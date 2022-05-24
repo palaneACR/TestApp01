@@ -1,0 +1,86 @@
+﻿@model WebApplication2.Models.EmailContent
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>TinyMCE Example</title>
+    <script src="~/Scripts/tinymce/tinymce.js"></script>
+    <!-- TinyMCE Script Reference -->
+    <script src="~/scripts/tinymce/tinymce.min.js"></script>
+    <!-- Script to wire up your TinyMCE editor -->
+    <script type="text/javascript">
+        // Initialize your tinyMCE Editor with your preferred options
+        tinymce.init({
+            selector: 'textarea',
+            width: 700,
+            height: 520,
+            plugins: 'print preview paste importcss searchreplace autolink autosave save directionality link table  hr  nonbreaking anchor toc  advlist lists  textpattern  help',
+            imagetools_cors_hosts: ['picsum.photos'],
+            menubar: 'file edit view insert format table help',
+            toolbar: 'undo redo | bold italic underline strikethrough | fontselect fontsizeselect formatselect | alignleft aligncenter alignright alignjustify | outdent indent |  numlist bullist | forecolor backcolor removeformat | link | ltr rtl',
+            toolbar_sticky: true,
+            autosave_ask_before_unload: true,
+            autosave_interval: "30s",
+            autosave_prefix: "{path}{query}-{id}-",
+            autosave_restore_when_empty: false,
+            autosave_retention: "2m",
+            //image_advtab: true,
+            content_css: '//www.tiny.cloud/css/codepen.min.css',
+            importcss_append: true,
+            
+            template_cdate_format: '[Date Created (CDATE): %m/%d/%Y : %H:%M:%S]',
+            template_mdate_format: '[Date Modified (MDATE): %m/%d/%Y : %H:%M:%S]',
+            //image_caption: true,
+            quickbars_selection_toolbar: 'bold italic | quicklink h2 h3 blockquote quicktable',
+            noneditable_noneditable_class: "mceNonEditable",
+            toolbar_mode: 'sliding',
+            contextmenu: "link image imagetools table",
+        });
+        
+    </script>
+
+</head>
+<body>
+
+
+    <h>Test Application</h>
+    <!-- This will automatically post to your Index method
+     (that is decorated with a HttpPost attribute) -->
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+
+    }
+    @Html.TextAreaFor(model => model.HtmlContent)
+
+    <input type="submit" value="Create" onclick="TestFunction()" />
+    <div>
+        <!-- This will contain your HtmlContent and use the TinyMCE editor-->
+    </div>
+    <script>
+        function TestFunction() {
+            var content = $("#HtmlContent_ifr").contents().find('body').html();
+            debugger;
+            $.ajax({
+                url: "/TinyMCE/Index",
+                method: "POST",
+                data: { CatType: $("#selectCategory").val(), updateBody: encodeURI(content) },
+                success: function (data) {
+                    debugger;
+                    if (data == true) {
+                        $("#emailBodyDiv").html('');
+                        alert("changes Applied");
+                    } else {
+                        alert("Model update failed")
+                    }
+                },
+                error: function (data) {
+                    debugger;
+                    console.log(data)
+                }
+            });
+        }
+    </script>
+</body>
+</html>

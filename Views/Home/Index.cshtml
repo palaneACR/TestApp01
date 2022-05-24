@@ -1,0 +1,79 @@
+﻿@using System.Dynamic;
+@{
+    ViewBag.Title = "Home Page";
+}
+@Scripts.Render("~/bundles/jquery")
+<script src="~/Scripts/morris/raphael-2.1.0.min.js"></script>
+<div class="" style="margin-top:20px;">
+    <div>
+        <select value="Select" id="selectCategory">
+            @foreach (var item in @Model.items)
+            {
+                <option value="@item" name="selectCategory">@item</option>
+            }
+        </select>
+    </div>
+    <div>
+        <input type="submit" value="Send Email" onclick="SendEmail()">
+    </div>
+    <div id="emailBodyDiv">
+    </div>
+    <div id="bar-example"></div>
+</div>
+
+<script>
+
+    $(document).ready(function () {
+        $("#selectCategory").on('change', function () {
+            //debugger;
+            console.log($("#selectCategory").val());
+            $.ajax({
+                url: "/TinyMCE/Index",
+                method: "get",
+                data: { categoryType: $("#selectCategory").val() },
+                success: function (data) {
+                    debugger;
+                    $("#emailBodyDiv").html(data);
+                },
+                error: function (data) {
+                    debugger;
+                    console.log(data)
+                }
+            });
+        });
+
+        Morris.Bar({
+            element: 'bar-example',
+            data: [
+                { y: '2006', a: 100, b: 90 },
+                { y: '2007', a: 75, b: 65 },
+                { y: '2008', a: 50, b: 40 },
+                { y: '2009', a: 75, b: 65 },
+                { y: '2010', a: 50, b: 40 },
+                { y: '2011', a: 75, b: 65 },
+                { y: '2012', a: 100, b: 90 }
+            ],
+            xkey: 'y',
+            ykeys: ['a', 'b'],
+            labels: ['Series A', 'Series B']
+        });
+    });
+
+    function SendEmail() {
+        var content = $("#HtmlContent_ifr").contents().find('body').html();
+        debugger;
+        $.ajax({
+            url: "TinyMCE/SendEmail",
+            method: "POST",
+            data: { subject: $("#selectCategory").val(), body: encodeURI(content) },
+            success: function (data) {
+                debugger;
+                console.log("Enail sent successfully.");
+            },
+            error: function (data) {
+                debugger;
+                console.log("Enail sending failed.");
+            }
+        });
+    }
+</script>

@@ -1,0 +1,938 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props')" />
+  <Import Project="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{B28FD539-33ED-4867-A7E9-79408E9DE543}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WebApplication2</RootNamespace>
+    <AssemblyName>WebApplication2</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>44393</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <TypeScriptToolsVersion>4.3</TypeScriptToolsVersion>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNetCore.Hosting.Abstractions, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.AspNetCore.Hosting.Abstractions.2.2.0\lib\netstandard2.0\Microsoft.AspNetCore.Hosting.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNetCore.Hosting.Server.Abstractions, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.AspNetCore.Hosting.Server.Abstractions.2.2.0\lib\netstandard2.0\Microsoft.AspNetCore.Hosting.Server.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNetCore.Http.Abstractions, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.AspNetCore.Http.Abstractions.2.2.0\lib\netstandard2.0\Microsoft.AspNetCore.Http.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNetCore.Http.Features, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.AspNetCore.Http.Features.2.2.0\lib\netstandard2.0\Microsoft.AspNetCore.Http.Features.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=1.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Bcl.AsyncInterfaces.1.1.1\lib\net461\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Extensions.Configuration, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Extensions.Configuration.2.2.0\lib\netstandard2.0\Microsoft.Extensions.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Configuration.Abstractions, Version=3.1.8.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Extensions.Configuration.Abstractions.3.1.8\lib\netstandard2.0\Microsoft.Extensions.Configuration.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Configuration.Binder, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Extensions.Configuration.Binder.2.2.0\lib\netstandard2.0\Microsoft.Extensions.Configuration.Binder.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.DependencyInjection, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Extensions.DependencyInjection.2.2.0\lib\net461\Microsoft.Extensions.DependencyInjection.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.DependencyInjection.Abstractions, Version=3.1.8.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Extensions.DependencyInjection.Abstractions.3.1.8\lib\netstandard2.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.DependencyModel, Version=3.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Extensions.DependencyModel.3.0.0\lib\net451\Microsoft.Extensions.DependencyModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.FileProviders.Abstractions, Version=3.1.8.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Extensions.FileProviders.Abstractions.3.1.8\lib\netstandard2.0\Microsoft.Extensions.FileProviders.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Hosting.Abstractions, Version=3.1.8.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Extensions.Hosting.Abstractions.3.1.8\lib\netstandard2.0\Microsoft.Extensions.Hosting.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Logging, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Extensions.Logging.2.2.0\lib\netstandard2.0\Microsoft.Extensions.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Logging.Abstractions, Version=3.1.8.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Extensions.Logging.Abstractions.3.1.8\lib\netstandard2.0\Microsoft.Extensions.Logging.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Options, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Extensions.Options.2.2.0\lib\netstandard2.0\Microsoft.Extensions.Options.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Options.ConfigurationExtensions, Version=2.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Extensions.Options.ConfigurationExtensions.2.0.0\lib\netstandard2.0\Microsoft.Extensions.Options.ConfigurationExtensions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Primitives, Version=3.1.8.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Extensions.Primitives.3.1.8\lib\netstandard2.0\Microsoft.Extensions.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="Serilog, Version=2.0.0.0, Culture=neutral, PublicKeyToken=24c2f752a8e58a10, processorArchitecture=MSIL">
+      <HintPath>packages\Serilog.2.10.0\lib\net46\Serilog.dll</HintPath>
+    </Reference>
+    <Reference Include="Serilog.AspNetCore, Version=2.0.0.0, Culture=neutral, PublicKeyToken=24c2f752a8e58a10, processorArchitecture=MSIL">
+      <HintPath>packages\Serilog.AspNetCore.5.0.0\lib\netstandard2.0\Serilog.AspNetCore.dll</HintPath>
+    </Reference>
+    <Reference Include="Serilog.Extensions.Hosting, Version=2.0.0.0, Culture=neutral, PublicKeyToken=24c2f752a8e58a10, processorArchitecture=MSIL">
+      <HintPath>packages\Serilog.Extensions.Hosting.4.2.0\lib\netstandard2.0\Serilog.Extensions.Hosting.dll</HintPath>
+    </Reference>
+    <Reference Include="Serilog.Extensions.Logging, Version=2.0.0.0, Culture=neutral, PublicKeyToken=24c2f752a8e58a10, processorArchitecture=MSIL">
+      <HintPath>packages\Serilog.Extensions.Logging.3.1.0\lib\netstandard2.0\Serilog.Extensions.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="Serilog.Formatting.Compact, Version=1.1.0.0, Culture=neutral, PublicKeyToken=24c2f752a8e58a10, processorArchitecture=MSIL">
+      <HintPath>packages\Serilog.Formatting.Compact.1.1.0\lib\net452\Serilog.Formatting.Compact.dll</HintPath>
+    </Reference>
+    <Reference Include="Serilog.Settings.Configuration, Version=3.3.0.0, Culture=neutral, PublicKeyToken=24c2f752a8e58a10, processorArchitecture=MSIL">
+      <HintPath>packages\Serilog.Settings.Configuration.3.3.0\lib\net461\Serilog.Settings.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="Serilog.Sinks.Console, Version=4.0.1.0, Culture=neutral, PublicKeyToken=24c2f752a8e58a10, processorArchitecture=MSIL">
+      <HintPath>packages\Serilog.Sinks.Console.4.0.1\lib\net45\Serilog.Sinks.Console.dll</HintPath>
+    </Reference>
+    <Reference Include="Serilog.Sinks.Debug, Version=2.0.0.0, Culture=neutral, PublicKeyToken=24c2f752a8e58a10, processorArchitecture=MSIL">
+      <HintPath>packages\Serilog.Sinks.Debug.2.0.0\lib\net46\Serilog.Sinks.Debug.dll</HintPath>
+    </Reference>
+    <Reference Include="Serilog.Sinks.File, Version=5.0.0.0, Culture=neutral, PublicKeyToken=24c2f752a8e58a10, processorArchitecture=MSIL">
+      <HintPath>packages\Serilog.Sinks.File.5.0.0\lib\net45\Serilog.Sinks.File.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Buffers.4.4.0\lib\netstandard2.0\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.Annotations, Version=4.2.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.ComponentModel.Annotations.4.5.0\lib\net461\System.ComponentModel.Annotations.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Memory, Version=4.0.1.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Memory.4.5.2\lib\netstandard2.0\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.3.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Numerics.Vectors.4.4.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.6.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Runtime.CompilerServices.Unsafe.4.7.1\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.InteropServices.RuntimeInformation, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Runtime.InteropServices.RuntimeInformation.4.0.0\lib\net45\System.Runtime.InteropServices.RuntimeInformation.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Text.Encodings.Web, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Text.Encodings.Web.4.5.0\lib\netstandard2.0\System.Text.Encodings.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Threading.Tasks.Extensions.4.5.4\lib\net461\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>packages\Microsoft.AspNet.Mvc.5.2.7\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>packages\Microsoft.AspNet.Razor.3.2.7\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>packages\Newtonsoft.Json.12.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>packages\WebGrease.1.6.0\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\TinyMCEController.cs" />
+    <Compile Include="Entities\c_Result.cs">
+      <DependentUpon>EmailConnString.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\EmailConnString.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EmailConnString.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\EmailConnString.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EmailConnString.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\EmailConnString.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EmailConnString.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\fnAbdomenBenchmarks_Result.cs">
+      <DependentUpon>EmailConnString.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\fnGetBlockMeasures_Result.cs">
+      <DependentUpon>EmailConnString.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\fnMIPSExamDataKeyParameters_Result.cs">
+      <DependentUpon>EmailConnString.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\GetFileDetails_Result.cs">
+      <DependentUpon>EmailConnString.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\GetImportErrorDetails_Result.cs">
+      <DependentUpon>EmailConnString.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\GetInvalidrecords_Result.cs">
+      <DependentUpon>EmailConnString.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\spALLTINNPIRelatedMeasureDataForFullYear_Physician_Result.cs">
+      <DependentUpon>EmailConnString.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\spALLTINNPIRelatedMeasureDataForFullYear_Result.cs">
+      <DependentUpon>EmailConnString.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\spAllTinRelatedMeasureDataForFullYear_Result.cs">
+      <DependentUpon>EmailConnString.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\SPAttestation_FacilityDetails_Result.cs">
+      <DependentUpon>EmailConnString.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\SPAttestation_PhysicianDetails_Result.cs">
+      <DependentUpon>EmailConnString.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\SpCI_App_GetMeasureData_Result.cs">
+      <DependentUpon>EmailConnString.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\SPCI_BulkUploadInvalidRecordsForTINNPIs_Result.cs">
+      <DependentUpon>EmailConnString.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\SPCI_BulkUploadInvalidRecordsForTINs_Result.cs">
+      <DependentUpon>EmailConnString.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\SPCI_BulkUpload_FileErrorDetails_Result.cs">
+      <DependentUpon>EmailConnString.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\SPCI_BulkUpload_FileProcess_Details_Result.cs">
+      <DependentUpon>EmailConnString.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\SPCI_BulkUpload_HistoryDetails_Result.cs">
+      <DependentUpon>EmailConnString.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\SPCI_BulkUpload_MeasureDataUpdate_ACRStaff_IA_Result.cs">
+      <DependentUpon>EmailConnString.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\SPCI_DeleteMeasureswithFilter_Result.cs">
+      <DependentUpon>EmailConnString.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\SPCI_GetBulkCMSTINNPISSubwithFilter_Result.cs">
+      <DependentUpon>EmailConnString.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\SpCI_GetIsSubmittoCMSAndSubmittedDate_Result.cs">
+      <DependentUpon>EmailConnString.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\SPCI_GetMeasurementsetIdswithFilter_Result.cs">
+      <DependentUpon>EmailConnString.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\SpCI_GetMeasurementSetKeyForPatch_Result.cs">
+      <DependentUpon>EmailConnString.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\SPCI_GetScoreDetails_Result.cs">
+      <DependentUpon>EmailConnString.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\SPCI_GetSubmissionsDataByEntityType_N_Result.cs">
+      <DependentUpon>EmailConnString.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\SPCI_GetSub_IndividualScore_Result.cs">
+      <DependentUpon>EmailConnString.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\SPCI_GetSub_Score_All_Result.cs">
+      <DependentUpon>EmailConnString.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\SPCI_GetSub_Score_Result.cs">
+      <DependentUpon>EmailConnString.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\SPCI_HttpStatusCodeDescription_Result.cs">
+      <DependentUpon>EmailConnString.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\SPCI_NonGproValidationDetails_Result.cs">
+      <DependentUpon>EmailConnString.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\SPCI_Report_ScoreIASheet_Result.cs">
+      <DependentUpon>EmailConnString.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\SPCI_Report_ScorePISheet_Result.cs">
+      <DependentUpon>EmailConnString.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\SPCI_Report_ScoreQMSheet_Result.cs">
+      <DependentUpon>EmailConnString.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\SPCI_Report_ScoreSummarySheet_Result.cs">
+      <DependentUpon>EmailConnString.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\SPCI_SubmissionDetails_Result.cs">
+      <DependentUpon>EmailConnString.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\SPCI_TINCMSSubStatusReports_ACRStaff_Result.cs">
+      <DependentUpon>EmailConnString.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\SPCI_TINNPICMSSubStatusReports_ACRStaff_Result.cs">
+      <DependentUpon>EmailConnString.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\SPCI_TINNPI_ScoreDetails_Result.cs">
+      <DependentUpon>EmailConnString.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\SPCI_TIN_ScoreDetails_Result.cs">
+      <DependentUpon>EmailConnString.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\spDisableTransactionData_Result.cs">
+      <DependentUpon>EmailConnString.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\SpEmailTemplate_GetDetails_Result.cs">
+      <DependentUpon>EmailConnString.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\SpEmail_GetAppSettings_Result.cs">
+      <DependentUpon>EmailConnString.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\spFileProcessHistoryDetails_Result.cs">
+      <DependentUpon>EmailConnString.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\SPGetActivitieslistIA_ACRStaff_Result.cs">
+      <DependentUpon>EmailConnString.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\SPGetActivitieslistIA_Facility_Result.cs">
+      <DependentUpon>EmailConnString.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\SPGetActivitieslistIA_Physician_Result.cs">
+      <DependentUpon>EmailConnString.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\SPGetActivitieslist_IA_bak_Result.cs">
+      <DependentUpon>EmailConnString.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\SPGetActivitieslist_IA_Result.cs">
+      <DependentUpon>EmailConnString.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\SpGetAC_PI_MeasureData_Tin_Result.cs">
+      <DependentUpon>EmailConnString.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\SpGetBlockMeasureDetails_Result.cs">
+      <DependentUpon>EmailConnString.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\SpGetCMSPaymentsActiveStatus_Result.cs">
+      <DependentUpon>EmailConnString.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\SpgetEligibleMeasuresOnAge_Result.cs">
+      <DependentUpon>EmailConnString.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\spGetFacilityAccessDetailsforUploadedFiles_Result.cs">
+      <DependentUpon>EmailConnString.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\SPGetFacilityTinRelatedPhysicianDetails_Result.cs">
+      <DependentUpon>EmailConnString.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\spGetFacilityTins_EmailAddress_Result.cs">
+      <DependentUpon>EmailConnString.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\spGetFilenames_of_NnumeratorZero_Result.cs">
+      <DependentUpon>EmailConnString.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\spGetGproACIXmlData_Result.cs">
+      <DependentUpon>EmailConnString.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\spGetGproACIXmlData_Tin_Result.cs">
+      <DependentUpon>EmailConnString.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\SPGetGPROCMSSubmittedTins_Result.cs">
+      <DependentUpon>EmailConnString.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\spGetGproIAXmlData_Result.cs">
+      <DependentUpon>EmailConnString.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\spGetGproIAXmlData_Tin_Result.cs">
+      <DependentUpon>EmailConnString.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\SpGetHitrustSiteActiveStatus_Result.cs">
+      <DependentUpon>EmailConnString.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\spGetIAGPROAttestation_Finalize_Activities_Result.cs">
+      <DependentUpon>EmailConnString.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\spGetIANonGPROAttestation_Finalize_Activities_Result.cs">
+      <DependentUpon>EmailConnString.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\SpGetMeasureRulesConfigPart1_Result.cs">
+      <DependentUpon>EmailConnString.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\SPGetMeasureslistByRuleIdCompare_Result.cs">
+      <DependentUpon>EmailConnString.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\SPGetMeasureslistByRuleId_Result.cs">
+      <DependentUpon>EmailConnString.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\spGetNonGproACIXmlData_Result.cs">
+      <DependentUpon>EmailConnString.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\spGetNonGproACIXmlData_Tin_NPI_Result.cs">
+      <DependentUpon>EmailConnString.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\spGetNonGproACIXmlData_Tin_Result.cs">
+      <DependentUpon>EmailConnString.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\SPGetNonGproCMSSubmittedTins_Result.cs">
+      <DependentUpon>EmailConnString.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\spGetNonGproIAXmlData_Result.cs">
+      <DependentUpon>EmailConnString.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\spGetNonGproIAXmlData_Tin_NPI_Result.cs">
+      <DependentUpon>EmailConnString.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\spGetNonGproIAXmlData_Tin_Result.cs">
+      <DependentUpon>EmailConnString.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\SpGetNonGproIA_PI_MeasureData_Tin_Result.cs">
+      <DependentUpon>EmailConnString.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\SPGetNpisofTinwithDescription_VW_Result.cs">
+      <DependentUpon>EmailConnString.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\SPGetProcessRecordCount_Result.cs">
+      <DependentUpon>EmailConnString.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\spGetRecordsEnteredPageGridDetails_Result.cs">
+      <DependentUpon>EmailConnString.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\spGetStartEndDateForACI_Result.cs">
+      <DependentUpon>EmailConnString.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\spGetStartEndDateForIAorACI_Result.cs">
+      <DependentUpon>EmailConnString.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\spGetStartEndDateForIA_Result.cs">
+      <DependentUpon>EmailConnString.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\SPGetSubmittoCMSTinsCount_Result.cs">
+      <DependentUpon>EmailConnString.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\SpGetTinlevelAttesationDetailsOfUser_Result.cs">
+      <DependentUpon>EmailConnString.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\SPGetTINSbyNpi_Physician_VW_Result.cs">
+      <DependentUpon>EmailConnString.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\spGproNonGproConversionLock_Result.cs">
+      <DependentUpon>EmailConnString.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\SPIA_Activitieslist_Result.cs">
+      <DependentUpon>EmailConnString.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\SPIA_FinalizeDetails_Physician_Result.cs">
+      <DependentUpon>EmailConnString.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\SPIA_FinalizeDetails_Result.cs">
+      <DependentUpon>EmailConnString.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\Split_IgnoreParantheses_Result.cs">
+      <DependentUpon>EmailConnString.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\Split_Result.cs">
+      <DependentUpon>EmailConnString.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\spLockPendingFilesforExamAPI_Result.cs">
+      <DependentUpon>EmailConnString.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\spNPIMeasureRelatedmeasureDataFor90Days_Result.cs">
+      <DependentUpon>EmailConnString.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\spNPIMeasureRelatedmeasureDataForFullYear_Result.cs">
+      <DependentUpon>EmailConnString.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\spNPIRelatedMeasureDataFor90days_Result.cs">
+      <DependentUpon>EmailConnString.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\spNPIRelatedMeasureDataForFullYear_Result.cs">
+      <DependentUpon>EmailConnString.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\spNPIRelatedmeasureData_Result.cs">
+      <DependentUpon>EmailConnString.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\SPPI_Activitieslist_Result.cs">
+      <DependentUpon>EmailConnString.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\SPPI_FinalizeDetails_Physician_Result.cs">
+      <DependentUpon>EmailConnString.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\SPPI_FinalizeDetails_Result.cs">
+      <DependentUpon>EmailConnString.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\SPQM_FacilityPhyFinalizeDetails_Result.cs">
+      <DependentUpon>EmailConnString.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\SPQM_FinalizeDetails_Physician_Result.cs">
+      <DependentUpon>EmailConnString.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\SPQM_FinalizeDetails_Result.cs">
+      <DependentUpon>EmailConnString.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\SPRecordEnteredPageGridDetails_Result.cs">
+      <DependentUpon>EmailConnString.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\spShowImportTables_Result.cs">
+      <DependentUpon>EmailConnString.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\SPTestPK_Result.cs">
+      <DependentUpon>EmailConnString.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\spTinFinalize_90DaysLock_Result.cs">
+      <DependentUpon>EmailConnString.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\spTinMeasureRelatedMeasureDataFor90Days_Result.cs">
+      <DependentUpon>EmailConnString.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\spTinMeasureRelatedMeasureDataForFullYear_Result.cs">
+      <DependentUpon>EmailConnString.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\spTinNpiFinalize_90DaysLock_Result.cs">
+      <DependentUpon>EmailConnString.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\spTinRelatedMeasureDataFor90days_Result.cs">
+      <DependentUpon>EmailConnString.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\spTinRelatedMeasureDataForFullYear_Result.cs">
+      <DependentUpon>EmailConnString.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\spTinRelatedMeasureData_Result.cs">
+      <DependentUpon>EmailConnString.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\spUpdateExamData_Result.cs">
+      <DependentUpon>EmailConnString.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\spUpdateMeasureData_Result.cs">
+      <DependentUpon>EmailConnString.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\sp_getACRTINandTINNPISs_Result.cs">
+      <DependentUpon>EmailConnString.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\sp_getACRTINsWithOptInStatus_Result.cs">
+      <DependentUpon>EmailConnString.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\sp_getFacilityAdminNPIs_Result.cs">
+      <DependentUpon>EmailConnString.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\sp_GetFacilityInvoices_Result.cs">
+      <DependentUpon>EmailConnString.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\sp_getFacilityManagedPhysicianNPIs_Result.cs">
+      <DependentUpon>EmailConnString.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\sp_getFacilityPhysicianNPIsTINs_bkp_Result.cs">
+      <DependentUpon>EmailConnString.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\sp_getFacilityPhysicianNPIsTINs_Result.cs">
+      <DependentUpon>EmailConnString.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\sp_GetFacilityTinDocumentsStatus_Result.cs">
+      <DependentUpon>EmailConnString.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\sp_getFacilityTINsWithOptInStatus_Result.cs">
+      <DependentUpon>EmailConnString.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\sp_getFacilityTIN_GPRO_Result.cs">
+      <DependentUpon>EmailConnString.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\sp_getFacilityUnFinializedTins_ACI_Result.cs">
+      <DependentUpon>EmailConnString.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\sp_getFacilityUnFinializedTins_Result.cs">
+      <DependentUpon>EmailConnString.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\sp_getNPIsOfTin_Result.cs">
+      <DependentUpon>EmailConnString.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\sp_getPhysianProfileForNPI_Result.cs">
+      <DependentUpon>EmailConnString.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\sp_GetPhysicianInvoices_Result.cs">
+      <DependentUpon>EmailConnString.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\sp_getPhysicianNPIByFacilityID_Result.cs">
+      <DependentUpon>EmailConnString.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\sp_getPhysicianProfile_Result.cs">
+      <DependentUpon>EmailConnString.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\sp_getTinNpiDetailsForOptInData_Result.cs">
+      <DependentUpon>EmailConnString.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\sp_getTINNPIsWithOptInStatus_Result.cs">
+      <DependentUpon>EmailConnString.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\sp_getTINNumbers_Result.cs">
+      <DependentUpon>EmailConnString.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\sp_helpdiagramdefinition_Result.cs">
+      <DependentUpon>EmailConnString.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\sp_helpdiagrams_Result.cs">
+      <DependentUpon>EmailConnString.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\SP_PhysicianAttestionDetails_bak_Result.cs">
+      <DependentUpon>EmailConnString.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\SP_RecordEnteredPageGridDetails_Result.cs">
+      <DependentUpon>EmailConnString.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\Sp_SingleNPITINFiles_Result.cs">
+      <DependentUpon>EmailConnString.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\tbl_MIPS_Email_Manager_Test.cs">
+      <DependentUpon>EmailConnString.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\test1_Result.cs">
+      <DependentUpon>EmailConnString.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\test2_Result.cs">
+      <DependentUpon>EmailConnString.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\test_List_orders_2_Result.cs">
+      <DependentUpon>EmailConnString.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\test_List_orders_3_Result.cs">
+      <DependentUpon>EmailConnString.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EmailContent.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap-theme.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Entities\EmailConnString.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>EmailConnString.Context.cs</LastGenOutput>
+      <DependentUpon>EmailConnString.edmx</DependentUpon>
+    </Content>
+    <Content Include="Entities\EmailConnString.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>EmailConnString.edmx</DependentUpon>
+      <LastGenOutput>EmailConnString.cs</LastGenOutput>
+    </Content>
+    <Content Include="favicon.ico" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="Content\Site.css" />
+    <Content Include="morris.css" />
+    <Content Include="morris.min.css" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <EntityDeploy Include="Entities\EmailConnString.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>EmailConnString.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Entities\EmailConnString.edmx.diagram">
+      <DependentUpon>EmailConnString.edmx</DependentUpon>
+    </Content>
+    <None Include="Scripts\jquery-1.9.1.intellisense.js" />
+    <Content Include="Scripts\jquery-1.9.1.js" />
+    <Content Include="Scripts\jquery-1.9.1.min.js" />
+    <Content Include="Scripts\jquery-1.9.1.min.map" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Scripts\morris\morris.js" />
+    <Content Include="Scripts\morris\morris_modified.js" />
+    <Content Include="Scripts\morris\raphael-2.1.0.min.js" />
+    <Content Include="Scripts\raphael-min.js" />
+    <Content Include="Scripts\raphael.js" />
+    <Content Include="Scripts\tinymce\icons\default\icons.js" />
+    <Content Include="Scripts\tinymce\icons\default\icons.min.js" />
+    <Content Include="Scripts\tinymce\license.txt" />
+    <Content Include="Scripts\tinymce\models\dom\model.js" />
+    <Content Include="Scripts\tinymce\models\dom\model.min.js" />
+    <Content Include="Scripts\tinymce\plugins\advlist\plugin.js" />
+    <Content Include="Scripts\tinymce\plugins\advlist\plugin.min.js" />
+    <Content Include="Scripts\tinymce\plugins\anchor\plugin.js" />
+    <Content Include="Scripts\tinymce\plugins\anchor\plugin.min.js" />
+    <Content Include="Scripts\tinymce\plugins\autolink\plugin.js" />
+    <Content Include="Scripts\tinymce\plugins\autolink\plugin.min.js" />
+    <Content Include="Scripts\tinymce\plugins\autoresize\plugin.js" />
+    <Content Include="Scripts\tinymce\plugins\autoresize\plugin.min.js" />
+    <Content Include="Scripts\tinymce\plugins\autosave\plugin.js" />
+    <Content Include="Scripts\tinymce\plugins\autosave\plugin.min.js" />
+    <Content Include="Scripts\tinymce\plugins\charmap\plugin.js" />
+    <Content Include="Scripts\tinymce\plugins\charmap\plugin.min.js" />
+    <Content Include="Scripts\tinymce\plugins\codesample\plugin.js" />
+    <Content Include="Scripts\tinymce\plugins\codesample\plugin.min.js" />
+    <Content Include="Scripts\tinymce\plugins\code\plugin.js" />
+    <Content Include="Scripts\tinymce\plugins\code\plugin.min.js" />
+    <Content Include="Scripts\tinymce\plugins\directionality\plugin.js" />
+    <Content Include="Scripts\tinymce\plugins\directionality\plugin.min.js" />
+    <Content Include="Scripts\tinymce\plugins\emoticons\js\emojiimages.js" />
+    <Content Include="Scripts\tinymce\plugins\emoticons\js\emojiimages.min.js" />
+    <Content Include="Scripts\tinymce\plugins\emoticons\js\emojis.js" />
+    <Content Include="Scripts\tinymce\plugins\emoticons\js\emojis.min.js" />
+    <Content Include="Scripts\tinymce\plugins\emoticons\plugin.js" />
+    <Content Include="Scripts\tinymce\plugins\emoticons\plugin.min.js" />
+    <Content Include="Scripts\tinymce\plugins\fullscreen\plugin.js" />
+    <Content Include="Scripts\tinymce\plugins\fullscreen\plugin.min.js" />
+    <Content Include="Scripts\tinymce\plugins\help\plugin.js" />
+    <Content Include="Scripts\tinymce\plugins\help\plugin.min.js" />
+    <Content Include="Scripts\tinymce\plugins\image\plugin.js" />
+    <Content Include="Scripts\tinymce\plugins\image\plugin.min.js" />
+    <Content Include="Scripts\tinymce\plugins\importcss\plugin.js" />
+    <Content Include="Scripts\tinymce\plugins\importcss\plugin.min.js" />
+    <Content Include="Scripts\tinymce\plugins\insertdatetime\plugin.js" />
+    <Content Include="Scripts\tinymce\plugins\insertdatetime\plugin.min.js" />
+    <Content Include="Scripts\tinymce\plugins\link\plugin.js" />
+    <Content Include="Scripts\tinymce\plugins\link\plugin.min.js" />
+    <Content Include="Scripts\tinymce\plugins\lists\plugin.js" />
+    <Content Include="Scripts\tinymce\plugins\lists\plugin.min.js" />
+    <Content Include="Scripts\tinymce\plugins\media\plugin.js" />
+    <Content Include="Scripts\tinymce\plugins\media\plugin.min.js" />
+    <Content Include="Scripts\tinymce\plugins\nonbreaking\plugin.js" />
+    <Content Include="Scripts\tinymce\plugins\nonbreaking\plugin.min.js" />
+    <Content Include="Scripts\tinymce\plugins\pagebreak\plugin.js" />
+    <Content Include="Scripts\tinymce\plugins\pagebreak\plugin.min.js" />
+    <Content Include="Scripts\tinymce\plugins\preview\plugin.js" />
+    <Content Include="Scripts\tinymce\plugins\preview\plugin.min.js" />
+    <Content Include="Scripts\tinymce\plugins\quickbars\plugin.js" />
+    <Content Include="Scripts\tinymce\plugins\quickbars\plugin.min.js" />
+    <Content Include="Scripts\tinymce\plugins\save\plugin.js" />
+    <Content Include="Scripts\tinymce\plugins\save\plugin.min.js" />
+    <Content Include="Scripts\tinymce\plugins\searchreplace\plugin.js" />
+    <Content Include="Scripts\tinymce\plugins\searchreplace\plugin.min.js" />
+    <Content Include="Scripts\tinymce\plugins\table\plugin.js" />
+    <Content Include="Scripts\tinymce\plugins\table\plugin.min.js" />
+    <Content Include="Scripts\tinymce\plugins\template\plugin.js" />
+    <Content Include="Scripts\tinymce\plugins\template\plugin.min.js" />
+    <Content Include="Scripts\tinymce\plugins\visualblocks\plugin.js" />
+    <Content Include="Scripts\tinymce\plugins\visualblocks\plugin.min.js" />
+    <Content Include="Scripts\tinymce\plugins\visualchars\plugin.js" />
+    <Content Include="Scripts\tinymce\plugins\visualchars\plugin.min.js" />
+    <Content Include="Scripts\tinymce\plugins\wordcount\plugin.js" />
+    <Content Include="Scripts\tinymce\plugins\wordcount\plugin.min.js" />
+    <Content Include="Scripts\tinymce\skins\content\dark\content.css" />
+    <Content Include="Scripts\tinymce\skins\content\dark\content.min.css" />
+    <Content Include="Scripts\tinymce\skins\content\default\content.css" />
+    <Content Include="Scripts\tinymce\skins\content\default\content.min.css" />
+    <Content Include="Scripts\tinymce\skins\content\document\content.css" />
+    <Content Include="Scripts\tinymce\skins\content\document\content.min.css" />
+    <Content Include="Scripts\tinymce\skins\content\tinymce-5-dark\content.css" />
+    <Content Include="Scripts\tinymce\skins\content\tinymce-5-dark\content.min.css" />
+    <Content Include="Scripts\tinymce\skins\content\tinymce-5\content.css" />
+    <Content Include="Scripts\tinymce\skins\content\tinymce-5\content.min.css" />
+    <Content Include="Scripts\tinymce\skins\content\writer\content.css" />
+    <Content Include="Scripts\tinymce\skins\content\writer\content.min.css" />
+    <Content Include="Scripts\tinymce\skins\ui\oxide-dark\content.css" />
+    <Content Include="Scripts\tinymce\skins\ui\oxide-dark\content.inline.css" />
+    <Content Include="Scripts\tinymce\skins\ui\oxide-dark\content.inline.min.css" />
+    <Content Include="Scripts\tinymce\skins\ui\oxide-dark\content.min.css" />
+    <Content Include="Scripts\tinymce\skins\ui\oxide-dark\skin.css" />
+    <Content Include="Scripts\tinymce\skins\ui\oxide-dark\skin.min.css" />
+    <Content Include="Scripts\tinymce\skins\ui\oxide-dark\skin.shadowdom.css" />
+    <Content Include="Scripts\tinymce\skins\ui\oxide-dark\skin.shadowdom.min.css" />
+    <Content Include="Scripts\tinymce\skins\ui\oxide\content.css" />
+    <Content Include="Scripts\tinymce\skins\ui\oxide\content.inline.css" />
+    <Content Include="Scripts\tinymce\skins\ui\oxide\content.inline.min.css" />
+    <Content Include="Scripts\tinymce\skins\ui\oxide\content.min.css" />
+    <Content Include="Scripts\tinymce\skins\ui\oxide\skin.css" />
+    <Content Include="Scripts\tinymce\skins\ui\oxide\skin.min.css" />
+    <Content Include="Scripts\tinymce\skins\ui\oxide\skin.shadowdom.css" />
+    <Content Include="Scripts\tinymce\skins\ui\oxide\skin.shadowdom.min.css" />
+    <Content Include="Scripts\tinymce\skins\ui\tinymce-5-dark\content.css" />
+    <Content Include="Scripts\tinymce\skins\ui\tinymce-5-dark\content.inline.css" />
+    <Content Include="Scripts\tinymce\skins\ui\tinymce-5-dark\content.inline.min.css" />
+    <Content Include="Scripts\tinymce\skins\ui\tinymce-5-dark\content.min.css" />
+    <Content Include="Scripts\tinymce\skins\ui\tinymce-5-dark\skin.css" />
+    <Content Include="Scripts\tinymce\skins\ui\tinymce-5-dark\skin.min.css" />
+    <Content Include="Scripts\tinymce\skins\ui\tinymce-5-dark\skin.shadowdom.css" />
+    <Content Include="Scripts\tinymce\skins\ui\tinymce-5-dark\skin.shadowdom.min.css" />
+    <Content Include="Scripts\tinymce\skins\ui\tinymce-5\content.css" />
+    <Content Include="Scripts\tinymce\skins\ui\tinymce-5\content.inline.css" />
+    <Content Include="Scripts\tinymce\skins\ui\tinymce-5\content.inline.min.css" />
+    <Content Include="Scripts\tinymce\skins\ui\tinymce-5\content.min.css" />
+    <Content Include="Scripts\tinymce\skins\ui\tinymce-5\skin.css" />
+    <Content Include="Scripts\tinymce\skins\ui\tinymce-5\skin.min.css" />
+    <Content Include="Scripts\tinymce\skins\ui\tinymce-5\skin.shadowdom.css" />
+    <Content Include="Scripts\tinymce\skins\ui\tinymce-5\skin.shadowdom.min.css" />
+    <Content Include="Scripts\tinymce\themes\silver\theme.js" />
+    <Content Include="Scripts\tinymce\themes\silver\theme.min.js" />
+    <Content Include="Scripts\tinymce\tinymce.js" />
+    <Content Include="Scripts\tinymce\tinymce.min.js" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Home\About.cshtml" />
+    <Content Include="Views\Home\Contact.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Scripts\tinymce\langs\README.md" />
+    <Content Include="Views\TinyMCE\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\bootstrap.min.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Content\bootstrap-theme.min.css.map" />
+    <Content Include="Content\bootstrap-theme.css.map" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <TypeScriptCompile Include="Scripts\tinymce\tinymce.d.ts" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets')" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>58580</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://localhost:44393/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

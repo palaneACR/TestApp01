@@ -1,0 +1,2381 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="PQRSV13ModelStoreContainer" CdmEntityContainer="PQRSV13Entities">
+    <FunctionImportMapping FunctionName="PQRSV13Model.Store.fnAbdomenBenchmarks" FunctionImportName="fnAbdomenBenchmarks">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="PQRSV13Model.fnAbdomenBenchmarks_Result">
+          <ScalarProperty Name="MeasureGroup" ColumnName="MeasureGroup" />
+          <ScalarProperty Name="MeasureName" ColumnName="MeasureName" />
+          <ScalarProperty Name="Actual" ColumnName="Actual" />
+          <ScalarProperty Name="BenchmarkValue" ColumnName="BenchmarkValue" />
+          <ScalarProperty Name="Numerator" ColumnName="Numerator" />
+          <ScalarProperty Name="Denominator" ColumnName="Denominator" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionName="PQRSV13Model.Store.fnGetBlockMeasures" FunctionImportName="fnGetBlockMeasures">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="PQRSV13Model.fnGetBlockMeasures_Result">
+          <ScalarProperty Name="Mesures" ColumnName="Mesures" />
+          <ScalarProperty Name="CmsYear" ColumnName="CmsYear" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionName="PQRSV13Model.Store.fnMIPSExamDataKeyParameters" FunctionImportName="fnMIPSExamDataKeyParameters">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="PQRSV13Model.fnMIPSExamDataKeyParameters_Result">
+          <ScalarProperty Name="Exam_Id" ColumnName="Exam_Id" />
+          <ScalarProperty Name="Exam_Measure_Id" ColumnName="Exam_Measure_Id" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionName="PQRSV13Model.Store.Split" FunctionImportName="Split">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="PQRSV13Model.Split_Result">
+          <ScalarProperty Name="Item" ColumnName="Item" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionName="PQRSV13Model.Store.Split_IgnoreParantheses" FunctionImportName="Split_IgnoreParantheses">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="PQRSV13Model.Split_IgnoreParantheses_Result">
+          <ScalarProperty Name="Item" ColumnName="Item" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="c" FunctionName="PQRSV13Model.Store.c">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="PQRSV13Model.c_Result">
+          <ScalarProperty Name="Measure_num" ColumnName="Measure_num" />
+          <ScalarProperty Name="TotalExamsCount" ColumnName="TotalExamsCount" />
+          <ScalarProperty Name="SelectedForCMSSubmission" ColumnName="SelectedForCMSSubmission" />
+          <ScalarProperty Name="TotalCasesReviewed" ColumnName="TotalCasesReviewed" />
+          <ScalarProperty Name="Tin" ColumnName="Tin" />
+          <ScalarProperty Name="CMSYear" ColumnName="CMSYear" />
+          <ScalarProperty Name="is90days" ColumnName="is90days" />
+          <ScalarProperty Name="Last_Mod_Date" ColumnName="Last_Mod_Date" />
+          <ScalarProperty Name="isSavedPreviously" ColumnName="isSavedPreviously" />
+          <ScalarProperty Name="HundredPercentSubmit" ColumnName="HundredPercentSubmit" />
+          <ScalarProperty Name="PhysGroupMeasure" ColumnName="PhysGroupMeasure" />
+          <ScalarProperty Name="Performance_rate" ColumnName="Performance_rate" />
+          <ScalarProperty Name="Decile_Val" ColumnName="Decile_Val" />
+          <ScalarProperty Name="Reporting_Rate" ColumnName="Reporting_Rate" />
+          <ScalarProperty Name="NPI" ColumnName="NPI" />
+          <ScalarProperty Name="CMS_Message" ColumnName="CMS_Message" />
+          <ScalarProperty Name="isEndToEndReported" ColumnName="isEndToEndReported" />
+          <ScalarProperty Name="HundredPercentSubmit_C2" ColumnName="HundredPercentSubmit_C2" />
+          <ScalarProperty Name="TotalCasesReviewed_C2" ColumnName="TotalCasesReviewed_C2" />
+          <ScalarProperty Name="HundredPercentSubmit_C3" ColumnName="HundredPercentSubmit_C3" />
+          <ScalarProperty Name="TotalCasesReviewed_C3" ColumnName="TotalCasesReviewed_C3" />
+          <ScalarProperty Name="TotalExamsCount_C1" ColumnName="TotalExamsCount_C1" />
+          <ScalarProperty Name="TotalExamsCount_C3" ColumnName="TotalExamsCount_C3" />
+          <ScalarProperty Name="Measure_Scoring" ColumnName="Measure_Scoring" />
+          <ScalarProperty Name="PR_CMeasure" ColumnName="PR_CMeasure" />
+          <ScalarProperty Name="PriorityName" ColumnName="PriorityName" />
+          <ScalarProperty Name="ISSubmittedtoCMS" ColumnName="ISSubmittedtoCMS" />
+          <ScalarProperty Name="Is_eCQM" ColumnName="Is_eCQM" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="ELMAH_GetErrorsXml" FunctionName="PQRSV13Model.Store.ELMAH_GetErrorsXml" />
+    <FunctionImportMapping FunctionImportName="ELMAH_GetErrorXml" FunctionName="PQRSV13Model.Store.ELMAH_GetErrorXml" />
+    <FunctionImportMapping FunctionImportName="ELMAH_LogError" FunctionName="PQRSV13Model.Store.ELMAH_LogError" />
+    <FunctionImportMapping FunctionImportName="GetExcelSelectQuery" FunctionName="PQRSV13Model.Store.GetExcelSelectQuery" />
+    <FunctionImportMapping FunctionImportName="GetFileDetails" FunctionName="PQRSV13Model.Store.GetFileDetails">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="PQRSV13Model.GetFileDetails_Result">
+          <ScalarProperty Name="FileName" ColumnName="FileName" />
+          <ScalarProperty Name="CategoryId" ColumnName="CategoryId" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GetImportErrorDetails" FunctionName="PQRSV13Model.Store.GetImportErrorDetails">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="PQRSV13Model.GetImportErrorDetails_Result">
+          <ScalarProperty Name="ImportID" ColumnName="ImportID" />
+          <ScalarProperty Name="Hello" ColumnName="Hello" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GetImportExamErrorDetails" FunctionName="PQRSV13Model.Store.GetImportExamErrorDetails" />
+    <FunctionImportMapping FunctionImportName="GetImportExamMeasureErrorDetails" FunctionName="PQRSV13Model.Store.GetImportExamMeasureErrorDetails" />
+    <FunctionImportMapping FunctionImportName="GetImportExamMeasureExtErrorDetails" FunctionName="PQRSV13Model.Store.GetImportExamMeasureExtErrorDetails" />
+    <FunctionImportMapping FunctionImportName="GetImportExamsErrorDetails" FunctionName="PQRSV13Model.Store.GetImportExamsErrorDetails" />
+    <FunctionImportMapping FunctionImportName="GetImportFileErrorDetails" FunctionName="PQRSV13Model.Store.GetImportFileErrorDetails" />
+    <FunctionImportMapping FunctionImportName="GetInvalidrecords" FunctionName="PQRSV13Model.Store.GetInvalidrecords">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="PQRSV13Model.GetInvalidrecords_Result">
+          <ScalarProperty Name="CmsDataId" ColumnName="CmsDataId" />
+          <ScalarProperty Name="FileId" ColumnName="FileId" />
+          <ScalarProperty Name="TIN" ColumnName="TIN" />
+          <ScalarProperty Name="Npi" ColumnName="Npi" />
+          <ScalarProperty Name="Measure_Name" ColumnName="Measure_Name" />
+          <ScalarProperty Name="CmsYear" ColumnName="CmsYear" />
+          <ScalarProperty Name="NoofExamsSubmitted" ColumnName="NoofExamsSubmitted" />
+          <ScalarProperty Name="Total_no_of_exams_old" ColumnName="Total_no_of_exams_old" />
+          <ScalarProperty Name="Total_no_of_exams_new" ColumnName="Total_no_of_exams_new" />
+          <ScalarProperty Name="HundredPercentSubmit_old" ColumnName="HundredPercentSubmit_old" />
+          <ScalarProperty Name="HundredPercentSubmit_new" ColumnName="HundredPercentSubmit_new" />
+          <ScalarProperty Name="SelectedForCms_old" ColumnName="SelectedForCms_old" />
+          <ScalarProperty Name="SelectedForCms_new" ColumnName="SelectedForCms_new" />
+          <ScalarProperty Name="Performac_Rate" ColumnName="Performac_Rate" />
+          <ScalarProperty Name="Decile" ColumnName="Decile" />
+          <ScalarProperty Name="ErrorMessage" ColumnName="ErrorMessage" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_alterdiagram" FunctionName="PQRSV13Model.Store.sp_alterdiagram" />
+    <FunctionImportMapping FunctionImportName="SP_Attestation_InsertTinsNpis" FunctionName="PQRSV13Model.Store.SP_Attestation_InsertTinsNpis" />
+    <FunctionImportMapping FunctionImportName="sp_creatediagram" FunctionName="PQRSV13Model.Store.sp_creatediagram" />
+    <FunctionImportMapping FunctionImportName="sp_CreatePhysicianRecords" FunctionName="PQRSV13Model.Store.sp_CreatePhysicianRecords" />
+    <FunctionImportMapping FunctionImportName="sp_dropdiagram" FunctionName="PQRSV13Model.Store.sp_dropdiagram" />
+    <FunctionImportMapping FunctionImportName="sp_getACRTINandTINNPISs" FunctionName="PQRSV13Model.Store.sp_getACRTINandTINNPISs">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="PQRSV13Model.sp_getACRTINandTINNPISs_Result">
+          <ScalarProperty Name="TIN" ColumnName="TIN" />
+          <ScalarProperty Name="NPI" ColumnName="NPI" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_getACRTINsWithOptInStatus" FunctionName="PQRSV13Model.Store.sp_getACRTINsWithOptInStatus">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="PQRSV13Model.sp_getACRTINsWithOptInStatus_Result">
+          <ScalarProperty Name="TIN" ColumnName="TIN" />
+          <ScalarProperty Name="OptinEligibleStatus" ColumnName="OptinEligibleStatus" />
+          <ScalarProperty Name="OptedIn" ColumnName="OptedIn" />
+          <ScalarProperty Name="OptinDecisionDate" ColumnName="OptinDecisionDate" />
+          <ScalarProperty Name="NPI" ColumnName="NPI" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_GetDecileSevenCappedMeasures" FunctionName="PQRSV13Model.Store.sp_GetDecileSevenCappedMeasures" />
+    <FunctionImportMapping FunctionImportName="sp_getFacilityAdminNPIs" FunctionName="PQRSV13Model.Store.sp_getFacilityAdminNPIs">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="PQRSV13Model.sp_getFacilityAdminNPIs_Result">
+          <ScalarProperty Name="Physician_first_name" ColumnName="Physician_first_name" />
+          <ScalarProperty Name="physician_last_name" ColumnName="physician_last_name" />
+          <ScalarProperty Name="Physician_NPI" ColumnName="Physician_NPI" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_getFacilityIDbyUsername" FunctionName="PQRSV13Model.Store.sp_getFacilityIDbyUsername" />
+    <FunctionImportMapping FunctionImportName="sp_GetFacilityInvoices" FunctionName="PQRSV13Model.Store.sp_GetFacilityInvoices">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="PQRSV13Model.sp_GetFacilityInvoices_Result">
+          <ScalarProperty Name="TIN" ColumnName="TIN" />
+          <ScalarProperty Name="NPI" ColumnName="NPI" />
+          <ScalarProperty Name="InvoiceId" ColumnName="InvoiceId" />
+          <ScalarProperty Name="InvoicePaymentStatus" ColumnName="InvoicePaymentStatus" />
+          <ScalarProperty Name="CorporateID" ColumnName="CorporateID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_getFacilityManagedPhysicianNPIs" FunctionName="PQRSV13Model.Store.sp_getFacilityManagedPhysicianNPIs">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="PQRSV13Model.sp_getFacilityManagedPhysicianNPIs_Result">
+          <ScalarProperty Name="first_name" ColumnName="first_name" />
+          <ScalarProperty Name="last_name" ColumnName="last_name" />
+          <ScalarProperty Name="npi" ColumnName="npi" />
+          <ScalarProperty Name="is_active" ColumnName="is_active" />
+          <ScalarProperty Name="deactivation_date" ColumnName="deactivation_date" />
+          <ScalarProperty Name="is_enrolled" ColumnName="is_enrolled" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_getFacilityPhysicianNPIsTINs" FunctionName="PQRSV13Model.Store.sp_getFacilityPhysicianNPIsTINs">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="PQRSV13Model.sp_getFacilityPhysicianNPIsTINs_Result">
+          <ScalarProperty Name="first_name" ColumnName="first_name" />
+          <ScalarProperty Name="last_name" ColumnName="last_name" />
+          <ScalarProperty Name="npi" ColumnName="npi" />
+          <ScalarProperty Name="TIN" ColumnName="TIN" />
+          <ScalarProperty Name="is_active" ColumnName="is_active" />
+          <ScalarProperty Name="deactivation_date" ColumnName="deactivation_date" />
+          <ScalarProperty Name="is_enrolled" ColumnName="is_enrolled" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_getFacilityPhysicianNPIsTINs_bkp" FunctionName="PQRSV13Model.Store.sp_getFacilityPhysicianNPIsTINs_bkp">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="PQRSV13Model.sp_getFacilityPhysicianNPIsTINs_bkp_Result">
+          <ScalarProperty Name="first_name" ColumnName="first_name" />
+          <ScalarProperty Name="last_name" ColumnName="last_name" />
+          <ScalarProperty Name="npi" ColumnName="npi" />
+          <ScalarProperty Name="TIN" ColumnName="TIN" />
+          <ScalarProperty Name="is_active" ColumnName="is_active" />
+          <ScalarProperty Name="deactivation_date" ColumnName="deactivation_date" />
+          <ScalarProperty Name="is_enrolled" ColumnName="is_enrolled" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_getFacilityTIN" FunctionName="PQRSV13Model.Store.sp_getFacilityTIN" />
+    <FunctionImportMapping FunctionImportName="sp_getFacilityTIN_GPRO" FunctionName="PQRSV13Model.Store.sp_getFacilityTIN_GPRO">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="PQRSV13Model.sp_getFacilityTIN_GPRO_Result">
+          <ScalarProperty Name="TIN" ColumnName="TIN" />
+          <ScalarProperty Name="IS_GPRO" ColumnName="IS_GPRO" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_GetFacilityTinDocumentsStatus" FunctionName="PQRSV13Model.Store.sp_GetFacilityTinDocumentsStatus">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="PQRSV13Model.sp_GetFacilityTinDocumentsStatus_Result">
+          <ScalarProperty Name="TIN" ColumnName="TIN" />
+          <ScalarProperty Name="NPI" ColumnName="NPI" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_getFacilityTINsWithOptInStatus" FunctionName="PQRSV13Model.Store.sp_getFacilityTINsWithOptInStatus">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="PQRSV13Model.sp_getFacilityTINsWithOptInStatus_Result">
+          <ScalarProperty Name="TIN" ColumnName="TIN" />
+          <ScalarProperty Name="OptinEligibleStatus" ColumnName="OptinEligibleStatus" />
+          <ScalarProperty Name="IsOptedIn" ColumnName="IsOptedIn" />
+          <ScalarProperty Name="OptInDecisionDate" ColumnName="OptInDecisionDate" />
+          <ScalarProperty Name="NPI" ColumnName="NPI" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_getFacilityUnFinializedTins" FunctionName="PQRSV13Model.Store.sp_getFacilityUnFinializedTins">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="PQRSV13Model.sp_getFacilityUnFinializedTins_Result">
+          <ScalarProperty Name="TIN" ColumnName="TIN" />
+          <ScalarProperty Name="IS_GPRO" ColumnName="IS_GPRO" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_getFacilityUnFinializedTins_ACI" FunctionName="PQRSV13Model.Store.sp_getFacilityUnFinializedTins_ACI">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="PQRSV13Model.sp_getFacilityUnFinializedTins_ACI_Result">
+          <ScalarProperty Name="TIN" ColumnName="TIN" />
+          <ScalarProperty Name="IS_GPRO" ColumnName="IS_GPRO" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_GetFacilityUnpaidInvoicesCount" FunctionName="PQRSV13Model.Store.sp_GetFacilityUnpaidInvoicesCount" />
+    <FunctionImportMapping FunctionImportName="sp_getListOfFacilities" FunctionName="PQRSV13Model.Store.sp_getListOfFacilities" />
+    <FunctionImportMapping FunctionImportName="sp_getNPIsOfTin" FunctionName="PQRSV13Model.Store.sp_getNPIsOfTin">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="PQRSV13Model.sp_getNPIsOfTin_Result">
+          <ScalarProperty Name="NPI" ColumnName="NPI" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="TIN" ColumnName="TIN" />
+          <ScalarProperty Name="is_GPRO" ColumnName="is_GPRO" />
+          <ScalarProperty Name="IS_ENROLLED" ColumnName="IS_ENROLLED" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_getPhysianProfileForNPI" FunctionName="PQRSV13Model.Store.sp_getPhysianProfileForNPI">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="PQRSV13Model.sp_getPhysianProfileForNPI_Result">
+          <ScalarProperty Name="NPI" ColumnName="NPI" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_getPhysicianDocumentStatus" FunctionName="PQRSV13Model.Store.sp_getPhysicianDocumentStatus" />
+    <FunctionImportMapping FunctionImportName="sp_GetPhysicianInvoices" FunctionName="PQRSV13Model.Store.sp_GetPhysicianInvoices">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="PQRSV13Model.sp_GetPhysicianInvoices_Result">
+          <ScalarProperty Name="InvoiceId" ColumnName="InvoiceId" />
+          <ScalarProperty Name="CorporateID" ColumnName="CorporateID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_getPhysicianNPIByFacilityID" FunctionName="PQRSV13Model.Store.sp_getPhysicianNPIByFacilityID">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="PQRSV13Model.sp_getPhysicianNPIByFacilityID_Result">
+          <ScalarProperty Name="first_name" ColumnName="first_name" />
+          <ScalarProperty Name="last_name" ColumnName="last_name" />
+          <ScalarProperty Name="NPI" ColumnName="NPI" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_getPhysicianProfile" FunctionName="PQRSV13Model.Store.sp_getPhysicianProfile">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="PQRSV13Model.sp_getPhysicianProfile_Result">
+          <ScalarProperty Name="NPI" ColumnName="NPI" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_getTIN_GPRO" FunctionName="PQRSV13Model.Store.sp_getTIN_GPRO" />
+    <FunctionImportMapping FunctionImportName="sp_getTinNpiDetailsForOptInData" FunctionName="PQRSV13Model.Store.sp_getTinNpiDetailsForOptInData">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="PQRSV13Model.sp_getTinNpiDetailsForOptInData_Result">
+          <ScalarProperty Name="TIN" ColumnName="TIN" />
+          <ScalarProperty Name="NPI" ColumnName="NPI" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_getTINNPIsWithOptInStatus" FunctionName="PQRSV13Model.Store.sp_getTINNPIsWithOptInStatus">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="PQRSV13Model.sp_getTINNPIsWithOptInStatus_Result">
+          <ScalarProperty Name="TIN" ColumnName="TIN" />
+          <ScalarProperty Name="OptinEligibleStatus" ColumnName="OptinEligibleStatus" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_getTINNumbers" FunctionName="PQRSV13Model.Store.sp_getTINNumbers">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="PQRSV13Model.sp_getTINNumbers_Result">
+          <ScalarProperty Name="TIN" ColumnName="TIN" />
+          <ScalarProperty Name="Registry" ColumnName="Registry" />
+          <ScalarProperty Name="TIN_Description" ColumnName="TIN_Description" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_getUserIDWithNrdrUserID" FunctionName="PQRSV13Model.Store.sp_getUserIDWithNrdrUserID" />
+    <FunctionImportMapping FunctionImportName="sp_helpdiagramdefinition" FunctionName="PQRSV13Model.Store.sp_helpdiagramdefinition">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="PQRSV13Model.sp_helpdiagramdefinition_Result">
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_helpdiagrams" FunctionName="PQRSV13Model.Store.sp_helpdiagrams">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="PQRSV13Model.sp_helpdiagrams_Result">
+          <ScalarProperty Name="Database" ColumnName="Database" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Owner" ColumnName="Owner" />
+          <ScalarProperty Name="OwnerID" ColumnName="OwnerID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_isExistFacilitytin" FunctionName="PQRSV13Model.Store.sp_isExistFacilitytin" />
+    <FunctionImportMapping FunctionImportName="sp_Physian_Tin_Count" FunctionName="PQRSV13Model.Store.sp_Physian_Tin_Count" />
+    <FunctionImportMapping FunctionImportName="SP_PhysicianAttestionDetails_bak" FunctionName="PQRSV13Model.Store.SP_PhysicianAttestionDetails_bak">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="PQRSV13Model.SP_PhysicianAttestionDetails_bak_Result">
+          <ScalarProperty Name="IsAttested" ColumnName="IsAttested" />
+          <ScalarProperty Name="IsNewTins" ColumnName="IsNewTins" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SP_RecordEnteredPageGridDetails" FunctionName="PQRSV13Model.Store.SP_RecordEnteredPageGridDetails">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="PQRSV13Model.SP_RecordEnteredPageGridDetails_Result">
+          <ScalarProperty Name="NPI" ColumnName="NPI" />
+          <ScalarProperty Name="TIN" ColumnName="TIN" />
+          <ScalarProperty Name="ExamID" ColumnName="ExamID" />
+          <ScalarProperty Name="MeasureID" ColumnName="MeasureID" />
+          <ScalarProperty Name="MeasureNum" ColumnName="MeasureNum" />
+          <ScalarProperty Name="CPTCode" ColumnName="CPTCode" />
+          <ScalarProperty Name="NumeratorCode" ColumnName="NumeratorCode" />
+          <ScalarProperty Name="Created_Date" ColumnName="Created_Date" />
+          <ScalarProperty Name="ExamDate" ColumnName="ExamDate" />
+          <ScalarProperty Name="UniqueExamID" ColumnName="UniqueExamID" />
+          <ScalarProperty Name="PatientGender" ColumnName="PatientGender" />
+          <ScalarProperty Name="PatientID" ColumnName="PatientID" />
+          <ScalarProperty Name="isEncrypt" ColumnName="isEncrypt" />
+          <ScalarProperty Name="PatientAge" ColumnName="PatientAge" />
+          <ScalarProperty Name="StatusDesc" ColumnName="StatusDesc" />
+          <ScalarProperty Name="DataSource" ColumnName="DataSource" />
+          <ScalarProperty Name="cmsYear" ColumnName="cmsYear" />
+          <ScalarProperty Name="RecordsCount" ColumnName="RecordsCount" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_renamediagram" FunctionName="PQRSV13Model.Store.sp_renamediagram" />
+    <FunctionImportMapping FunctionImportName="sp_sendquarterlymails" FunctionName="PQRSV13Model.Store.sp_sendquarterlymails" />
+    <FunctionImportMapping FunctionImportName="Sp_SingleNPITINFiles" FunctionName="PQRSV13Model.Store.Sp_SingleNPITINFiles">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="PQRSV13Model.Sp_SingleNPITINFiles_Result">
+          <ScalarProperty Name="FILE_NAME" ColumnName="FILE_NAME" />
+          <ScalarProperty Name="UPLOAD_START_DATE_TIME" ColumnName="UPLOAD_START_DATE_TIME" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="IsFile_Encrypted" ColumnName="IsFile_Encrypted" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_upgraddiagrams" FunctionName="PQRSV13Model.Store.sp_upgraddiagrams" />
+    <FunctionImportMapping FunctionImportName="SP_Validate_PreProcessed_Data" FunctionName="PQRSV13Model.Store.SP_Validate_PreProcessed_Data" />
+    <FunctionImportMapping FunctionImportName="sp_validateTIN" FunctionName="PQRSV13Model.Store.sp_validateTIN" />
+    <FunctionImportMapping FunctionImportName="SpacimeasuresInsertbyselectionId" FunctionName="PQRSV13Model.Store.SpacimeasuresInsertbyselectionId" />
+    <FunctionImportMapping FunctionImportName="spAddFacilityUserNPIsFromNRDR" FunctionName="PQRSV13Model.Store.spAddFacilityUserNPIsFromNRDR" />
+    <FunctionImportMapping FunctionImportName="spAddUserFacilityTIN_forFacility" FunctionName="PQRSV13Model.Store.spAddUserFacilityTIN_forFacility" />
+    <FunctionImportMapping FunctionImportName="spALLTINNPIRelatedMeasureDataForFullYear" FunctionName="PQRSV13Model.Store.spALLTINNPIRelatedMeasureDataForFullYear">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="PQRSV13Model.spALLTINNPIRelatedMeasureDataForFullYear_Result">
+          <ScalarProperty Name="Measure_num" ColumnName="Measure_num" />
+          <ScalarProperty Name="TotalExamsCount" ColumnName="TotalExamsCount" />
+          <ScalarProperty Name="SelectedForCMSSubmission" ColumnName="SelectedForCMSSubmission" />
+          <ScalarProperty Name="TotalCasesReviewed" ColumnName="TotalCasesReviewed" />
+          <ScalarProperty Name="Tin" ColumnName="Tin" />
+          <ScalarProperty Name="CMSYear" ColumnName="CMSYear" />
+          <ScalarProperty Name="is90days" ColumnName="is90days" />
+          <ScalarProperty Name="Last_Mod_Date" ColumnName="Last_Mod_Date" />
+          <ScalarProperty Name="isSavedPreviously" ColumnName="isSavedPreviously" />
+          <ScalarProperty Name="HundredPercentSubmit" ColumnName="HundredPercentSubmit" />
+          <ScalarProperty Name="PhysGroupMeasure" ColumnName="PhysGroupMeasure" />
+          <ScalarProperty Name="Performance_rate" ColumnName="Performance_rate" />
+          <ScalarProperty Name="Decile_Val" ColumnName="Decile_Val" />
+          <ScalarProperty Name="Reporting_Rate" ColumnName="Reporting_Rate" />
+          <ScalarProperty Name="NPI" ColumnName="NPI" />
+          <ScalarProperty Name="CMS_Message" ColumnName="CMS_Message" />
+          <ScalarProperty Name="isEndToEndReported" ColumnName="isEndToEndReported" />
+          <ScalarProperty Name="HundredPercentSubmit_C2" ColumnName="HundredPercentSubmit_C2" />
+          <ScalarProperty Name="TotalCasesReviewed_C2" ColumnName="TotalCasesReviewed_C2" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spALLTINNPIRelatedMeasureDataForFullYear_Physician" FunctionName="PQRSV13Model.Store.spALLTINNPIRelatedMeasureDataForFullYear_Physician">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="PQRSV13Model.spALLTINNPIRelatedMeasureDataForFullYear_Physician_Result">
+          <ScalarProperty Name="Measure_num" ColumnName="Measure_num" />
+          <ScalarProperty Name="TotalExamsCount" ColumnName="TotalExamsCount" />
+          <ScalarProperty Name="SelectedForCMSSubmission" ColumnName="SelectedForCMSSubmission" />
+          <ScalarProperty Name="TotalCasesReviewed" ColumnName="TotalCasesReviewed" />
+          <ScalarProperty Name="Tin" ColumnName="Tin" />
+          <ScalarProperty Name="CMSYear" ColumnName="CMSYear" />
+          <ScalarProperty Name="is90days" ColumnName="is90days" />
+          <ScalarProperty Name="Last_Mod_Date" ColumnName="Last_Mod_Date" />
+          <ScalarProperty Name="isSavedPreviously" ColumnName="isSavedPreviously" />
+          <ScalarProperty Name="HundredPercentSubmit" ColumnName="HundredPercentSubmit" />
+          <ScalarProperty Name="PhysGroupMeasure" ColumnName="PhysGroupMeasure" />
+          <ScalarProperty Name="Performance_rate" ColumnName="Performance_rate" />
+          <ScalarProperty Name="Decile_Val" ColumnName="Decile_Val" />
+          <ScalarProperty Name="Reporting_Rate" ColumnName="Reporting_Rate" />
+          <ScalarProperty Name="NPI" ColumnName="NPI" />
+          <ScalarProperty Name="CMS_Message" ColumnName="CMS_Message" />
+          <ScalarProperty Name="isEndtoEndReported" ColumnName="isEndtoEndReported" />
+          <ScalarProperty Name="HundredPercentSubmit_C2" ColumnName="HundredPercentSubmit_C2" />
+          <ScalarProperty Name="TotalCasesReviewed_C2" ColumnName="TotalCasesReviewed_C2" />
+          <ScalarProperty Name="HundredPercentSubmit_C3" ColumnName="HundredPercentSubmit_C3" />
+          <ScalarProperty Name="TotalCasesReviewed_C3" ColumnName="TotalCasesReviewed_C3" />
+          <ScalarProperty Name="TotalExamsCount_C1" ColumnName="TotalExamsCount_C1" />
+          <ScalarProperty Name="TotalExamsCount_C3" ColumnName="TotalExamsCount_C3" />
+          <ScalarProperty Name="Measure_Scoring" ColumnName="Measure_Scoring" />
+          <ScalarProperty Name="PR_CMeasure" ColumnName="PR_CMeasure" />
+          <ScalarProperty Name="PriorityName" ColumnName="PriorityName" />
+          <ScalarProperty Name="ISSubmittedtoCMS" ColumnName="ISSubmittedtoCMS" />
+          <ScalarProperty Name="Is_eCQM" ColumnName="Is_eCQM" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spAllTinRelatedMeasureDataForFullYear" FunctionName="PQRSV13Model.Store.spAllTinRelatedMeasureDataForFullYear">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="PQRSV13Model.spAllTinRelatedMeasureDataForFullYear_Result">
+          <ScalarProperty Name="Measure_num" ColumnName="Measure_num" />
+          <ScalarProperty Name="TotalExamsCount" ColumnName="TotalExamsCount" />
+          <ScalarProperty Name="SelectedForCMSSubmission" ColumnName="SelectedForCMSSubmission" />
+          <ScalarProperty Name="TotalCasesReviewed" ColumnName="TotalCasesReviewed" />
+          <ScalarProperty Name="Tin" ColumnName="Tin" />
+          <ScalarProperty Name="CMSYear" ColumnName="CMSYear" />
+          <ScalarProperty Name="is90days" ColumnName="is90days" />
+          <ScalarProperty Name="Last_Mod_Date" ColumnName="Last_Mod_Date" />
+          <ScalarProperty Name="isSavedPreviously" ColumnName="isSavedPreviously" />
+          <ScalarProperty Name="HundredPercentSubmit" ColumnName="HundredPercentSubmit" />
+          <ScalarProperty Name="PhysGroupMeasure" ColumnName="PhysGroupMeasure" />
+          <ScalarProperty Name="totalPhysiansSubmittedCount" ColumnName="totalPhysiansSubmittedCount" />
+          <ScalarProperty Name="Performance_rate" ColumnName="Performance_rate" />
+          <ScalarProperty Name="Decile_Val" ColumnName="Decile_Val" />
+          <ScalarProperty Name="Reporting_Rate" ColumnName="Reporting_Rate" />
+          <ScalarProperty Name="CMS_Message" ColumnName="CMS_Message" />
+          <ScalarProperty Name="isEndToEndReported" ColumnName="isEndToEndReported" />
+          <ScalarProperty Name="HundredPercentSubmit_C2" ColumnName="HundredPercentSubmit_C2" />
+          <ScalarProperty Name="TotalCasesReviewed_C2" ColumnName="TotalCasesReviewed_C2" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SPAttestation_FacilityDetails" FunctionName="PQRSV13Model.Store.SPAttestation_FacilityDetails">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="PQRSV13Model.SPAttestation_FacilityDetails_Result">
+          <ScalarProperty Name="IsAttested" ColumnName="IsAttested" />
+          <ScalarProperty Name="IsNonGproAttested" ColumnName="IsNonGproAttested" />
+          <ScalarProperty Name="IsGproAttested" ColumnName="IsGproAttested" />
+          <ScalarProperty Name="TINsNPIsNewExists" ColumnName="TINsNPIsNewExists" />
+          <ScalarProperty Name="EmailAddr" ColumnName="EmailAddr" />
+          <ScalarProperty Name="AttestedBy" ColumnName="AttestedBy" />
+          <ScalarProperty Name="AttestedDate" ColumnName="AttestedDate" />
+          <ScalarProperty Name="ISTinsNPIsAvaliable" ColumnName="ISTinsNPIsAvaliable" />
+          <ScalarProperty Name="IsFacilityNonGproNpisExisted" ColumnName="IsFacilityNonGproNpisExisted" />
+          <ScalarProperty Name="IsFacilityGproTinsExisted" ColumnName="IsFacilityGproTinsExisted" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SPAttestation_InsertFacilityData" FunctionName="PQRSV13Model.Store.SPAttestation_InsertFacilityData" />
+    <FunctionImportMapping FunctionImportName="SPAttestation_InsertPhysicianData" FunctionName="PQRSV13Model.Store.SPAttestation_InsertPhysicianData" />
+    <FunctionImportMapping FunctionImportName="SPAttestation_InsertTinsNpisofFile" FunctionName="PQRSV13Model.Store.SPAttestation_InsertTinsNpisofFile" />
+    <FunctionImportMapping FunctionImportName="SPAttestation_PhysicianDetails" FunctionName="PQRSV13Model.Store.SPAttestation_PhysicianDetails">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="PQRSV13Model.SPAttestation_PhysicianDetails_Result">
+          <ScalarProperty Name="IsAttested" ColumnName="IsAttested" />
+          <ScalarProperty Name="IsNewTins" ColumnName="IsNewTins" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="AttestedBy" ColumnName="AttestedBy" />
+          <ScalarProperty Name="AttestedDate" ColumnName="AttestedDate" />
+          <ScalarProperty Name="IsNonGproTinExists" ColumnName="IsNonGproTinExists" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SPAttestationDelete_UploadFiles" FunctionName="PQRSV13Model.Store.SPAttestationDelete_UploadFiles" />
+    <FunctionImportMapping FunctionImportName="SpBackend_GPRO_IAMeasures" FunctionName="PQRSV13Model.Store.SpBackend_GPRO_IAMeasures" />
+    <FunctionImportMapping FunctionImportName="SpBackend_GPROTIN_IA_Measures" FunctionName="PQRSV13Model.Store.SpBackend_GPROTIN_IA_Measures" />
+    <FunctionImportMapping FunctionImportName="SpBackend_GPROTIN_Measures" FunctionName="PQRSV13Model.Store.SpBackend_GPROTIN_Measures" />
+    <FunctionImportMapping FunctionImportName="SpBackend_GPROTIN_Measures_Finalize" FunctionName="PQRSV13Model.Store.SpBackend_GPROTIN_Measures_Finalize" />
+    <FunctionImportMapping FunctionImportName="SpBackend_GPROTIN_Measures_IA_Finalize" FunctionName="PQRSV13Model.Store.SpBackend_GPROTIN_Measures_IA_Finalize" />
+    <FunctionImportMapping FunctionImportName="spBackend_IA_ACI_Tins_Insert_tbl_Tin_Gpro" FunctionName="PQRSV13Model.Store.spBackend_IA_ACI_Tins_Insert_tbl_Tin_Gpro" />
+    <FunctionImportMapping FunctionImportName="SpBackend_NonGPRO_IAMeasures" FunctionName="PQRSV13Model.Store.SpBackend_NonGPRO_IAMeasures" />
+    <FunctionImportMapping FunctionImportName="SpBackend_NONGPROTIN_NPI_IA_Measures" FunctionName="PQRSV13Model.Store.SpBackend_NONGPROTIN_NPI_IA_Measures" />
+    <FunctionImportMapping FunctionImportName="SpBackend_NONGPROTIN_NPI_Measures" FunctionName="PQRSV13Model.Store.SpBackend_NONGPROTIN_NPI_Measures" />
+    <FunctionImportMapping FunctionImportName="SpBackend_NONGPROTIN_NPI_Measures_Finalize" FunctionName="PQRSV13Model.Store.SpBackend_NONGPROTIN_NPI_Measures_Finalize" />
+    <FunctionImportMapping FunctionImportName="SpBackend_NONGPROTIN_NPI_Measures_IA_Finalize" FunctionName="PQRSV13Model.Store.SpBackend_NONGPROTIN_NPI_Measures_IA_Finalize" />
+    <FunctionImportMapping FunctionImportName="SpBackend_TIN_IAMeasures" FunctionName="PQRSV13Model.Store.SpBackend_TIN_IAMeasures" />
+    <FunctionImportMapping FunctionImportName="SpBackend_TINNPI_IAMeasures" FunctionName="PQRSV13Model.Store.SpBackend_TINNPI_IAMeasures" />
+    <FunctionImportMapping FunctionImportName="SpBackend_TINNPI_IAMeasures_UNSELECTED" FunctionName="PQRSV13Model.Store.SpBackend_TINNPI_IAMeasures_UNSELECTED" />
+    <FunctionImportMapping FunctionImportName="SPBackendHandling_tblFileAccessFacilityList" FunctionName="PQRSV13Model.Store.SPBackendHandling_tblFileAccessFacilityList" />
+    <FunctionImportMapping FunctionImportName="spBackupCompatability_Fileupload" FunctionName="PQRSV13Model.Store.spBackupCompatability_Fileupload" />
+    <FunctionImportMapping FunctionImportName="SPCheck_NPI_Exists" FunctionName="PQRSV13Model.Store.SPCheck_NPI_Exists" />
+    <FunctionImportMapping FunctionImportName="SpCI_App_GetMeasureData" FunctionName="PQRSV13Model.Store.SpCI_App_GetMeasureData">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="PQRSV13Model.SpCI_App_GetMeasureData_Result">
+          <ScalarProperty Name="Tin" ColumnName="Tin" />
+          <ScalarProperty Name="Npi" ColumnName="Npi" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="CategoryId" ColumnName="CategoryId" />
+          <ScalarProperty Name="TIN1" ColumnName="TIN1" />
+          <ScalarProperty Name="NPI1" ColumnName="NPI1" />
+          <ScalarProperty Name="KeyId" ColumnName="KeyId" />
+          <ScalarProperty Name="Measure_Name" ColumnName="Measure_Name" />
+          <ScalarProperty Name="isEndToEndReported" ColumnName="isEndToEndReported" />
+          <ScalarProperty Name="performanceMet" ColumnName="performanceMet" />
+          <ScalarProperty Name="eligiblePopulationExclusion" ColumnName="eligiblePopulationExclusion" />
+          <ScalarProperty Name="eligiblePopulationException" ColumnName="eligiblePopulationException" />
+          <ScalarProperty Name="eligiblePopulation" ColumnName="eligiblePopulation" />
+          <ScalarProperty Name="reportingRate" ColumnName="reportingRate" />
+          <ScalarProperty Name="performanceRate" ColumnName="performanceRate" />
+          <ScalarProperty Name="numerator" ColumnName="numerator" />
+          <ScalarProperty Name="denominator" ColumnName="denominator" />
+          <ScalarProperty Name="denominatorException" ColumnName="denominatorException" />
+          <ScalarProperty Name="numeratorExclusion" ColumnName="numeratorExclusion" />
+          <ScalarProperty Name="valuebit" ColumnName="valuebit" />
+          <ScalarProperty Name="Stratum_Name" ColumnName="Stratum_Name" />
+          <ScalarProperty Name="ObservationInstances" ColumnName="ObservationInstances" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SpCI_App_MeasureDataCount" FunctionName="PQRSV13Model.Store.SpCI_App_MeasureDataCount" />
+    <FunctionImportMapping FunctionImportName="SPCI_AppInsertMeasureData" FunctionName="PQRSV13Model.Store.SPCI_AppInsertMeasureData" />
+    <FunctionImportMapping FunctionImportName="SPCI_BatchPerformanceStatusUpdate" FunctionName="PQRSV13Model.Store.SPCI_BatchPerformanceStatusUpdate" />
+    <FunctionImportMapping FunctionImportName="SPCI_BlockedMeasureList" FunctionName="PQRSV13Model.Store.SPCI_BlockedMeasureList" />
+    <FunctionImportMapping FunctionImportName="SPCI_BulkUpload_ExcelMeasureData_Gpro_IA" FunctionName="PQRSV13Model.Store.SPCI_BulkUpload_ExcelMeasureData_Gpro_IA" />
+    <FunctionImportMapping FunctionImportName="SPCI_BulkUpload_ExcelMeasureData_Gpro_QM" FunctionName="PQRSV13Model.Store.SPCI_BulkUpload_ExcelMeasureData_Gpro_QM" />
+    <FunctionImportMapping FunctionImportName="SPCI_BulkUpload_ExcelMeasureData_NonGpro_IA" FunctionName="PQRSV13Model.Store.SPCI_BulkUpload_ExcelMeasureData_NonGpro_IA" />
+    <FunctionImportMapping FunctionImportName="SPCI_BulkUpload_ExcelMeasureData_NonGpro_QM" FunctionName="PQRSV13Model.Store.SPCI_BulkUpload_ExcelMeasureData_NonGpro_QM" />
+    <FunctionImportMapping FunctionImportName="SPCI_BulkUpload_FileErrorDetails" FunctionName="PQRSV13Model.Store.SPCI_BulkUpload_FileErrorDetails">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="PQRSV13Model.SPCI_BulkUpload_FileErrorDetails_Result">
+          <ScalarProperty Name="TIN" ColumnName="TIN" />
+          <ScalarProperty Name="Npi" ColumnName="Npi" />
+          <ScalarProperty Name="ErrorMessage" ColumnName="ErrorMessage" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SPCI_BulkUpload_FileProcess_Details" FunctionName="PQRSV13Model.Store.SPCI_BulkUpload_FileProcess_Details">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="PQRSV13Model.SPCI_BulkUpload_FileProcess_Details_Result">
+          <ScalarProperty Name="CmsStatusDetails" ColumnName="CmsStatusDetails" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="CategoryName" ColumnName="CategoryName" />
+          <ScalarProperty Name="FileName" ColumnName="FileName" />
+          <ScalarProperty Name="InvalidExcelRecords" ColumnName="InvalidExcelRecords" />
+          <ScalarProperty Name="TotalEditedExcelRecordsCount" ColumnName="TotalEditedExcelRecordsCount" />
+          <ScalarProperty Name="ValidExcelRecords" ColumnName="ValidExcelRecords" />
+          <ScalarProperty Name="TotalExcelRecords" ColumnName="TotalExcelRecords" />
+          <ScalarProperty Name="FileId" ColumnName="FileId" />
+          <ScalarProperty Name="CmsYear" ColumnName="CmsYear" />
+          <ScalarProperty Name="Category_Name" ColumnName="Category_Name" />
+          <ScalarProperty Name="CompleteDate" ColumnName="CompleteDate" />
+          <ScalarProperty Name="Message" ColumnName="Message" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SPCI_BulkUpload_FilesProcess" FunctionName="PQRSV13Model.Store.SPCI_BulkUpload_FilesProcess" />
+    <FunctionImportMapping FunctionImportName="SPCI_BulkUpload_HistoryDetails" FunctionName="PQRSV13Model.Store.SPCI_BulkUpload_HistoryDetails">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="PQRSV13Model.SPCI_BulkUpload_HistoryDetails_Result">
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="FileName" ColumnName="FileName" />
+          <ScalarProperty Name="STATUS" ColumnName="STATUS" />
+          <ScalarProperty Name="CategoryId" ColumnName="CategoryId" />
+          <ScalarProperty Name="NoofFailureSubmissions" ColumnName="NoofFailureSubmissions" />
+          <ScalarProperty Name="NoofSuccessSubmissions" ColumnName="NoofSuccessSubmissions" />
+          <ScalarProperty Name="NoofSubmissions" ColumnName="NoofSubmissions" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="CompleteDate" ColumnName="CompleteDate" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SPCI_BulkUpload_MeasureDataUpdate" FunctionName="PQRSV13Model.Store.SPCI_BulkUpload_MeasureDataUpdate" />
+    <FunctionImportMapping FunctionImportName="SPCI_BulkUpload_MeasureDataUpdate_ACRStaff" FunctionName="PQRSV13Model.Store.SPCI_BulkUpload_MeasureDataUpdate_ACRStaff" />
+    <FunctionImportMapping FunctionImportName="SPCI_BulkUpload_MeasureDataUpdate_ACRStaff_IA" FunctionName="PQRSV13Model.Store.SPCI_BulkUpload_MeasureDataUpdate_ACRStaff_IA">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="PQRSV13Model.SPCI_BulkUpload_MeasureDataUpdate_ACRStaff_IA_Result">
+          <ScalarProperty Name="TIN" ColumnName="TIN" />
+          <ScalarProperty Name="NPI" ColumnName="NPI" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SPCI_BulkUpload_MeasureDataUpdate_IA" FunctionName="PQRSV13Model.Store.SPCI_BulkUpload_MeasureDataUpdate_IA" />
+    <FunctionImportMapping FunctionImportName="SPCI_BulkUpload_MeasureDataUpdateForFacility" FunctionName="PQRSV13Model.Store.SPCI_BulkUpload_MeasureDataUpdateForFacility" />
+    <FunctionImportMapping FunctionImportName="SPCI_BulkUpload_PREValidation_For_IA" FunctionName="PQRSV13Model.Store.SPCI_BulkUpload_PREValidation_For_IA" />
+    <FunctionImportMapping FunctionImportName="SPCI_BulkUpload_ReCalculatePerformance_TIN_Measure" FunctionName="PQRSV13Model.Store.SPCI_BulkUpload_ReCalculatePerformance_TIN_Measure" />
+    <FunctionImportMapping FunctionImportName="SPCI_BulkUpload_ReCalculatePerformance_TIN_NPI_Measure" FunctionName="PQRSV13Model.Store.SPCI_BulkUpload_ReCalculatePerformance_TIN_NPI_Measure" />
+    <FunctionImportMapping FunctionImportName="SPCI_BulkUpload_SingleMeasureDataUpdate" FunctionName="PQRSV13Model.Store.SPCI_BulkUpload_SingleMeasureDataUpdate" />
+    <FunctionImportMapping FunctionImportName="SPCI_BulkUploadInvalidRecordsForTINNPIs" FunctionName="PQRSV13Model.Store.SPCI_BulkUploadInvalidRecordsForTINNPIs">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="PQRSV13Model.SPCI_BulkUploadInvalidRecordsForTINNPIs_Result">
+          <ScalarProperty Name="TIN" ColumnName="TIN" />
+          <ScalarProperty Name="Npi" ColumnName="Npi" />
+          <ScalarProperty Name="Measure_Number" ColumnName="Measure_Number" />
+          <ScalarProperty Name="Total_Exams_Submitted" ColumnName="Total_Exams_Submitted" />
+          <ScalarProperty Name="Total_Exam_Volume_Old" ColumnName="Total_Exam_Volume_Old" />
+          <ScalarProperty Name="Total_Exam_Volume_New" ColumnName="Total_Exam_Volume_New" />
+          <ScalarProperty Name="Submitted_Hundred_Percent_OLD" ColumnName="Submitted_Hundred_Percent_OLD" />
+          <ScalarProperty Name="Submitted_Hundred_Percent_NEW" ColumnName="Submitted_Hundred_Percent_NEW" />
+          <ScalarProperty Name="Selected_for_CMS_submission_OLD" ColumnName="Selected_for_CMS_submission_OLD" />
+          <ScalarProperty Name="Selected_for_CMS_submission_NEW" ColumnName="Selected_for_CMS_submission_NEW" />
+          <ScalarProperty Name="EndtoEndReporting_OLD" ColumnName="EndtoEndReporting_OLD" />
+          <ScalarProperty Name="EndtoEndReporting_NEW" ColumnName="EndtoEndReporting_NEW" />
+          <ScalarProperty Name="Performance_rate" ColumnName="Performance_rate" />
+          <ScalarProperty Name="Completeness" ColumnName="Completeness" />
+          <ScalarProperty Name="Decile" ColumnName="Decile" />
+          <ScalarProperty Name="CMS_Submission_Status" ColumnName="CMS_Submission_Status" />
+          <ScalarProperty Name="ErrorMessage" ColumnName="ErrorMessage" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SPCI_BulkUploadInvalidRecordsForTINs" FunctionName="PQRSV13Model.Store.SPCI_BulkUploadInvalidRecordsForTINs">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="PQRSV13Model.SPCI_BulkUploadInvalidRecordsForTINs_Result">
+          <ScalarProperty Name="TIN" ColumnName="TIN" />
+          <ScalarProperty Name="Measure_Number" ColumnName="Measure_Number" />
+          <ScalarProperty Name="Total_Exams_Submitted" ColumnName="Total_Exams_Submitted" />
+          <ScalarProperty Name="Total_Exam_Volume_Old" ColumnName="Total_Exam_Volume_Old" />
+          <ScalarProperty Name="Total_Exam_Volume_New" ColumnName="Total_Exam_Volume_New" />
+          <ScalarProperty Name="Submitted_Hundred_Percent_OLD" ColumnName="Submitted_Hundred_Percent_OLD" />
+          <ScalarProperty Name="Submitted_Hundred_Percent_NEW" ColumnName="Submitted_Hundred_Percent_NEW" />
+          <ScalarProperty Name="Selected_for_CMS_submission_OLD" ColumnName="Selected_for_CMS_submission_OLD" />
+          <ScalarProperty Name="Selected_for_CMS_submission_NEW" ColumnName="Selected_for_CMS_submission_NEW" />
+          <ScalarProperty Name="EndtoEndReporting_OLD" ColumnName="EndtoEndReporting_OLD" />
+          <ScalarProperty Name="EndtoEndReporting_NEW" ColumnName="EndtoEndReporting_NEW" />
+          <ScalarProperty Name="Performance_rate" ColumnName="Performance_rate" />
+          <ScalarProperty Name="Completeness" ColumnName="Completeness" />
+          <ScalarProperty Name="Decile" ColumnName="Decile" />
+          <ScalarProperty Name="CMS_Submission_Status" ColumnName="CMS_Submission_Status" />
+          <ScalarProperty Name="ErrorMessage" ColumnName="ErrorMessage" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SPCI_DeleteMeasureData" FunctionName="PQRSV13Model.Store.SPCI_DeleteMeasureData" />
+    <FunctionImportMapping FunctionImportName="SPCI_DeleteMeasureswithFilter" FunctionName="PQRSV13Model.Store.SPCI_DeleteMeasureswithFilter">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="PQRSV13Model.SPCI_DeleteMeasureswithFilter_Result">
+          <ScalarProperty Name="Key_Id" ColumnName="Key_Id" />
+          <ScalarProperty Name="Tin" ColumnName="Tin" />
+          <ScalarProperty Name="Npi" ColumnName="Npi" />
+          <ScalarProperty Name="Submission_Uniquekey_Id" ColumnName="Submission_Uniquekey_Id" />
+          <ScalarProperty Name="MeasurementSet_Unquekey_id" ColumnName="MeasurementSet_Unquekey_id" />
+          <ScalarProperty Name="Category_Id" ColumnName="Category_Id" />
+          <ScalarProperty Name="Response_Id" ColumnName="Response_Id" />
+          <ScalarProperty Name="IsMSetIdActive" ColumnName="IsMSetIdActive" />
+          <ScalarProperty Name="CmsYear" ColumnName="CmsYear" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SPCI_FinalScoreDetails" FunctionName="PQRSV13Model.Store.SPCI_FinalScoreDetails" />
+    <FunctionImportMapping FunctionImportName="SPCI_GetBulkCMSTINNPISSubwithFilter" FunctionName="PQRSV13Model.Store.SPCI_GetBulkCMSTINNPISSubwithFilter">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="PQRSV13Model.SPCI_GetBulkCMSTINNPISSubwithFilter_Result">
+          <ScalarProperty Name="Bulk_ID" ColumnName="Bulk_ID" />
+          <ScalarProperty Name="Tin" ColumnName="Tin" />
+          <ScalarProperty Name="Npi" ColumnName="Npi" />
+          <ScalarProperty Name="Category_Id" ColumnName="Category_Id" />
+          <ScalarProperty Name="Category_Name" ColumnName="Category_Name" />
+          <ScalarProperty Name="CmsYear" ColumnName="CmsYear" />
+          <ScalarProperty Name="IsSubmittoCMS" ColumnName="IsSubmittoCMS" />
+          <ScalarProperty Name="CMSStatus" ColumnName="CMSStatus" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SPCI_GetCategorywiseResponseData" FunctionName="PQRSV13Model.Store.SPCI_GetCategorywiseResponseData" />
+    <FunctionImportMapping FunctionImportName="SPCI_GetFinalScorePendingDetails" FunctionName="PQRSV13Model.Store.SPCI_GetFinalScorePendingDetails" />
+    <FunctionImportMapping FunctionImportName="SpCI_GetIsSubmittoCMSAndSubmittedDate" FunctionName="PQRSV13Model.Store.SpCI_GetIsSubmittoCMSAndSubmittedDate">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="PQRSV13Model.SpCI_GetIsSubmittoCMSAndSubmittedDate_Result">
+          <ScalarProperty Name="isSubmittedtoCMS" ColumnName="isSubmittedtoCMS" />
+          <ScalarProperty Name="LastSubmittedDate" ColumnName="LastSubmittedDate" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SPCI_GetMeasurementsetIdswithFilter" FunctionName="PQRSV13Model.Store.SPCI_GetMeasurementsetIdswithFilter">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="PQRSV13Model.SPCI_GetMeasurementsetIdswithFilter_Result">
+          <ScalarProperty Name="Key_Id" ColumnName="Key_Id" />
+          <ScalarProperty Name="Tin" ColumnName="Tin" />
+          <ScalarProperty Name="Npi" ColumnName="Npi" />
+          <ScalarProperty Name="Submission_Uniquekey_Id" ColumnName="Submission_Uniquekey_Id" />
+          <ScalarProperty Name="MeasurementSet_Unquekey_id" ColumnName="MeasurementSet_Unquekey_id" />
+          <ScalarProperty Name="Category_Id" ColumnName="Category_Id" />
+          <ScalarProperty Name="Category_Name" ColumnName="Category_Name" />
+          <ScalarProperty Name="CmsYear" ColumnName="CmsYear" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SpCI_GetMeasurementSetKeyForPatch" FunctionName="PQRSV13Model.Store.SpCI_GetMeasurementSetKeyForPatch">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="PQRSV13Model.SpCI_GetMeasurementSetKeyForPatch_Result">
+          <ScalarProperty Name="Submission_Uniquekey_Id" ColumnName="Submission_Uniquekey_Id" />
+          <ScalarProperty Name="MeasurementSet_Unquekey_id" ColumnName="MeasurementSet_Unquekey_id" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SPCI_GetScoreDetails" FunctionName="PQRSV13Model.Store.SPCI_GetScoreDetails">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="PQRSV13Model.SPCI_GetScoreDetails_Result">
+          <ScalarProperty Name="Tin" ColumnName="Tin" />
+          <ScalarProperty Name="Npi" ColumnName="Npi" />
+          <ScalarProperty Name="CategoryName" ColumnName="CategoryName" />
+          <ScalarProperty Name="CmsYear" ColumnName="CmsYear" />
+          <ScalarProperty Name="LastSubmittedDate" ColumnName="LastSubmittedDate" />
+          <ScalarProperty Name="Submission_Uniquekey_Id" ColumnName="Submission_Uniquekey_Id" />
+          <ScalarProperty Name="FilesCount" ColumnName="FilesCount" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SPCI_GetSub_IndividualScore" FunctionName="PQRSV13Model.Store.SPCI_GetSub_IndividualScore">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="PQRSV13Model.SPCI_GetSub_IndividualScore_Result">
+          <ScalarProperty Name="Individual_Mes_ScoreId" ColumnName="Individual_Mes_ScoreId" />
+          <ScalarProperty Name="Measure_Name" ColumnName="Measure_Name" />
+          <ScalarProperty Name="Measure_Score" ColumnName="Measure_Score" />
+          <ScalarProperty Name="processingStatus" ColumnName="processingStatus" />
+          <ScalarProperty Name="totaldecileScore" ColumnName="totaldecileScore" />
+          <ScalarProperty Name="totalMeasurementPoints" ColumnName="totalMeasurementPoints" />
+          <ScalarProperty Name="totalBonusPoints" ColumnName="totalBonusPoints" />
+          <ScalarProperty Name="measurementPicker" ColumnName="measurementPicker" />
+          <ScalarProperty Name="feedback_quality" ColumnName="feedback_quality" />
+          <ScalarProperty Name="endToEndBonus" ColumnName="endToEndBonus" />
+          <ScalarProperty Name="outcomeOrPatientExperienceBonus" ColumnName="outcomeOrPatientExperienceBonus" />
+          <ScalarProperty Name="highPriorityBonus" ColumnName="highPriorityBonus" />
+          <ScalarProperty Name="decile" ColumnName="decile" />
+          <ScalarProperty Name="Contribution_Value" ColumnName="Contribution_Value" />
+          <ScalarProperty Name="Max_Contribution" ColumnName="Max_Contribution" />
+          <ScalarProperty Name="Measure_Weight" ColumnName="Measure_Weight" />
+          <ScalarProperty Name="Ia_Complete" ColumnName="Ia_Complete" />
+          <ScalarProperty Name="Pi_Type" ColumnName="Pi_Type" />
+          <ScalarProperty Name="Ia_Message" ColumnName="Ia_Message" />
+          <ScalarProperty Name="Notes" ColumnName="Notes" />
+          <ScalarProperty Name="Category_Id" ColumnName="Category_Id" />
+          <ScalarProperty Name="Sub_ScoreId" ColumnName="Sub_ScoreId" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SPCI_GetSub_Score" FunctionName="PQRSV13Model.Store.SPCI_GetSub_Score">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="PQRSV13Model.SPCI_GetSub_Score_Result">
+          <ScalarProperty Name="TIN" ColumnName="TIN" />
+          <ScalarProperty Name="NPI" ColumnName="NPI" />
+          <ScalarProperty Name="Category_Name" ColumnName="Category_Name" />
+          <ScalarProperty Name="Sub_ScoreId" ColumnName="Sub_ScoreId" />
+          <ScalarProperty Name="Response_Data" ColumnName="Response_Data" />
+          <ScalarProperty Name="QM_Weight_Score" ColumnName="QM_Weight_Score" />
+          <ScalarProperty Name="QM_UnWeight_Score" ColumnName="QM_UnWeight_Score" />
+          <ScalarProperty Name="QM_Max_Contribution" ColumnName="QM_Max_Contribution" />
+          <ScalarProperty Name="QM_Weight_Msg" ColumnName="QM_Weight_Msg" />
+          <ScalarProperty Name="QM_hasACRMeasure" ColumnName="QM_hasACRMeasure" />
+          <ScalarProperty Name="QM_hasQualityMeasures" ColumnName="QM_hasQualityMeasures" />
+          <ScalarProperty Name="IA_Weight_Score" ColumnName="IA_Weight_Score" />
+          <ScalarProperty Name="IA_UnWeight_Score" ColumnName="IA_UnWeight_Score" />
+          <ScalarProperty Name="IA_Max_Contribution" ColumnName="IA_Max_Contribution" />
+          <ScalarProperty Name="IA_Weight_Msg" ColumnName="IA_Weight_Msg" />
+          <ScalarProperty Name="IA_hasIAWeightStatus" ColumnName="IA_hasIAWeightStatus" />
+          <ScalarProperty Name="IA_givenIACreditPCMH" ColumnName="IA_givenIACreditPCMH" />
+          <ScalarProperty Name="IA_givenIAStudyCredit" ColumnName="IA_givenIAStudyCredit" />
+          <ScalarProperty Name="IA_feedback_message" ColumnName="IA_feedback_message" />
+          <ScalarProperty Name="PI_Weight_Score" ColumnName="PI_Weight_Score" />
+          <ScalarProperty Name="PI_Max_Contribution" ColumnName="PI_Max_Contribution" />
+          <ScalarProperty Name="PI_Weight_Msg" ColumnName="PI_Weight_Msg" />
+          <ScalarProperty Name="PI_baseScore" ColumnName="PI_baseScore" />
+          <ScalarProperty Name="PI_attestationBonusEligible" ColumnName="PI_attestationBonusEligible" />
+          <ScalarProperty Name="PI_performance" ColumnName="PI_performance" />
+          <ScalarProperty Name="PI_bonus" ColumnName="PI_bonus" />
+          <ScalarProperty Name="PI_cehrt_bonus" ColumnName="PI_cehrt_bonus" />
+          <ScalarProperty Name="PI_base_max" ColumnName="PI_base_max" />
+          <ScalarProperty Name="PI_performance_max" ColumnName="PI_performance_max" />
+          <ScalarProperty Name="PI_bonus_max" ColumnName="PI_bonus_max" />
+          <ScalarProperty Name="PI_cehrt_bonus_max" ColumnName="PI_cehrt_bonus_max" />
+          <ScalarProperty Name="PI_UnWeight_Score" ColumnName="PI_UnWeight_Score" />
+          <ScalarProperty Name="PI_feedback_message" ColumnName="PI_feedback_message" />
+          <ScalarProperty Name="Total_Score" ColumnName="Total_Score" />
+          <ScalarProperty Name="CMS_Error_Message" ColumnName="CMS_Error_Message" />
+          <ScalarProperty Name="CMS_Warning_Message" ColumnName="CMS_Warning_Message" />
+          <ScalarProperty Name="Created_Date" ColumnName="Created_Date" />
+          <ScalarProperty Name="CmsYear" ColumnName="CmsYear" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="PI_hasMinimumPIPerformancePeriod" ColumnName="PI_hasMinimumPIPerformancePeriod" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SPCI_GetSub_Score_All" FunctionName="PQRSV13Model.Store.SPCI_GetSub_Score_All">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="PQRSV13Model.SPCI_GetSub_Score_All_Result">
+          <ScalarProperty Name="TIN" ColumnName="TIN" />
+          <ScalarProperty Name="NPI" ColumnName="NPI" />
+          <ScalarProperty Name="Category_Name" ColumnName="Category_Name" />
+          <ScalarProperty Name="Sub_ScoreId" ColumnName="Sub_ScoreId" />
+          <ScalarProperty Name="Response_Data" ColumnName="Response_Data" />
+          <ScalarProperty Name="QM_Weight_Score" ColumnName="QM_Weight_Score" />
+          <ScalarProperty Name="QM_UnWeight_Score" ColumnName="QM_UnWeight_Score" />
+          <ScalarProperty Name="QM_Max_Contribution" ColumnName="QM_Max_Contribution" />
+          <ScalarProperty Name="QM_Weight_Msg" ColumnName="QM_Weight_Msg" />
+          <ScalarProperty Name="QM_hasACRMeasure" ColumnName="QM_hasACRMeasure" />
+          <ScalarProperty Name="QM_hasQualityMeasures" ColumnName="QM_hasQualityMeasures" />
+          <ScalarProperty Name="IA_Weight_Score" ColumnName="IA_Weight_Score" />
+          <ScalarProperty Name="IA_UnWeight_Score" ColumnName="IA_UnWeight_Score" />
+          <ScalarProperty Name="IA_Max_Contribution" ColumnName="IA_Max_Contribution" />
+          <ScalarProperty Name="IA_Weight_Msg" ColumnName="IA_Weight_Msg" />
+          <ScalarProperty Name="IA_hasIAWeightStatus" ColumnName="IA_hasIAWeightStatus" />
+          <ScalarProperty Name="IA_givenIACreditPCMH" ColumnName="IA_givenIACreditPCMH" />
+          <ScalarProperty Name="IA_givenIAStudyCredit" ColumnName="IA_givenIAStudyCredit" />
+          <ScalarProperty Name="IA_feedback_message" ColumnName="IA_feedback_message" />
+          <ScalarProperty Name="PI_Weight_Score" ColumnName="PI_Weight_Score" />
+          <ScalarProperty Name="PI_Max_Contribution" ColumnName="PI_Max_Contribution" />
+          <ScalarProperty Name="PI_Weight_Msg" ColumnName="PI_Weight_Msg" />
+          <ScalarProperty Name="PI_baseScore" ColumnName="PI_baseScore" />
+          <ScalarProperty Name="PI_attestationBonusEligible" ColumnName="PI_attestationBonusEligible" />
+          <ScalarProperty Name="PI_performance" ColumnName="PI_performance" />
+          <ScalarProperty Name="PI_bonus" ColumnName="PI_bonus" />
+          <ScalarProperty Name="PI_cehrt_bonus" ColumnName="PI_cehrt_bonus" />
+          <ScalarProperty Name="PI_base_max" ColumnName="PI_base_max" />
+          <ScalarProperty Name="PI_performance_max" ColumnName="PI_performance_max" />
+          <ScalarProperty Name="PI_bonus_max" ColumnName="PI_bonus_max" />
+          <ScalarProperty Name="PI_cehrt_bonus_max" ColumnName="PI_cehrt_bonus_max" />
+          <ScalarProperty Name="PI_UnWeight_Score" ColumnName="PI_UnWeight_Score" />
+          <ScalarProperty Name="PI_feedback_message" ColumnName="PI_feedback_message" />
+          <ScalarProperty Name="Total_Score" ColumnName="Total_Score" />
+          <ScalarProperty Name="CMS_Error_Message" ColumnName="CMS_Error_Message" />
+          <ScalarProperty Name="CMS_Warning_Message" ColumnName="CMS_Warning_Message" />
+          <ScalarProperty Name="Created_Date" ColumnName="Created_Date" />
+          <ScalarProperty Name="CmsYear" ColumnName="CmsYear" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="PI_hasMinimumPIPerformancePeriod" ColumnName="PI_hasMinimumPIPerformancePeriod" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SPCI_GetSubmissionsDataByEntityType_N" FunctionName="PQRSV13Model.Store.SPCI_GetSubmissionsDataByEntityType_N">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="PQRSV13Model.SPCI_GetSubmissionsDataByEntityType_N_Result">
+          <ScalarProperty Name="Tin" ColumnName="Tin" />
+          <ScalarProperty Name="Npi" ColumnName="Npi" />
+          <ScalarProperty Name="CmsYear" ColumnName="CmsYear" />
+          <ScalarProperty Name="Category" ColumnName="Category" />
+          <ScalarProperty Name="EntityType" ColumnName="EntityType" />
+          <ScalarProperty Name="Measure_Name" ColumnName="Measure_Name" />
+          <ScalarProperty Name="value" ColumnName="value" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SPCI_GetSubmissionUniqueKeyId" FunctionName="PQRSV13Model.Store.SPCI_GetSubmissionUniqueKeyId" />
+    <FunctionImportMapping FunctionImportName="SPCI_GetTIN_NPI_ProcessDetails" FunctionName="PQRSV13Model.Store.SPCI_GetTIN_NPI_ProcessDetails" />
+    <FunctionImportMapping FunctionImportName="SPCI_GproShedulerReportbyID_N" FunctionName="PQRSV13Model.Store.SPCI_GproShedulerReportbyID_N" />
+    <FunctionImportMapping FunctionImportName="SPCI_HttpStatusCodeDescription" FunctionName="PQRSV13Model.Store.SPCI_HttpStatusCodeDescription">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="PQRSV13Model.SPCI_HttpStatusCodeDescription_Result">
+          <ScalarProperty Name="Http_Status_Code" ColumnName="Http_Status_Code" />
+          <ScalarProperty Name="Http_Status_Description" ColumnName="Http_Status_Description" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SPCI_IABulkSubmissionMeasureUpdate" FunctionName="PQRSV13Model.Store.SPCI_IABulkSubmissionMeasureUpdate" />
+    <FunctionImportMapping FunctionImportName="SpCI_InsertPIAttestedMeasures" FunctionName="PQRSV13Model.Store.SpCI_InsertPIAttestedMeasures" />
+    <FunctionImportMapping FunctionImportName="SPCI_InsertSubmissionDataDetails_N" FunctionName="PQRSV13Model.Store.SPCI_InsertSubmissionDataDetails_N" />
+    <FunctionImportMapping FunctionImportName="SPCI_IsAnyMeasureDataExistsForCMS" FunctionName="PQRSV13Model.Store.SPCI_IsAnyMeasureDataExistsForCMS" />
+    <FunctionImportMapping FunctionImportName="SPCI_NonGproValidationDetails" FunctionName="PQRSV13Model.Store.SPCI_NonGproValidationDetails">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="PQRSV13Model.SPCI_NonGproValidationDetails_Result">
+          <ScalarProperty Name="Tin" ColumnName="Tin" />
+          <ScalarProperty Name="Npi" ColumnName="Npi" />
+          <ScalarProperty Name="isOptedIn" ColumnName="isOptedIn" />
+          <ScalarProperty Name="isOptInEligible" ColumnName="isOptInEligible" />
+          <ScalarProperty Name="IsAttested" ColumnName="IsAttested" />
+          <ScalarProperty Name="PIAttestation" ColumnName="PIAttestation" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SpCI_Post_Patch_Insert" FunctionName="PQRSV13Model.Store.SpCI_Post_Patch_Insert" />
+    <FunctionImportMapping FunctionImportName="SPCI_Report_ScoreIASheet" FunctionName="PQRSV13Model.Store.SPCI_Report_ScoreIASheet">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="PQRSV13Model.SPCI_Report_ScoreIASheet_Result">
+          <ScalarProperty Name="TIN" ColumnName="TIN" />
+          <ScalarProperty Name="IA_Measure_Number" ColumnName="IA Measure Number" />
+          <ScalarProperty Name="CMS_Submission_Status" ColumnName="CMS Submission Status" />
+          <ScalarProperty Name="Contribution_Value" ColumnName="Contribution Value" />
+          <ScalarProperty Name="Weight" ColumnName="Weight" />
+          <ScalarProperty Name="Complete" ColumnName="Complete" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SPCI_Report_ScorePISheet" FunctionName="PQRSV13Model.Store.SPCI_Report_ScorePISheet">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="PQRSV13Model.SPCI_Report_ScorePISheet_Result">
+          <ScalarProperty Name="TIN" ColumnName="TIN" />
+          <ScalarProperty Name="PI_Measure_Number" ColumnName="PI Measure Number" />
+          <ScalarProperty Name="CMS_Submission_Status" ColumnName="CMS Submission Status" />
+          <ScalarProperty Name="Contribution_Value" ColumnName="Contribution Value" />
+          <ScalarProperty Name="Processing_Status" ColumnName="Processing Status" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SPCI_Report_ScoreQMSheet" FunctionName="PQRSV13Model.Store.SPCI_Report_ScoreQMSheet">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="PQRSV13Model.SPCI_Report_ScoreQMSheet_Result">
+          <ScalarProperty Name="TIN" ColumnName="TIN" />
+          <ScalarProperty Name="QM_Measure_Number" ColumnName="QM Measure Number" />
+          <ScalarProperty Name="Measure_Selection_Status" ColumnName="Measure Selection Status" />
+          <ScalarProperty Name="CMS_Submission_Status" ColumnName="CMS Submission Status" />
+          <ScalarProperty Name="Measurement_Score_Value" ColumnName="Measurement Score Value" />
+          <ScalarProperty Name="Total_Bonus_Point" ColumnName="Total Bonus Point" />
+          <ScalarProperty Name="Processing_Status" ColumnName="Processing Status" />
+          <ScalarProperty Name="Feeback_Quality" ColumnName="Feeback-Quality" />
+          <ScalarProperty Name="End_to_End_Bonus" ColumnName="End to End Bonus" />
+          <ScalarProperty Name="Outcome_or_Patient_Experience_Bonus" ColumnName="Outcome or Patient Experience Bonus" />
+          <ScalarProperty Name="High_Priority_Bonus" ColumnName="High Priority Bonus" />
+          <ScalarProperty Name="Decile_Score" ColumnName="Decile Score" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SPCI_Report_ScoreSummarySheet" FunctionName="PQRSV13Model.Store.SPCI_Report_ScoreSummarySheet">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="PQRSV13Model.SPCI_Report_ScoreSummarySheet_Result">
+          <ScalarProperty Name="TIN" ColumnName="TIN" />
+          <ScalarProperty Name="CMS_Reporting_Year" ColumnName="CMS Reporting Year" />
+          <ScalarProperty Name="CMS_Submission_Status" ColumnName="CMS Submission Status" />
+          <ScalarProperty Name="QM_Contribution_to_Final_Score" ColumnName="QM Contribution to Final Score" />
+          <ScalarProperty Name="QM_Unweighted_Score" ColumnName="QM Unweighted Score" />
+          <ScalarProperty Name="IA_Contribution_to_Final_Score" ColumnName="IA Contribution to Final Score" />
+          <ScalarProperty Name="IA_Unweighted_Score" ColumnName="IA Unweighted Score" />
+          <ScalarProperty Name="PI_Contribution_to_Final_Score" ColumnName="PI Contribution to Final Score" />
+          <ScalarProperty Name="PI_Unweighted_Score" ColumnName="PI Unweighted Score" />
+          <ScalarProperty Name="Total_Score" ColumnName="Total_Score" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SpCI_Score_Insert" FunctionName="PQRSV13Model.Store.SpCI_Score_Insert" />
+    <FunctionImportMapping FunctionImportName="SPCI_Submission_Email_Remainder_GPRO" FunctionName="PQRSV13Model.Store.SPCI_Submission_Email_Remainder_GPRO" />
+    <FunctionImportMapping FunctionImportName="SPCI_Submission_Email_Remainder_nonGPRO" FunctionName="PQRSV13Model.Store.SPCI_Submission_Email_Remainder_nonGPRO" />
+    <FunctionImportMapping FunctionImportName="SPCI_SubmissionDetails" FunctionName="PQRSV13Model.Store.SPCI_SubmissionDetails">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="PQRSV13Model.SPCI_SubmissionDetails_Result">
+          <ScalarProperty Name="Request_Id" ColumnName="Request_Id" />
+          <ScalarProperty Name="Category_Name" ColumnName="Category_Name" />
+          <ScalarProperty Name="Request_Data" ColumnName="Request_Data" />
+          <ScalarProperty Name="Tin" ColumnName="Tin" />
+          <ScalarProperty Name="Npi" ColumnName="Npi" />
+          <ScalarProperty Name="CmsYear" ColumnName="CmsYear" />
+          <ScalarProperty Name="MethodName" ColumnName="MethodName" />
+          <ScalarProperty Name="Response_Data" ColumnName="Response_Data" />
+          <ScalarProperty Name="Status_Id" ColumnName="Status_Id" />
+          <ScalarProperty Name="Status_Code" ColumnName="Status_Code" />
+          <ScalarProperty Name="NoofMeasures" ColumnName="NoofMeasures" />
+          <ScalarProperty Name="Response_Start_Date" ColumnName="Response_Start_Date" />
+          <ScalarProperty Name="Response_End_Date" ColumnName="Response_End_Date" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="FilesCount" ColumnName="FilesCount" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SPCI_SubsDataSyncStatusUpdate" FunctionName="PQRSV13Model.Store.SPCI_SubsDataSyncStatusUpdate" />
+    <FunctionImportMapping FunctionImportName="SPCI_TIN_ScoreDetails" FunctionName="PQRSV13Model.Store.SPCI_TIN_ScoreDetails">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="PQRSV13Model.SPCI_TIN_ScoreDetails_Result">
+          <ScalarProperty Name="TIN" ColumnName="TIN" />
+          <ScalarProperty Name="Score" ColumnName="Score" />
+          <ScalarProperty Name="CMSYear" ColumnName="CMSYear" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SPCI_TINCMSSubStatusReports_ACRStaff" FunctionName="PQRSV13Model.Store.SPCI_TINCMSSubStatusReports_ACRStaff">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="PQRSV13Model.SPCI_TINCMSSubStatusReports_ACRStaff_Result">
+          <ScalarProperty Name="Tin" ColumnName="Tin" />
+          <ScalarProperty Name="CategoryName" ColumnName="CategoryName" />
+          <ScalarProperty Name="CmsStatus" ColumnName="CmsStatus" />
+          <ScalarProperty Name="CMSYear" ColumnName="CMSYear" />
+          <ScalarProperty Name="Category_Id" ColumnName="Category_Id" />
+          <ScalarProperty Name="LastSubmitedDate" ColumnName="LastSubmitedDate" />
+          <ScalarProperty Name="NoofMeasures" ColumnName="NoofMeasures" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SPCI_TINNPI_ScoreDetails" FunctionName="PQRSV13Model.Store.SPCI_TINNPI_ScoreDetails">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="PQRSV13Model.SPCI_TINNPI_ScoreDetails_Result">
+          <ScalarProperty Name="TIN" ColumnName="TIN" />
+          <ScalarProperty Name="NPI" ColumnName="NPI" />
+          <ScalarProperty Name="Score" ColumnName="Score" />
+          <ScalarProperty Name="CMSYear" ColumnName="CMSYear" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SPCI_TINNPICMSSubStatusReports_ACRStaff" FunctionName="PQRSV13Model.Store.SPCI_TINNPICMSSubStatusReports_ACRStaff">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="PQRSV13Model.SPCI_TINNPICMSSubStatusReports_ACRStaff_Result">
+          <ScalarProperty Name="Tin" ColumnName="Tin" />
+          <ScalarProperty Name="Npi" ColumnName="Npi" />
+          <ScalarProperty Name="Category_Name" ColumnName="Category_Name" />
+          <ScalarProperty Name="CMSStatus" ColumnName="CMSStatus" />
+          <ScalarProperty Name="CMSYear" ColumnName="CMSYear" />
+          <ScalarProperty Name="Category_Id" ColumnName="Category_Id" />
+          <ScalarProperty Name="LastSubmitedDate" ColumnName="LastSubmitedDate" />
+          <ScalarProperty Name="NoofMeasures" ColumnName="NoofMeasures" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SPCI_UpdateMeasureData" FunctionName="PQRSV13Model.Store.SPCI_UpdateMeasureData" />
+    <FunctionImportMapping FunctionImportName="SPCI_UpdateMeasurementSetKeys_N" FunctionName="PQRSV13Model.Store.SPCI_UpdateMeasurementSetKeys_N" />
+    <FunctionImportMapping FunctionImportName="SPCI_UpdateMeasurementSetKeysByCategory" FunctionName="PQRSV13Model.Store.SPCI_UpdateMeasurementSetKeysByCategory" />
+    <FunctionImportMapping FunctionImportName="SPCI_Updatetbl_CI_Source_UniqueKeys" FunctionName="PQRSV13Model.Store.SPCI_Updatetbl_CI_Source_UniqueKeys" />
+    <FunctionImportMapping FunctionImportName="SpDeleteACIAssestedMeasures" FunctionName="PQRSV13Model.Store.SpDeleteACIAssestedMeasures" />
+    <FunctionImportMapping FunctionImportName="spDeleteFacilityUserNPIs" FunctionName="PQRSV13Model.Store.spDeleteFacilityUserNPIs" />
+    <FunctionImportMapping FunctionImportName="spDeleteMigrateImportData" FunctionName="PQRSV13Model.Store.spDeleteMigrateImportData" />
+    <FunctionImportMapping FunctionImportName="spDeleteNewTransImportData" FunctionName="PQRSV13Model.Store.spDeleteNewTransImportData" />
+    <FunctionImportMapping FunctionImportName="spDeletePhysicianUserTINs" FunctionName="PQRSV13Model.Store.spDeletePhysicianUserTINs" />
+    <FunctionImportMapping FunctionImportName="spDeletePrevTransImportData" FunctionName="PQRSV13Model.Store.spDeletePrevTransImportData" />
+    <FunctionImportMapping FunctionImportName="spDisableTransactionData" FunctionName="PQRSV13Model.Store.spDisableTransactionData">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="PQRSV13Model.spDisableTransactionData_Result">
+          <ScalarProperty Name="Column1" ColumnName="Column1" />
+          <ScalarProperty Name="Column2" ColumnName="Column2" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SpEmail_GetAppSettings" FunctionName="PQRSV13Model.Store.SpEmail_GetAppSettings">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="PQRSV13Model.SpEmail_GetAppSettings_Result">
+          <ScalarProperty Name="Set_Key" ColumnName="Set_Key" />
+          <ScalarProperty Name="Value" ColumnName="Value" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SpEmail_InsertData" FunctionName="PQRSV13Model.Store.SpEmail_InsertData" />
+    <FunctionImportMapping FunctionImportName="SpEmailTemplate_GetDetails" FunctionName="PQRSV13Model.Store.SpEmailTemplate_GetDetails">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="PQRSV13Model.SpEmailTemplate_GetDetails_Result">
+          <ScalarProperty Name="Email_Manager_ID" ColumnName="Email_Manager_ID" />
+          <ScalarProperty Name="FromAddress" ColumnName="FromAddress" />
+          <ScalarProperty Name="ToAddress" ColumnName="ToAddress" />
+          <ScalarProperty Name="Subject" ColumnName="Subject" />
+          <ScalarProperty Name="TemplateType" ColumnName="TemplateType" />
+          <ScalarProperty Name="Body" ColumnName="Body" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+          <ScalarProperty Name="UpdatedDate" ColumnName="UpdatedDate" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SPExamData_Decrypted_PatientIds" FunctionName="PQRSV13Model.Store.SPExamData_Decrypted_PatientIds" />
+    <FunctionImportMapping FunctionImportName="spFileDependencies" FunctionName="PQRSV13Model.Store.spFileDependencies" />
+    <FunctionImportMapping FunctionImportName="spFileDependenciesByFileId" FunctionName="PQRSV13Model.Store.spFileDependenciesByFileId" />
+    <FunctionImportMapping FunctionImportName="spFileProcessHistoryDetails" FunctionName="PQRSV13Model.Store.spFileProcessHistoryDetails">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="PQRSV13Model.spFileProcessHistoryDetails_Result">
+          <ScalarProperty Name="ReqId" ColumnName="ReqId" />
+          <ScalarProperty Name="RequestsCount" ColumnName="RequestsCount" />
+          <ScalarProperty Name="Notes" ColumnName="Notes" />
+          <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+          <ScalarProperty Name="EndDate" ColumnName="EndDate" />
+          <ScalarProperty Name="Uname" ColumnName="Uname" />
+          <ScalarProperty Name="Successfull_files" ColumnName="Successfull_files" />
+          <ScalarProperty Name="Pending_files" ColumnName="Pending_files" />
+          <ScalarProperty Name="Rejected_files" ColumnName="Rejected_files" />
+          <ScalarProperty Name="Processing_files" ColumnName="Processing_files" />
+          <ScalarProperty Name="TotalFiles" ColumnName="TotalFiles" />
+          <ScalarProperty Name="ProcessType" ColumnName="ProcessType" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SpGet_DenomProc_Code_ForManualDataEntry" FunctionName="PQRSV13Model.Store.SpGet_DenomProc_Code_ForManualDataEntry" />
+    <FunctionImportMapping FunctionImportName="SPGet_Measurenum_helpofProc_NumreratorCodes" FunctionName="PQRSV13Model.Store.SPGet_Measurenum_helpofProc_NumreratorCodes" />
+    <FunctionImportMapping FunctionImportName="SpGetAC_PI_MeasureData_Tin" FunctionName="PQRSV13Model.Store.SpGetAC_PI_MeasureData_Tin">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="PQRSV13Model.SpGetAC_PI_MeasureData_Tin_Result">
+          <ScalarProperty Name="Selected_MeasureIds" ColumnName="Selected_MeasureIds" />
+          <ScalarProperty Name="Denominator" ColumnName="Denominator" />
+          <ScalarProperty Name="Numerator" ColumnName="Numerator" />
+          <ScalarProperty Name="Attestion" ColumnName="Attestion" />
+          <ScalarProperty Name="TIN" ColumnName="TIN" />
+          <ScalarProperty Name="CMSYear" ColumnName="CMSYear" />
+          <ScalarProperty Name="Category" ColumnName="Category" />
+          <ScalarProperty Name="StarDate" ColumnName="StarDate" />
+          <ScalarProperty Name="EndDate" ColumnName="EndDate" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SPGetActivitieslist_IA" FunctionName="PQRSV13Model.Store.SPGetActivitieslist_IA">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="PQRSV13Model.SPGetActivitieslist_IA_Result">
+          <ScalarProperty Name="Firstname" ColumnName="Firstname" />
+          <ScalarProperty Name="Lastname" ColumnName="Lastname" />
+          <ScalarProperty Name="NPI" ColumnName="NPI" />
+          <ScalarProperty Name="Tin" ColumnName="Tin" />
+          <ScalarProperty Name="SelectedActivites" ColumnName="SelectedActivites" />
+          <ScalarProperty Name="isGpro" ColumnName="isGpro" />
+          <ScalarProperty Name="emailid" ColumnName="emailid" />
+          <ScalarProperty Name="isFinalize" ColumnName="isFinalize" />
+          <ScalarProperty Name="finalizeAgreeDate" ColumnName="finalizeAgreeDate" />
+          <ScalarProperty Name="finalizeDisAgreeDate" ColumnName="finalizeDisAgreeDate" />
+          <ScalarProperty Name="isSubmitToCI" ColumnName="isSubmitToCI" />
+          <ScalarProperty Name="LastSubmittedDateTime" ColumnName="LastSubmittedDateTime" />
+          <ScalarProperty Name="CMSYear" ColumnName="CMSYear" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SPGetActivitieslist_IA_bak" FunctionName="PQRSV13Model.Store.SPGetActivitieslist_IA_bak">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="PQRSV13Model.SPGetActivitieslist_IA_bak_Result">
+          <ScalarProperty Name="first_name" ColumnName="first_name" />
+          <ScalarProperty Name="last_name" ColumnName="last_name" />
+          <ScalarProperty Name="npi" ColumnName="npi" />
+          <ScalarProperty Name="tin" ColumnName="tin" />
+          <ScalarProperty Name="SelectedActivity" ColumnName="SelectedActivity" />
+          <ScalarProperty Name="Gpro" ColumnName="Gpro" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SPGetActivitieslistIA_ACRStaff" FunctionName="PQRSV13Model.Store.SPGetActivitieslistIA_ACRStaff">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="PQRSV13Model.SPGetActivitieslistIA_ACRStaff_Result">
+          <ScalarProperty Name="Firstname" ColumnName="Firstname" />
+          <ScalarProperty Name="Lastname" ColumnName="Lastname" />
+          <ScalarProperty Name="NPI" ColumnName="NPI" />
+          <ScalarProperty Name="Tin" ColumnName="Tin" />
+          <ScalarProperty Name="SelectedActivites" ColumnName="SelectedActivites" />
+          <ScalarProperty Name="isGpro" ColumnName="isGpro" />
+          <ScalarProperty Name="emailid" ColumnName="emailid" />
+          <ScalarProperty Name="isFinalize" ColumnName="isFinalize" />
+          <ScalarProperty Name="finalizeAgreeDate" ColumnName="finalizeAgreeDate" />
+          <ScalarProperty Name="finalizeDisAgreeDate" ColumnName="finalizeDisAgreeDate" />
+          <ScalarProperty Name="isSubmitToCI" ColumnName="isSubmitToCI" />
+          <ScalarProperty Name="LastSubmittedDateTime" ColumnName="LastSubmittedDateTime" />
+          <ScalarProperty Name="CMSYear" ColumnName="CMSYear" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SPGetActivitieslistIA_Facility" FunctionName="PQRSV13Model.Store.SPGetActivitieslistIA_Facility">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="PQRSV13Model.SPGetActivitieslistIA_Facility_Result">
+          <ScalarProperty Name="Firstname" ColumnName="Firstname" />
+          <ScalarProperty Name="Lastname" ColumnName="Lastname" />
+          <ScalarProperty Name="NPI" ColumnName="NPI" />
+          <ScalarProperty Name="Tin" ColumnName="Tin" />
+          <ScalarProperty Name="SelectedActivites" ColumnName="SelectedActivites" />
+          <ScalarProperty Name="isGpro" ColumnName="isGpro" />
+          <ScalarProperty Name="emailid" ColumnName="emailid" />
+          <ScalarProperty Name="isFinalize" ColumnName="isFinalize" />
+          <ScalarProperty Name="finalizeAgreeDate" ColumnName="finalizeAgreeDate" />
+          <ScalarProperty Name="finalizeDisAgreeDate" ColumnName="finalizeDisAgreeDate" />
+          <ScalarProperty Name="isSubmitToCI" ColumnName="isSubmitToCI" />
+          <ScalarProperty Name="LastSubmittedDateTime" ColumnName="LastSubmittedDateTime" />
+          <ScalarProperty Name="CMSYear" ColumnName="CMSYear" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SPGetActivitieslistIA_Physician" FunctionName="PQRSV13Model.Store.SPGetActivitieslistIA_Physician">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="PQRSV13Model.SPGetActivitieslistIA_Physician_Result">
+          <ScalarProperty Name="Firstname" ColumnName="Firstname" />
+          <ScalarProperty Name="Lastname" ColumnName="Lastname" />
+          <ScalarProperty Name="NPI" ColumnName="NPI" />
+          <ScalarProperty Name="Tin" ColumnName="Tin" />
+          <ScalarProperty Name="SelectedActivites" ColumnName="SelectedActivites" />
+          <ScalarProperty Name="isGpro" ColumnName="isGpro" />
+          <ScalarProperty Name="emailid" ColumnName="emailid" />
+          <ScalarProperty Name="isFinalize" ColumnName="isFinalize" />
+          <ScalarProperty Name="finalizeAgreeDate" ColumnName="finalizeAgreeDate" />
+          <ScalarProperty Name="finalizeDisAgreeDate" ColumnName="finalizeDisAgreeDate" />
+          <ScalarProperty Name="isSubmitToCI" ColumnName="isSubmitToCI" />
+          <ScalarProperty Name="LastSubmittedDateTime" ColumnName="LastSubmittedDateTime" />
+          <ScalarProperty Name="CMSYear" ColumnName="CMSYear" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SpGetBlockMeasureDetails" FunctionName="PQRSV13Model.Store.SpGetBlockMeasureDetails">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="PQRSV13Model.SpGetBlockMeasureDetails_Result">
+          <ScalarProperty Name="Measure" ColumnName="Measure" />
+          <ScalarProperty Name="isblocked" ColumnName="isblocked" />
+          <ScalarProperty Name="DisplayOrder" ColumnName="DisplayOrder" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SpGetCMSPaymentsActiveStatus" FunctionName="PQRSV13Model.Store.SpGetCMSPaymentsActiveStatus">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="PQRSV13Model.SpGetCMSPaymentsActiveStatus_Result">
+          <ScalarProperty Name="IsCMSPaymentsBiPass" ColumnName="IsCMSPaymentsBiPass" />
+          <ScalarProperty Name="IsUserPaymentsBiPass" ColumnName="IsUserPaymentsBiPass" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SpgetEligibleMeasuresOnAge" FunctionName="PQRSV13Model.Store.SpgetEligibleMeasuresOnAge">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="PQRSV13Model.SpgetEligibleMeasuresOnAge_Result">
+          <ScalarProperty Name="Measure_ID" ColumnName="Measure_ID" />
+          <ScalarProperty Name="Measure_num" ColumnName="Measure_num" />
+          <ScalarProperty Name="Measure_Desc" ColumnName="Measure_Desc" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SPgetExamCountbyFileId" FunctionName="PQRSV13Model.Store.SPgetExamCountbyFileId" />
+    <FunctionImportMapping FunctionImportName="spGetFacilityAccessDetailsforUploadedFiles" FunctionName="PQRSV13Model.Store.spGetFacilityAccessDetailsforUploadedFiles">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="PQRSV13Model.spGetFacilityAccessDetailsforUploadedFiles_Result">
+          <ScalarProperty Name="FILE_NAME" ColumnName="FILE_NAME" />
+          <ScalarProperty Name="UPLOAD_START_DATE_TIME" ColumnName="UPLOAD_START_DATE_TIME" />
+          <ScalarProperty Name="UPLOAD_END_DATE_TIME" ColumnName="UPLOAD_END_DATE_TIME" />
+          <ScalarProperty Name="ERROR_MESSAGE" ColumnName="ERROR_MESSAGE" />
+          <ScalarProperty Name="TOTAL_RECORDS_COUNT" ColumnName="TOTAL_RECORDS_COUNT" />
+          <ScalarProperty Name="STATUS" ColumnName="STATUS" />
+          <ScalarProperty Name="NPI" ColumnName="NPI" />
+          <ScalarProperty Name="Load_Start_Time" ColumnName="Load_Start_Time" />
+          <ScalarProperty Name="Load_End_Time" ColumnName="Load_End_Time" />
+          <ScalarProperty Name="Invalid_Records_Count" ColumnName="Invalid_Records_Count" />
+          <ScalarProperty Name="Updated_Records_Count" ColumnName="Updated_Records_Count" />
+          <ScalarProperty Name="Added_Records_Count" ColumnName="Added_Records_Count" />
+          <ScalarProperty Name="Added_Records_WithWarning_Count" ColumnName="Added_Records_WithWarning_Count" />
+          <ScalarProperty Name="Updated_Records_WithWarning_Count" ColumnName="Updated_Records_WithWarning_Count" />
+          <ScalarProperty Name="Invalid_Records_WithExclusion_Count" ColumnName="Invalid_Records_WithExclusion_Count" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="Access" ColumnName="Access" />
+          <ScalarProperty Name="FilesCount" ColumnName="FilesCount" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SPGetFacilityTinRelatedPhysicianDetails" FunctionName="PQRSV13Model.Store.SPGetFacilityTinRelatedPhysicianDetails">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="PQRSV13Model.SPGetFacilityTinRelatedPhysicianDetails_Result">
+          <ScalarProperty Name="npi" ColumnName="npi" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="Records" ColumnName="Records" />
+          <ScalarProperty Name="Registered" ColumnName="Registered" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spGetFacilityTins_EmailAddress" FunctionName="PQRSV13Model.Store.spGetFacilityTins_EmailAddress">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="PQRSV13Model.spGetFacilityTins_EmailAddress_Result">
+          <ScalarProperty Name="TIN" ColumnName="TIN" />
+          <ScalarProperty Name="IS_GPRO" ColumnName="IS_GPRO" />
+          <ScalarProperty Name="GPROTIN_EmailAddress" ColumnName="GPROTIN_EmailAddress" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spGetFilenames_of_NnumeratorZero" FunctionName="PQRSV13Model.Store.spGetFilenames_of_NnumeratorZero">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="PQRSV13Model.spGetFilenames_of_NnumeratorZero_Result">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="FileId" ColumnName="FileId" />
+          <ScalarProperty Name="FILE_NAME" ColumnName="FILE_NAME" />
+          <ScalarProperty Name="STATUS" ColumnName="STATUS" />
+          <ScalarProperty Name="Extension" ColumnName="Extension" />
+          <ScalarProperty Name="IsFile_Encrypted" ColumnName="IsFile_Encrypted" />
+          <ScalarProperty Name="Encryption_Type" ColumnName="Encryption_Type" />
+          <ScalarProperty Name="Load_Data_STATUS" ColumnName="Load_Data_STATUS" />
+          <ScalarProperty Name="UPLOAD_START_DATE_TIME" ColumnName="UPLOAD_START_DATE_TIME" />
+          <ScalarProperty Name="TOTAL_RECORDS_COUNT" ColumnName="TOTAL_RECORDS_COUNT" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spGetGproACIXmlData" FunctionName="PQRSV13Model.Store.spGetGproACIXmlData">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="PQRSV13Model.spGetGproACIXmlData_Result">
+          <ScalarProperty Name="Selected_MeasureIds" ColumnName="Selected_MeasureIds" />
+          <ScalarProperty Name="Denominator" ColumnName="Denominator" />
+          <ScalarProperty Name="Numerator" ColumnName="Numerator" />
+          <ScalarProperty Name="Attestion" ColumnName="Attestion" />
+          <ScalarProperty Name="TIN" ColumnName="TIN" />
+          <ScalarProperty Name="CMSYear" ColumnName="CMSYear" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spGetGproACIXmlData_Tin" FunctionName="PQRSV13Model.Store.spGetGproACIXmlData_Tin">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="PQRSV13Model.spGetGproACIXmlData_Tin_Result">
+          <ScalarProperty Name="Selected_MeasureIds" ColumnName="Selected_MeasureIds" />
+          <ScalarProperty Name="Denominator" ColumnName="Denominator" />
+          <ScalarProperty Name="Numerator" ColumnName="Numerator" />
+          <ScalarProperty Name="Attestion" ColumnName="Attestion" />
+          <ScalarProperty Name="TIN" ColumnName="TIN" />
+          <ScalarProperty Name="CMSYear" ColumnName="CMSYear" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SPGetGPROCMSSubmittedTins" FunctionName="PQRSV13Model.Store.SPGetGPROCMSSubmittedTins">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="PQRSV13Model.SPGetGPROCMSSubmittedTins_Result">
+          <ScalarProperty Name="Tin" ColumnName="Tin" />
+          <ScalarProperty Name="Category" ColumnName="Category" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spGetGproIAXmlData" FunctionName="PQRSV13Model.Store.spGetGproIAXmlData">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="PQRSV13Model.spGetGproIAXmlData_Result">
+          <ScalarProperty Name="SelectedActivity" ColumnName="SelectedActivity" />
+          <ScalarProperty Name="TIN" ColumnName="TIN" />
+          <ScalarProperty Name="CMSYear" ColumnName="CMSYear" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spGetGproIAXmlData_Tin" FunctionName="PQRSV13Model.Store.spGetGproIAXmlData_Tin">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="PQRSV13Model.spGetGproIAXmlData_Tin_Result">
+          <ScalarProperty Name="SelectedActivity" ColumnName="SelectedActivity" />
+          <ScalarProperty Name="TIN" ColumnName="TIN" />
+          <ScalarProperty Name="CMSYear" ColumnName="CMSYear" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SpGetHitrustSiteActiveStatus" FunctionName="PQRSV13Model.Store.SpGetHitrustSiteActiveStatus">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="PQRSV13Model.SpGetHitrustSiteActiveStatus_Result">
+          <ScalarProperty Name="IsAppStop" ColumnName="IsAppStop" />
+          <ScalarProperty Name="IsHistrustBiPass" ColumnName="IsHistrustBiPass" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spGetIAGPROAttestation_Finalize_Activities" FunctionName="PQRSV13Model.Store.spGetIAGPROAttestation_Finalize_Activities">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="PQRSV13Model.spGetIAGPROAttestation_Finalize_Activities_Result">
+          <ScalarProperty Name="tin" ColumnName="tin" />
+          <ScalarProperty Name="cmsyear" ColumnName="cmsyear" />
+          <ScalarProperty Name="IsAttested" ColumnName="IsAttested" />
+          <ScalarProperty Name="isFinalize" ColumnName="isFinalize" />
+          <ScalarProperty Name="SelectedActivity" ColumnName="SelectedActivity" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spGetIANonGPROAttestation_Finalize_Activities" FunctionName="PQRSV13Model.Store.spGetIANonGPROAttestation_Finalize_Activities">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="PQRSV13Model.spGetIANonGPROAttestation_Finalize_Activities_Result">
+          <ScalarProperty Name="tin" ColumnName="tin" />
+          <ScalarProperty Name="npi" ColumnName="npi" />
+          <ScalarProperty Name="cmsyear" ColumnName="cmsyear" />
+          <ScalarProperty Name="IsAttested" ColumnName="IsAttested" />
+          <ScalarProperty Name="isFinalize" ColumnName="isFinalize" />
+          <ScalarProperty Name="SelectedActivity" ColumnName="SelectedActivity" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spGetLatestTINsOfNPI" FunctionName="PQRSV13Model.Store.spGetLatestTINsOfNPI" />
+    <FunctionImportMapping FunctionImportName="spGetLookupDataBasedonCategory" FunctionName="PQRSV13Model.Store.spGetLookupDataBasedonCategory" />
+    <FunctionImportMapping FunctionImportName="SpGetMeasureRulesConfigPart1" FunctionName="PQRSV13Model.Store.SpGetMeasureRulesConfigPart1">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="PQRSV13Model.SpGetMeasureRulesConfigPart1_Result">
+          <ScalarProperty Name="Measure" ColumnName="Measure" />
+          <ScalarProperty Name="Value" ColumnName="Value" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SPGetMeasureslistByRuleId" FunctionName="PQRSV13Model.Store.SPGetMeasureslistByRuleId">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="PQRSV13Model.SPGetMeasureslistByRuleId_Result">
+          <ScalarProperty Name="Measure" ColumnName="Measure" />
+          <ScalarProperty Name="Value" ColumnName="Value" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SPGetMeasureslistByRuleIdCompare" FunctionName="PQRSV13Model.Store.SPGetMeasureslistByRuleIdCompare">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="PQRSV13Model.SPGetMeasureslistByRuleIdCompare_Result">
+          <ScalarProperty Name="CompareMeasures" ColumnName="CompareMeasures" />
+          <ScalarProperty Name="CurrentMeasures" ColumnName="CurrentMeasures" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spGetNonGproACIXmlData" FunctionName="PQRSV13Model.Store.spGetNonGproACIXmlData">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="PQRSV13Model.spGetNonGproACIXmlData_Result">
+          <ScalarProperty Name="Selected_MeasureIds" ColumnName="Selected_MeasureIds" />
+          <ScalarProperty Name="Attestion" ColumnName="Attestion" />
+          <ScalarProperty Name="Denominator" ColumnName="Denominator" />
+          <ScalarProperty Name="Numerator" ColumnName="Numerator" />
+          <ScalarProperty Name="TIN" ColumnName="TIN" />
+          <ScalarProperty Name="NPI" ColumnName="NPI" />
+          <ScalarProperty Name="CMSYear" ColumnName="CMSYear" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spGetNonGproACIXmlData_Tin" FunctionName="PQRSV13Model.Store.spGetNonGproACIXmlData_Tin">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="PQRSV13Model.spGetNonGproACIXmlData_Tin_Result">
+          <ScalarProperty Name="Selected_MeasureIds" ColumnName="Selected_MeasureIds" />
+          <ScalarProperty Name="Attestion" ColumnName="Attestion" />
+          <ScalarProperty Name="Denominator" ColumnName="Denominator" />
+          <ScalarProperty Name="Numerator" ColumnName="Numerator" />
+          <ScalarProperty Name="TIN" ColumnName="TIN" />
+          <ScalarProperty Name="NPI" ColumnName="NPI" />
+          <ScalarProperty Name="CMSYear" ColumnName="CMSYear" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spGetNonGproACIXmlData_Tin_NPI" FunctionName="PQRSV13Model.Store.spGetNonGproACIXmlData_Tin_NPI">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="PQRSV13Model.spGetNonGproACIXmlData_Tin_NPI_Result">
+          <ScalarProperty Name="Selected_MeasureIds" ColumnName="Selected_MeasureIds" />
+          <ScalarProperty Name="Attestion" ColumnName="Attestion" />
+          <ScalarProperty Name="Denominator" ColumnName="Denominator" />
+          <ScalarProperty Name="Numerator" ColumnName="Numerator" />
+          <ScalarProperty Name="TIN" ColumnName="TIN" />
+          <ScalarProperty Name="NPI" ColumnName="NPI" />
+          <ScalarProperty Name="CMSYear" ColumnName="CMSYear" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SPGetNonGproCMSSubmittedTins" FunctionName="PQRSV13Model.Store.SPGetNonGproCMSSubmittedTins">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="PQRSV13Model.SPGetNonGproCMSSubmittedTins_Result">
+          <ScalarProperty Name="Tin" ColumnName="Tin" />
+          <ScalarProperty Name="Npi" ColumnName="Npi" />
+          <ScalarProperty Name="Category" ColumnName="Category" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SpGetNonGproIA_PI_MeasureData_Tin" FunctionName="PQRSV13Model.Store.SpGetNonGproIA_PI_MeasureData_Tin">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="PQRSV13Model.SpGetNonGproIA_PI_MeasureData_Tin_Result">
+          <ScalarProperty Name="Selected_MeasureIds" ColumnName="Selected_MeasureIds" />
+          <ScalarProperty Name="Denominator" ColumnName="Denominator" />
+          <ScalarProperty Name="Numerator" ColumnName="Numerator" />
+          <ScalarProperty Name="Attestion" ColumnName="Attestion" />
+          <ScalarProperty Name="TIN" ColumnName="TIN" />
+          <ScalarProperty Name="NPI" ColumnName="NPI" />
+          <ScalarProperty Name="CMSYear" ColumnName="CMSYear" />
+          <ScalarProperty Name="Category" ColumnName="Category" />
+          <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+          <ScalarProperty Name="EndDate" ColumnName="EndDate" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spGetNonGproIAXmlData" FunctionName="PQRSV13Model.Store.spGetNonGproIAXmlData">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="PQRSV13Model.spGetNonGproIAXmlData_Result">
+          <ScalarProperty Name="SelectedActivity" ColumnName="SelectedActivity" />
+          <ScalarProperty Name="TIN" ColumnName="TIN" />
+          <ScalarProperty Name="NPI" ColumnName="NPI" />
+          <ScalarProperty Name="CMSYear" ColumnName="CMSYear" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spGetNonGproIAXmlData_Tin" FunctionName="PQRSV13Model.Store.spGetNonGproIAXmlData_Tin">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="PQRSV13Model.spGetNonGproIAXmlData_Tin_Result">
+          <ScalarProperty Name="SelectedActivity" ColumnName="SelectedActivity" />
+          <ScalarProperty Name="TIN" ColumnName="TIN" />
+          <ScalarProperty Name="NPI" ColumnName="NPI" />
+          <ScalarProperty Name="CMSYear" ColumnName="CMSYear" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spGetNonGproIAXmlData_Tin_NPI" FunctionName="PQRSV13Model.Store.spGetNonGproIAXmlData_Tin_NPI">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="PQRSV13Model.spGetNonGproIAXmlData_Tin_NPI_Result">
+          <ScalarProperty Name="SelectedActivity" ColumnName="SelectedActivity" />
+          <ScalarProperty Name="TIN" ColumnName="TIN" />
+          <ScalarProperty Name="NPI" ColumnName="NPI" />
+          <ScalarProperty Name="CMSYear" ColumnName="CMSYear" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SPGetNpisofTin_VW" FunctionName="PQRSV13Model.Store.SPGetNpisofTin_VW" />
+    <FunctionImportMapping FunctionImportName="SPGetNpisofTinwithDescription_VW" FunctionName="PQRSV13Model.Store.SPGetNpisofTinwithDescription_VW">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="PQRSV13Model.SPGetNpisofTinwithDescription_VW_Result">
+          <ScalarProperty Name="TIN" ColumnName="TIN" />
+          <ScalarProperty Name="TIN_DESCRIPTION" ColumnName="TIN_DESCRIPTION" />
+          <ScalarProperty Name="npi" ColumnName="npi" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SPGetProcessRecordCount" FunctionName="PQRSV13Model.Store.SPGetProcessRecordCount">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="PQRSV13Model.SPGetProcessRecordCount_Result">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="ReqId" ColumnName="ReqId" />
+          <ScalarProperty Name="FileId" ColumnName="FileId" />
+          <ScalarProperty Name="ProcessedRecords" ColumnName="ProcessedRecords" />
+          <ScalarProperty Name="CountUpdateOn" ColumnName="CountUpdateOn" />
+          <ScalarProperty Name="Status_CnstID" ColumnName="Status_CnstID" />
+          <ScalarProperty Name="isValidationState" ColumnName="isValidationState" />
+          <ScalarProperty Name="Validation_StartDate" ColumnName="Validation_StartDate" />
+          <ScalarProperty Name="Validation_UpdateDate" ColumnName="Validation_UpdateDate" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spgetQMXML_examscount_TINGpro_NonGpro" FunctionName="PQRSV13Model.Store.spgetQMXML_examscount_TINGpro_NonGpro" />
+    <FunctionImportMapping FunctionImportName="spGetRecordsEnteredPageGridDetails" FunctionName="PQRSV13Model.Store.spGetRecordsEnteredPageGridDetails">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="PQRSV13Model.spGetRecordsEnteredPageGridDetails_Result">
+          <ScalarProperty Name="Physician_NPI" ColumnName="Physician_NPI" />
+          <ScalarProperty Name="Exam_TIN" ColumnName="Exam_TIN" />
+          <ScalarProperty Name="Exam_Id" ColumnName="Exam_Id" />
+          <ScalarProperty Name="Measure_ID" ColumnName="Measure_ID" />
+          <ScalarProperty Name="Status_Desc" ColumnName="Status_Desc" />
+          <ScalarProperty Name="Measure_num" ColumnName="Measure_num" />
+          <ScalarProperty Name="Patient_Gender" ColumnName="Patient_Gender" />
+          <ScalarProperty Name="Denominator_proc_code" ColumnName="Denominator_proc_code" />
+          <ScalarProperty Name="Numerator_Code" ColumnName="Numerator_Code" />
+          <ScalarProperty Name="Created_Date" ColumnName="Created_Date" />
+          <ScalarProperty Name="Exam_Date" ColumnName="Exam_Date" />
+          <ScalarProperty Name="Exam_Unique_ID" ColumnName="Exam_Unique_ID" />
+          <ScalarProperty Name="Patient_ID" ColumnName="Patient_ID" />
+          <ScalarProperty Name="Patient_Age" ColumnName="Patient_Age" />
+          <ScalarProperty Name="IsEncrypt" ColumnName="IsEncrypt" />
+          <ScalarProperty Name="DataSource" ColumnName="DataSource" />
+          <ScalarProperty Name="CMS_Submission_Year" ColumnName="CMS_Submission_Year" />
+          <ScalarProperty Name="FilesCount" ColumnName="FilesCount" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spgetReportingRateGreaterThan100TemplateBody" FunctionName="PQRSV13Model.Store.spgetReportingRateGreaterThan100TemplateBody" />
+    <FunctionImportMapping FunctionImportName="spGetStartEndDateForACI" FunctionName="PQRSV13Model.Store.spGetStartEndDateForACI">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="PQRSV13Model.spGetStartEndDateForACI_Result">
+          <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+          <ScalarProperty Name="EndDate" ColumnName="EndDate" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spGetStartEndDateForIA" FunctionName="PQRSV13Model.Store.spGetStartEndDateForIA">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="PQRSV13Model.spGetStartEndDateForIA_Result">
+          <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+          <ScalarProperty Name="EndDate" ColumnName="EndDate" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spGetStartEndDateForIAorACI" FunctionName="PQRSV13Model.Store.spGetStartEndDateForIAorACI">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="PQRSV13Model.spGetStartEndDateForIAorACI_Result">
+          <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+          <ScalarProperty Name="EndDate" ColumnName="EndDate" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spGetStartEndDateForTIN_TINNPIforXML" FunctionName="PQRSV13Model.Store.spGetStartEndDateForTIN_TINNPIforXML" />
+    <FunctionImportMapping FunctionImportName="SpGetSubmissionKeyForNonGproPatch" FunctionName="PQRSV13Model.Store.SpGetSubmissionKeyForNonGproPatch" />
+    <FunctionImportMapping FunctionImportName="SpGetSubmissionKeyForPatch" FunctionName="PQRSV13Model.Store.SpGetSubmissionKeyForPatch" />
+    <FunctionImportMapping FunctionImportName="SPGetSubmittoCMSTinsCount" FunctionName="PQRSV13Model.Store.SPGetSubmittoCMSTinsCount">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="PQRSV13Model.SPGetSubmittoCMSTinsCount_Result">
+          <ScalarProperty Name="TotalGproTins" ColumnName="TotalGproTins" />
+          <ScalarProperty Name="CMSSubmittedGproTins" ColumnName="CMSSubmittedGproTins" />
+          <ScalarProperty Name="TotalNonGproTins" ColumnName="TotalNonGproTins" />
+          <ScalarProperty Name="CMSSubmittedNonGproTins" ColumnName="CMSSubmittedNonGproTins" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SpGetTinlevelAttesationDetailsOfUser" FunctionName="PQRSV13Model.Store.SpGetTinlevelAttesationDetailsOfUser">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="PQRSV13Model.SpGetTinlevelAttesationDetailsOfUser_Result">
+          <ScalarProperty Name="Tin" ColumnName="Tin" />
+          <ScalarProperty Name="asIsAttested" ColumnName="asIsAttested" />
+          <ScalarProperty Name="attesteddate" ColumnName="attesteddate" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SPGetTINSbyNpi_Physician_VW" FunctionName="PQRSV13Model.Store.SPGetTINSbyNpi_Physician_VW">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="PQRSV13Model.SPGetTINSbyNpi_Physician_VW_Result">
+          <ScalarProperty Name="Tin" ColumnName="Tin" />
+          <ScalarProperty Name="IS_ACTIVE" ColumnName="IS_ACTIVE" />
+          <ScalarProperty Name="IS_ENROLLED" ColumnName="IS_ENROLLED" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spGetValidateNpi" FunctionName="PQRSV13Model.Store.spGetValidateNpi" />
+    <FunctionImportMapping FunctionImportName="spGetValidateTin" FunctionName="PQRSV13Model.Store.spGetValidateTin" />
+    <FunctionImportMapping FunctionImportName="spGproNonGproConversionLock" FunctionName="PQRSV13Model.Store.spGproNonGproConversionLock">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="PQRSV13Model.spGproNonGproConversionLock_Result">
+          <ScalarProperty Name="TIN" ColumnName="TIN" />
+          <ScalarProperty Name="IS_GPRO" ColumnName="IS_GPRO" />
+          <ScalarProperty Name="islock" ColumnName="islock" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SPIA_Activitieslist" FunctionName="PQRSV13Model.Store.SPIA_Activitieslist">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="PQRSV13Model.SPIA_Activitieslist_Result">
+          <ScalarProperty Name="Firstname" ColumnName="Firstname" />
+          <ScalarProperty Name="Lastname" ColumnName="Lastname" />
+          <ScalarProperty Name="NPI" ColumnName="NPI" />
+          <ScalarProperty Name="Tin" ColumnName="Tin" />
+          <ScalarProperty Name="SelectedActivites" ColumnName="SelectedActivites" />
+          <ScalarProperty Name="isGpro" ColumnName="isGpro" />
+          <ScalarProperty Name="emailid" ColumnName="emailid" />
+          <ScalarProperty Name="isFinalize" ColumnName="isFinalize" />
+          <ScalarProperty Name="finalizeAgreeDate" ColumnName="finalizeAgreeDate" />
+          <ScalarProperty Name="finalizeDisAgreeDate" ColumnName="finalizeDisAgreeDate" />
+          <ScalarProperty Name="isSubmitToCI" ColumnName="isSubmitToCI" />
+          <ScalarProperty Name="LastSubmittedDateTime" ColumnName="LastSubmittedDateTime" />
+          <ScalarProperty Name="LastSubmittedBy" ColumnName="LastSubmittedBy" />
+          <ScalarProperty Name="CMSYear" ColumnName="CMSYear" />
+          <ScalarProperty Name="SubmittoCMS" ColumnName="SubmittoCMS" />
+          <ScalarProperty Name="is_enrolled" ColumnName="is_enrolled" />
+          <ScalarProperty Name="OptInDate" ColumnName="OptInDate" />
+          <ScalarProperty Name="isOptedIn" ColumnName="isOptedIn" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SPIA_FinalizeDetails" FunctionName="PQRSV13Model.Store.SPIA_FinalizeDetails">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="PQRSV13Model.SPIA_FinalizeDetails_Result">
+          <ScalarProperty Name="Tin" ColumnName="Tin" />
+          <ScalarProperty Name="isGpro" ColumnName="isGpro" />
+          <ScalarProperty Name="emailid" ColumnName="emailid" />
+          <ScalarProperty Name="isFinalize" ColumnName="isFinalize" />
+          <ScalarProperty Name="finalizeAgreeDate" ColumnName="finalizeAgreeDate" />
+          <ScalarProperty Name="finalizeDisAgreeDate" ColumnName="finalizeDisAgreeDate" />
+          <ScalarProperty Name="isSubmitToCI" ColumnName="isSubmitToCI" />
+          <ScalarProperty Name="LastSubmittedDateTime" ColumnName="LastSubmittedDateTime" />
+          <ScalarProperty Name="LastSubmittedBy" ColumnName="LastSubmittedBy" />
+          <ScalarProperty Name="CMSYear" ColumnName="CMSYear" />
+          <ScalarProperty Name="SubmittoCMS" ColumnName="SubmittoCMS" />
+          <ScalarProperty Name="OptInDate" ColumnName="OptInDate" />
+          <ScalarProperty Name="isOptedIn" ColumnName="isOptedIn" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SPIA_FinalizeDetails_Physician" FunctionName="PQRSV13Model.Store.SPIA_FinalizeDetails_Physician">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="PQRSV13Model.SPIA_FinalizeDetails_Physician_Result">
+          <ScalarProperty Name="Tin" ColumnName="Tin" />
+          <ScalarProperty Name="Npi" ColumnName="Npi" />
+          <ScalarProperty Name="isGpro" ColumnName="isGpro" />
+          <ScalarProperty Name="emailid" ColumnName="emailid" />
+          <ScalarProperty Name="isFinalize" ColumnName="isFinalize" />
+          <ScalarProperty Name="finalizeAgreeDate" ColumnName="finalizeAgreeDate" />
+          <ScalarProperty Name="finalizeDisAgreeDate" ColumnName="finalizeDisAgreeDate" />
+          <ScalarProperty Name="isSubmitToCI" ColumnName="isSubmitToCI" />
+          <ScalarProperty Name="LastSubmittedDateTime" ColumnName="LastSubmittedDateTime" />
+          <ScalarProperty Name="LastSubmittedBy" ColumnName="LastSubmittedBy" />
+          <ScalarProperty Name="CMSYear" ColumnName="CMSYear" />
+          <ScalarProperty Name="SubmittoCMS" ColumnName="SubmittoCMS" />
+          <ScalarProperty Name="OptInDate" ColumnName="OptInDate" />
+          <ScalarProperty Name="isOptedIn" ColumnName="isOptedIn" />
+          <ScalarProperty Name="is_enrolled" ColumnName="is_enrolled" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SPInsert_Decrypted_PatientID" FunctionName="PQRSV13Model.Store.SPInsert_Decrypted_PatientID" />
+    <FunctionImportMapping FunctionImportName="SPInsert_FileAccessFacilityLists" FunctionName="PQRSV13Model.Store.SPInsert_FileAccessFacilityLists" />
+    <FunctionImportMapping FunctionImportName="SpInsertACIAssestedMeasures" FunctionName="PQRSV13Model.Store.SpInsertACIAssestedMeasures" />
+    <FunctionImportMapping FunctionImportName="spInsertFileRawData" FunctionName="PQRSV13Model.Store.spInsertFileRawData" />
+    <FunctionImportMapping FunctionImportName="SpInsertHitrustEventData" FunctionName="PQRSV13Model.Store.SpInsertHitrustEventData" />
+    <FunctionImportMapping FunctionImportName="SpInsertHitrustExceptionData" FunctionName="PQRSV13Model.Store.SpInsertHitrustExceptionData" />
+    <FunctionImportMapping FunctionImportName="spInsertIndividualInvalidDataForACIXML" FunctionName="PQRSV13Model.Store.spInsertIndividualInvalidDataForACIXML" />
+    <FunctionImportMapping FunctionImportName="spInsertTinInvalidDataForACIXML" FunctionName="PQRSV13Model.Store.spInsertTinInvalidDataForACIXML" />
+    <FunctionImportMapping FunctionImportName="spInsertUpdate_ACI_FinalizeData" FunctionName="PQRSV13Model.Store.spInsertUpdate_ACI_FinalizeData" />
+    <FunctionImportMapping FunctionImportName="spInsertUpdate_IA_FinalizeData" FunctionName="PQRSV13Model.Store.spInsertUpdate_IA_FinalizeData" />
+    <FunctionImportMapping FunctionImportName="spInsertUpdate_QM_FinalizeData" FunctionName="PQRSV13Model.Store.spInsertUpdate_QM_FinalizeData" />
+    <FunctionImportMapping FunctionImportName="SPInsertUpdateExamsData" FunctionName="PQRSV13Model.Store.SPInsertUpdateExamsData" />
+    <FunctionImportMapping FunctionImportName="SPInsertUpdateImportExamsData" FunctionName="PQRSV13Model.Store.SPInsertUpdateImportExamsData" />
+    <FunctionImportMapping FunctionImportName="SpInsertUserAttestData" FunctionName="PQRSV13Model.Store.SpInsertUserAttestData" />
+    <FunctionImportMapping FunctionImportName="SpIs_ResetButtonEnable" FunctionName="PQRSV13Model.Store.SpIs_ResetButtonEnable" />
+    <FunctionImportMapping FunctionImportName="spLockPendingFilesforExamAPI" FunctionName="PQRSV13Model.Store.spLockPendingFilesforExamAPI">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="PQRSV13Model.spLockPendingFilesforExamAPI_Result">
+          <ScalarProperty Name="FILE_NAME" ColumnName="FILE_NAME" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="UPLOAD_END_DATE_TIME" ColumnName="UPLOAD_END_DATE_TIME" />
+          <ScalarProperty Name="isFacility" ColumnName="isFacility" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spMeasureDataExists" FunctionName="PQRSV13Model.Store.spMeasureDataExists" />
+    <FunctionImportMapping FunctionImportName="spMeasureDataExistsForManualData" FunctionName="PQRSV13Model.Store.spMeasureDataExistsForManualData" />
+    <FunctionImportMapping FunctionImportName="SPMerge_Delete_NPI_tbl_Users" FunctionName="PQRSV13Model.Store.SPMerge_Delete_NPI_tbl_Users" />
+    <FunctionImportMapping FunctionImportName="spMigrated_Exam_split_Duplicate_measures" FunctionName="PQRSV13Model.Store.spMigrated_Exam_split_Duplicate_measures" />
+    <FunctionImportMapping FunctionImportName="spMigrateExamMeasureData" FunctionName="PQRSV13Model.Store.spMigrateExamMeasureData" />
+    <FunctionImportMapping FunctionImportName="spMigrateExamMeasureDataExtension" FunctionName="PQRSV13Model.Store.spMigrateExamMeasureDataExtension" />
+    <FunctionImportMapping FunctionImportName="spMigrateImportData" FunctionName="PQRSV13Model.Store.spMigrateImportData" />
+    <FunctionImportMapping FunctionImportName="spNPIMeasureRelatedmeasureDataFor90Days" FunctionName="PQRSV13Model.Store.spNPIMeasureRelatedmeasureDataFor90Days">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="PQRSV13Model.spNPIMeasureRelatedmeasureDataFor90Days_Result">
+          <ScalarProperty Name="Measure_num" ColumnName="Measure_num" />
+          <ScalarProperty Name="TotalExamsCount" ColumnName="TotalExamsCount" />
+          <ScalarProperty Name="SelectedForCMSSubmission" ColumnName="SelectedForCMSSubmission" />
+          <ScalarProperty Name="TotalCasesReviewed" ColumnName="TotalCasesReviewed" />
+          <ScalarProperty Name="Tin" ColumnName="Tin" />
+          <ScalarProperty Name="CMSYear" ColumnName="CMSYear" />
+          <ScalarProperty Name="is90days" ColumnName="is90days" />
+          <ScalarProperty Name="Last_Mod_Date" ColumnName="Last_Mod_Date" />
+          <ScalarProperty Name="isSavedPreviously" ColumnName="isSavedPreviously" />
+          <ScalarProperty Name="HundredPercentSubmit" ColumnName="HundredPercentSubmit" />
+          <ScalarProperty Name="PhysGroupMeasure" ColumnName="PhysGroupMeasure" />
+          <ScalarProperty Name="Performance_rate" ColumnName="Performance_rate" />
+          <ScalarProperty Name="Decile_Val" ColumnName="Decile_Val" />
+          <ScalarProperty Name="Reporting_Rate" ColumnName="Reporting_Rate" />
+          <ScalarProperty Name="CMS_Message" ColumnName="CMS_Message" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spNPIMeasureRelatedmeasureDataForFullYear" FunctionName="PQRSV13Model.Store.spNPIMeasureRelatedmeasureDataForFullYear">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="PQRSV13Model.spNPIMeasureRelatedmeasureDataForFullYear_Result">
+          <ScalarProperty Name="Measure_num" ColumnName="Measure_num" />
+          <ScalarProperty Name="TotalExamsCount" ColumnName="TotalExamsCount" />
+          <ScalarProperty Name="SelectedForCMSSubmission" ColumnName="SelectedForCMSSubmission" />
+          <ScalarProperty Name="TotalCasesReviewed" ColumnName="TotalCasesReviewed" />
+          <ScalarProperty Name="Tin" ColumnName="Tin" />
+          <ScalarProperty Name="CMSYear" ColumnName="CMSYear" />
+          <ScalarProperty Name="is90days" ColumnName="is90days" />
+          <ScalarProperty Name="Last_Mod_Date" ColumnName="Last_Mod_Date" />
+          <ScalarProperty Name="isSavedPreviously" ColumnName="isSavedPreviously" />
+          <ScalarProperty Name="HundredPercentSubmit" ColumnName="HundredPercentSubmit" />
+          <ScalarProperty Name="PhysGroupMeasure" ColumnName="PhysGroupMeasure" />
+          <ScalarProperty Name="Performance_rate" ColumnName="Performance_rate" />
+          <ScalarProperty Name="Decile_Val" ColumnName="Decile_Val" />
+          <ScalarProperty Name="Reporting_Rate" ColumnName="Reporting_Rate" />
+          <ScalarProperty Name="Physician_NPI" ColumnName="Physician_NPI" />
+          <ScalarProperty Name="CMS_Message" ColumnName="CMS_Message" />
+          <ScalarProperty Name="isEndToEndReported" ColumnName="isEndToEndReported" />
+          <ScalarProperty Name="HundredPercentSubmit_C2" ColumnName="HundredPercentSubmit_C2" />
+          <ScalarProperty Name="TotalCasesReviewed_C2" ColumnName="TotalCasesReviewed_C2" />
+          <ScalarProperty Name="HundredPercentSubmit_C3" ColumnName="HundredPercentSubmit_C3" />
+          <ScalarProperty Name="TotalCasesReviewed_C3" ColumnName="TotalCasesReviewed_C3" />
+          <ScalarProperty Name="TotalExamsCount_C1" ColumnName="TotalExamsCount_C1" />
+          <ScalarProperty Name="TotalExamsCount_C3" ColumnName="TotalExamsCount_C3" />
+          <ScalarProperty Name="Measure_Scoring" ColumnName="Measure_Scoring" />
+          <ScalarProperty Name="PR_CMeasure" ColumnName="PR_CMeasure" />
+          <ScalarProperty Name="PriorityName" ColumnName="PriorityName" />
+          <ScalarProperty Name="ISSubmittedtoCMS" ColumnName="ISSubmittedtoCMS" />
+          <ScalarProperty Name="Is_eCQM" ColumnName="Is_eCQM" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spNPIRelatedmeasureData" FunctionName="PQRSV13Model.Store.spNPIRelatedmeasureData">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="PQRSV13Model.spNPIRelatedmeasureData_Result">
+          <ScalarProperty Name="Measure_num" ColumnName="Measure_num" />
+          <ScalarProperty Name="TotalExamsCount" ColumnName="TotalExamsCount" />
+          <ScalarProperty Name="SelectedForCMSSubmission" ColumnName="SelectedForCMSSubmission" />
+          <ScalarProperty Name="TotalCasesReviewed" ColumnName="TotalCasesReviewed" />
+          <ScalarProperty Name="Tin" ColumnName="Tin" />
+          <ScalarProperty Name="CMSYear" ColumnName="CMSYear" />
+          <ScalarProperty Name="is90days" ColumnName="is90days" />
+          <ScalarProperty Name="Last_Mod_Date" ColumnName="Last_Mod_Date" />
+          <ScalarProperty Name="isSavedPreviously" ColumnName="isSavedPreviously" />
+          <ScalarProperty Name="HundredPercentSubmit" ColumnName="HundredPercentSubmit" />
+          <ScalarProperty Name="PhysGroupMeasure" ColumnName="PhysGroupMeasure" />
+          <ScalarProperty Name="Performance_rate" ColumnName="Performance_rate" />
+          <ScalarProperty Name="Decile_Val" ColumnName="Decile_Val" />
+          <ScalarProperty Name="Reporting_Rate" ColumnName="Reporting_Rate" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spNPIRelatedMeasureDataFor90days" FunctionName="PQRSV13Model.Store.spNPIRelatedMeasureDataFor90days">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="PQRSV13Model.spNPIRelatedMeasureDataFor90days_Result">
+          <ScalarProperty Name="Measure_num" ColumnName="Measure_num" />
+          <ScalarProperty Name="TotalExamsCount" ColumnName="TotalExamsCount" />
+          <ScalarProperty Name="SelectedForCMSSubmission" ColumnName="SelectedForCMSSubmission" />
+          <ScalarProperty Name="TotalCasesReviewed" ColumnName="TotalCasesReviewed" />
+          <ScalarProperty Name="Tin" ColumnName="Tin" />
+          <ScalarProperty Name="CMSYear" ColumnName="CMSYear" />
+          <ScalarProperty Name="is90days" ColumnName="is90days" />
+          <ScalarProperty Name="Last_Mod_Date" ColumnName="Last_Mod_Date" />
+          <ScalarProperty Name="isSavedPreviously" ColumnName="isSavedPreviously" />
+          <ScalarProperty Name="HundredPercentSubmit" ColumnName="HundredPercentSubmit" />
+          <ScalarProperty Name="PhysGroupMeasure" ColumnName="PhysGroupMeasure" />
+          <ScalarProperty Name="Performance_rate" ColumnName="Performance_rate" />
+          <ScalarProperty Name="Decile_Val" ColumnName="Decile_Val" />
+          <ScalarProperty Name="Reporting_Rate" ColumnName="Reporting_Rate" />
+          <ScalarProperty Name="NPI" ColumnName="NPI" />
+          <ScalarProperty Name="CMS_Message" ColumnName="CMS_Message" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spNPIRelatedMeasureDataForFullYear" FunctionName="PQRSV13Model.Store.spNPIRelatedMeasureDataForFullYear">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="PQRSV13Model.spNPIRelatedMeasureDataForFullYear_Result">
+          <ScalarProperty Name="Measure_num" ColumnName="Measure_num" />
+          <ScalarProperty Name="TotalExamsCount" ColumnName="TotalExamsCount" />
+          <ScalarProperty Name="SelectedForCMSSubmission" ColumnName="SelectedForCMSSubmission" />
+          <ScalarProperty Name="TotalCasesReviewed" ColumnName="TotalCasesReviewed" />
+          <ScalarProperty Name="Tin" ColumnName="Tin" />
+          <ScalarProperty Name="CMSYear" ColumnName="CMSYear" />
+          <ScalarProperty Name="is90days" ColumnName="is90days" />
+          <ScalarProperty Name="Last_Mod_Date" ColumnName="Last_Mod_Date" />
+          <ScalarProperty Name="isSavedPreviously" ColumnName="isSavedPreviously" />
+          <ScalarProperty Name="HundredPercentSubmit" ColumnName="HundredPercentSubmit" />
+          <ScalarProperty Name="PhysGroupMeasure" ColumnName="PhysGroupMeasure" />
+          <ScalarProperty Name="Performance_rate" ColumnName="Performance_rate" />
+          <ScalarProperty Name="Decile_Val" ColumnName="Decile_Val" />
+          <ScalarProperty Name="Reporting_Rate" ColumnName="Reporting_Rate" />
+          <ScalarProperty Name="NPI" ColumnName="NPI" />
+          <ScalarProperty Name="CMS_Message" ColumnName="CMS_Message" />
+          <ScalarProperty Name="isEndToEndReported" ColumnName="isEndToEndReported" />
+          <ScalarProperty Name="HundredPercentSubmit_C2" ColumnName="HundredPercentSubmit_C2" />
+          <ScalarProperty Name="TotalCasesReviewed_C2" ColumnName="TotalCasesReviewed_C2" />
+          <ScalarProperty Name="HundredPercentSubmit_C3" ColumnName="HundredPercentSubmit_C3" />
+          <ScalarProperty Name="TotalCasesReviewed_C3" ColumnName="TotalCasesReviewed_C3" />
+          <ScalarProperty Name="TotalExamsCount_C1" ColumnName="TotalExamsCount_C1" />
+          <ScalarProperty Name="TotalExamsCount_C3" ColumnName="TotalExamsCount_C3" />
+          <ScalarProperty Name="Measure_Scoring" ColumnName="Measure_Scoring" />
+          <ScalarProperty Name="PR_CMeasure" ColumnName="PR_CMeasure" />
+          <ScalarProperty Name="PriorityName" ColumnName="PriorityName" />
+          <ScalarProperty Name="ISSubmittedtoCMS" ColumnName="ISSubmittedtoCMS" />
+          <ScalarProperty Name="Is_eCQM" ColumnName="Is_eCQM" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spPhsicianTinNpiLevelQMFinalizationValidation" FunctionName="PQRSV13Model.Store.spPhsicianTinNpiLevelQMFinalizationValidation" />
+    <FunctionImportMapping FunctionImportName="spPhysicianTinNpiLevelIAFinalizationValidation" FunctionName="PQRSV13Model.Store.spPhysicianTinNpiLevelIAFinalizationValidation" />
+    <FunctionImportMapping FunctionImportName="SPPI_Activitieslist" FunctionName="PQRSV13Model.Store.SPPI_Activitieslist">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="PQRSV13Model.SPPI_Activitieslist_Result">
+          <ScalarProperty Name="Firstname" ColumnName="Firstname" />
+          <ScalarProperty Name="Lastname" ColumnName="Lastname" />
+          <ScalarProperty Name="NPI" ColumnName="NPI" />
+          <ScalarProperty Name="Tin" ColumnName="Tin" />
+          <ScalarProperty Name="SelectedActivites" ColumnName="SelectedActivites" />
+          <ScalarProperty Name="isGpro" ColumnName="isGpro" />
+          <ScalarProperty Name="emailid" ColumnName="emailid" />
+          <ScalarProperty Name="isFinalize" ColumnName="isFinalize" />
+          <ScalarProperty Name="finalizeAgreeDate" ColumnName="finalizeAgreeDate" />
+          <ScalarProperty Name="finalizeDisAgreeDate" ColumnName="finalizeDisAgreeDate" />
+          <ScalarProperty Name="isSubmitToCI" ColumnName="isSubmitToCI" />
+          <ScalarProperty Name="LastSubmittedDateTime" ColumnName="LastSubmittedDateTime" />
+          <ScalarProperty Name="LastSubmittedBy" ColumnName="LastSubmittedBy" />
+          <ScalarProperty Name="CMSYear" ColumnName="CMSYear" />
+          <ScalarProperty Name="ACI_Id" ColumnName="ACI_Id" />
+          <ScalarProperty Name="SubmittoCMS" ColumnName="SubmittoCMS" />
+          <ScalarProperty Name="is_enrolled" ColumnName="is_enrolled" />
+          <ScalarProperty Name="is_active" ColumnName="is_active" />
+          <ScalarProperty Name="OptInDate" ColumnName="OptInDate" />
+          <ScalarProperty Name="isOptedIn" ColumnName="isOptedIn" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SPPI_FinalizeDetails" FunctionName="PQRSV13Model.Store.SPPI_FinalizeDetails">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="PQRSV13Model.SPPI_FinalizeDetails_Result">
+          <ScalarProperty Name="Tin" ColumnName="Tin" />
+          <ScalarProperty Name="isGpro" ColumnName="isGpro" />
+          <ScalarProperty Name="emailid" ColumnName="emailid" />
+          <ScalarProperty Name="isFinalize" ColumnName="isFinalize" />
+          <ScalarProperty Name="finalizeAgreeDate" ColumnName="finalizeAgreeDate" />
+          <ScalarProperty Name="finalizeDisAgreeDate" ColumnName="finalizeDisAgreeDate" />
+          <ScalarProperty Name="isSubmitToCI" ColumnName="isSubmitToCI" />
+          <ScalarProperty Name="LastSubmittedDateTime" ColumnName="LastSubmittedDateTime" />
+          <ScalarProperty Name="LastSubmittedBy" ColumnName="LastSubmittedBy" />
+          <ScalarProperty Name="CMSYear" ColumnName="CMSYear" />
+          <ScalarProperty Name="SubmittoCMS" ColumnName="SubmittoCMS" />
+          <ScalarProperty Name="CehrtId" ColumnName="CehrtId" />
+          <ScalarProperty Name="OptInDate" ColumnName="OptInDate" />
+          <ScalarProperty Name="isOptedIn" ColumnName="isOptedIn" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SPPI_FinalizeDetails_Physician" FunctionName="PQRSV13Model.Store.SPPI_FinalizeDetails_Physician">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="PQRSV13Model.SPPI_FinalizeDetails_Physician_Result">
+          <ScalarProperty Name="Tin" ColumnName="Tin" />
+          <ScalarProperty Name="Npi" ColumnName="Npi" />
+          <ScalarProperty Name="isGpro" ColumnName="isGpro" />
+          <ScalarProperty Name="emailid" ColumnName="emailid" />
+          <ScalarProperty Name="isFinalize" ColumnName="isFinalize" />
+          <ScalarProperty Name="finalizeAgreeDate" ColumnName="finalizeAgreeDate" />
+          <ScalarProperty Name="finalizeDisAgreeDate" ColumnName="finalizeDisAgreeDate" />
+          <ScalarProperty Name="isSubmitToCI" ColumnName="isSubmitToCI" />
+          <ScalarProperty Name="LastSubmittedDateTime" ColumnName="LastSubmittedDateTime" />
+          <ScalarProperty Name="LastSubmittedBy" ColumnName="LastSubmittedBy" />
+          <ScalarProperty Name="CMSYear" ColumnName="CMSYear" />
+          <ScalarProperty Name="SubmittoCMS" ColumnName="SubmittoCMS" />
+          <ScalarProperty Name="CehrtId" ColumnName="CehrtId" />
+          <ScalarProperty Name="OptInDate" ColumnName="OptInDate" />
+          <ScalarProperty Name="isOptedIn" ColumnName="isOptedIn" />
+          <ScalarProperty Name="is_enrolled" ColumnName="is_enrolled" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SPQM_FacilityPhyFinalizeDetails" FunctionName="PQRSV13Model.Store.SPQM_FacilityPhyFinalizeDetails">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="PQRSV13Model.SPQM_FacilityPhyFinalizeDetails_Result">
+          <ScalarProperty Name="Firstname" ColumnName="Firstname" />
+          <ScalarProperty Name="Lastname" ColumnName="Lastname" />
+          <ScalarProperty Name="NPI" ColumnName="NPI" />
+          <ScalarProperty Name="Tin" ColumnName="Tin" />
+          <ScalarProperty Name="isGpro" ColumnName="isGpro" />
+          <ScalarProperty Name="emailid" ColumnName="emailid" />
+          <ScalarProperty Name="isFinalize" ColumnName="isFinalize" />
+          <ScalarProperty Name="finalizeAgreeDate" ColumnName="finalizeAgreeDate" />
+          <ScalarProperty Name="finalizeDisAgreeDate" ColumnName="finalizeDisAgreeDate" />
+          <ScalarProperty Name="isSubmitToCI" ColumnName="isSubmitToCI" />
+          <ScalarProperty Name="LastSubmittedDateTime" ColumnName="LastSubmittedDateTime" />
+          <ScalarProperty Name="LastSubmittedBy" ColumnName="LastSubmittedBy" />
+          <ScalarProperty Name="CMSYear" ColumnName="CMSYear" />
+          <ScalarProperty Name="is90Days" ColumnName="is90Days" />
+          <ScalarProperty Name="SubmittoCMS" ColumnName="SubmittoCMS" />
+          <ScalarProperty Name="is_enrolled" ColumnName="is_enrolled" />
+          <ScalarProperty Name="OptInDate" ColumnName="OptInDate" />
+          <ScalarProperty Name="isOptedIn" ColumnName="isOptedIn" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SPQM_FinalizeDetails" FunctionName="PQRSV13Model.Store.SPQM_FinalizeDetails">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="PQRSV13Model.SPQM_FinalizeDetails_Result">
+          <ScalarProperty Name="Tin" ColumnName="Tin" />
+          <ScalarProperty Name="isGpro" ColumnName="isGpro" />
+          <ScalarProperty Name="emailid" ColumnName="emailid" />
+          <ScalarProperty Name="isFinalize" ColumnName="isFinalize" />
+          <ScalarProperty Name="finalizeAgreeDate" ColumnName="finalizeAgreeDate" />
+          <ScalarProperty Name="finalizeDisAgreeDate" ColumnName="finalizeDisAgreeDate" />
+          <ScalarProperty Name="isSubmitToCI" ColumnName="isSubmitToCI" />
+          <ScalarProperty Name="LastSubmittedDateTime" ColumnName="LastSubmittedDateTime" />
+          <ScalarProperty Name="LastSubmittedBy" ColumnName="LastSubmittedBy" />
+          <ScalarProperty Name="CMSYear" ColumnName="CMSYear" />
+          <ScalarProperty Name="is90Days" ColumnName="is90Days" />
+          <ScalarProperty Name="SubmittoCMS" ColumnName="SubmittoCMS" />
+          <ScalarProperty Name="OptInDate" ColumnName="OptInDate" />
+          <ScalarProperty Name="isOptedIn" ColumnName="isOptedIn" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SPQM_FinalizeDetails_Physician" FunctionName="PQRSV13Model.Store.SPQM_FinalizeDetails_Physician">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="PQRSV13Model.SPQM_FinalizeDetails_Physician_Result">
+          <ScalarProperty Name="Tin" ColumnName="Tin" />
+          <ScalarProperty Name="Npi" ColumnName="Npi" />
+          <ScalarProperty Name="isGpro" ColumnName="isGpro" />
+          <ScalarProperty Name="emailid" ColumnName="emailid" />
+          <ScalarProperty Name="isFinalize" ColumnName="isFinalize" />
+          <ScalarProperty Name="finalizeAgreeDate" ColumnName="finalizeAgreeDate" />
+          <ScalarProperty Name="finalizeDisAgreeDate" ColumnName="finalizeDisAgreeDate" />
+          <ScalarProperty Name="isSubmitToCI" ColumnName="isSubmitToCI" />
+          <ScalarProperty Name="LastSubmittedDateTime" ColumnName="LastSubmittedDateTime" />
+          <ScalarProperty Name="LastSubmittedBy" ColumnName="LastSubmittedBy" />
+          <ScalarProperty Name="CMSYear" ColumnName="CMSYear" />
+          <ScalarProperty Name="is90Days" ColumnName="is90Days" />
+          <ScalarProperty Name="SubmittoCMS" ColumnName="SubmittoCMS" />
+          <ScalarProperty Name="OptInDate" ColumnName="OptInDate" />
+          <ScalarProperty Name="isOptedIn" ColumnName="isOptedIn" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SpQMSaveAllMeasureData" FunctionName="PQRSV13Model.Store.SpQMSaveAllMeasureData" />
+    <FunctionImportMapping FunctionImportName="spReCalculate_Measure143ForPhy" FunctionName="PQRSV13Model.Store.spReCalculate_Measure143ForPhy" />
+    <FunctionImportMapping FunctionImportName="spReCalculate_Measure143ForTin" FunctionName="PQRSV13Model.Store.spReCalculate_Measure143ForTin" />
+    <FunctionImportMapping FunctionImportName="spReCalculate_Measure226ForPhy" FunctionName="PQRSV13Model.Store.spReCalculate_Measure226ForPhy" />
+    <FunctionImportMapping FunctionImportName="spReCalculate_Measure226ForPhy90Days" FunctionName="PQRSV13Model.Store.spReCalculate_Measure226ForPhy90Days" />
+    <FunctionImportMapping FunctionImportName="spReCalculate_Measure226ForTin" FunctionName="PQRSV13Model.Store.spReCalculate_Measure226ForTin" />
+    <FunctionImportMapping FunctionImportName="spReCalculate_Measure226ForTin90Days" FunctionName="PQRSV13Model.Store.spReCalculate_Measure226ForTin90Days" />
+    <FunctionImportMapping FunctionImportName="spReCalculate_Measure409ForPhy" FunctionName="PQRSV13Model.Store.spReCalculate_Measure409ForPhy" />
+    <FunctionImportMapping FunctionImportName="spReCalculate_Measure409ForTin" FunctionName="PQRSV13Model.Store.spReCalculate_Measure409ForTin" />
+    <FunctionImportMapping FunctionImportName="spReCalculate_PapulatePhyAggrTblForTinofNPIS" FunctionName="PQRSV13Model.Store.spReCalculate_PapulatePhyAggrTblForTinofNPIS" />
+    <FunctionImportMapping FunctionImportName="spReCalculate_StratumCalbyAgeforPhy" FunctionName="PQRSV13Model.Store.spReCalculate_StratumCalbyAgeforPhy" />
+    <FunctionImportMapping FunctionImportName="spReCalculate_StratumCalbyAgeforPhy90Days" FunctionName="PQRSV13Model.Store.spReCalculate_StratumCalbyAgeforPhy90Days" />
+    <FunctionImportMapping FunctionImportName="spReCalculate_StratumCalbyAgeforTIN" FunctionName="PQRSV13Model.Store.spReCalculate_StratumCalbyAgeforTIN" />
+    <FunctionImportMapping FunctionImportName="spReCalculate_StratumCalbyAgeforTIN90Days" FunctionName="PQRSV13Model.Store.spReCalculate_StratumCalbyAgeforTIN90Days" />
+    <FunctionImportMapping FunctionImportName="spReCalculatePerfomanceRateFor90Days" FunctionName="PQRSV13Model.Store.spReCalculatePerfomanceRateFor90Days" />
+    <FunctionImportMapping FunctionImportName="spReCalculatePerfomanceRateFor90DaysandMeasureID" FunctionName="PQRSV13Model.Store.spReCalculatePerfomanceRateFor90DaysandMeasureID" />
+    <FunctionImportMapping FunctionImportName="spReCalculatePerfomanceRateForYear" FunctionName="PQRSV13Model.Store.spReCalculatePerfomanceRateForYear" />
+    <FunctionImportMapping FunctionImportName="spReCalculatePerfomanceRateForYearandMeasureID" FunctionName="PQRSV13Model.Store.spReCalculatePerfomanceRateForYearandMeasureID" />
+    <FunctionImportMapping FunctionImportName="spReCalculateTINperformanceRateFor90Days" FunctionName="PQRSV13Model.Store.spReCalculateTINperformanceRateFor90Days" />
+    <FunctionImportMapping FunctionImportName="spReCalculateTINperformanceRateFor90DaysandMeasureID" FunctionName="PQRSV13Model.Store.spReCalculateTINperformanceRateFor90DaysandMeasureID" />
+    <FunctionImportMapping FunctionImportName="spReCalculateTINperformanceRateForYear" FunctionName="PQRSV13Model.Store.spReCalculateTINperformanceRateForYear" />
+    <FunctionImportMapping FunctionImportName="spReCalculateTINperformanceRateForYear_NewSP" FunctionName="PQRSV13Model.Store.spReCalculateTINperformanceRateForYear_NewSP" />
+    <FunctionImportMapping FunctionImportName="spReCalculateTINperformanceRateForYearandMeasureID" FunctionName="PQRSV13Model.Store.spReCalculateTINperformanceRateForYearandMeasureID" />
+    <FunctionImportMapping FunctionImportName="SPRecordEnteredPageGridDetails" FunctionName="PQRSV13Model.Store.SPRecordEnteredPageGridDetails">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="PQRSV13Model.SPRecordEnteredPageGridDetails_Result">
+          <ScalarProperty Name="NPI" ColumnName="NPI" />
+          <ScalarProperty Name="TIN" ColumnName="TIN" />
+          <ScalarProperty Name="ExamID" ColumnName="ExamID" />
+          <ScalarProperty Name="MeasureID" ColumnName="MeasureID" />
+          <ScalarProperty Name="MeasureNum" ColumnName="MeasureNum" />
+          <ScalarProperty Name="CPTCode" ColumnName="CPTCode" />
+          <ScalarProperty Name="NumeratorCode" ColumnName="NumeratorCode" />
+          <ScalarProperty Name="Created_Date" ColumnName="Created_Date" />
+          <ScalarProperty Name="ExamDate" ColumnName="ExamDate" />
+          <ScalarProperty Name="UniqueExamID" ColumnName="UniqueExamID" />
+          <ScalarProperty Name="PatientGender" ColumnName="PatientGender" />
+          <ScalarProperty Name="PatientID" ColumnName="PatientID" />
+          <ScalarProperty Name="isEncrypt" ColumnName="isEncrypt" />
+          <ScalarProperty Name="PatientAge" ColumnName="PatientAge" />
+          <ScalarProperty Name="StatusDesc" ColumnName="StatusDesc" />
+          <ScalarProperty Name="DataSource" ColumnName="DataSource" />
+          <ScalarProperty Name="cmsYear" ColumnName="cmsYear" />
+          <ScalarProperty Name="RecordsCount" ColumnName="RecordsCount" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spRegistrationStatusForFaciilty" FunctionName="PQRSV13Model.Store.spRegistrationStatusForFaciilty" />
+    <FunctionImportMapping FunctionImportName="spRejectedData" FunctionName="PQRSV13Model.Store.spRejectedData" />
+    <FunctionImportMapping FunctionImportName="spRejectedDataNew" FunctionName="PQRSV13Model.Store.spRejectedDataNew" />
+    <FunctionImportMapping FunctionImportName="spRemoveDuplicate_Users" FunctionName="PQRSV13Model.Store.spRemoveDuplicate_Users" />
+    <FunctionImportMapping FunctionImportName="spRemoveDuplicateExams" FunctionName="PQRSV13Model.Store.spRemoveDuplicateExams" />
+    <FunctionImportMapping FunctionImportName="spRemoveDuplicateExams_NoExamUniqueID" FunctionName="PQRSV13Model.Store.spRemoveDuplicateExams_NoExamUniqueID" />
+    <FunctionImportMapping FunctionImportName="SPRepopulate_AttestationTINNPIs_ForJIRA_659" FunctionName="PQRSV13Model.Store.SPRepopulate_AttestationTINNPIs_ForJIRA_659" />
+    <FunctionImportMapping FunctionImportName="SPSaveAllMeasureData_notusing" FunctionName="PQRSV13Model.Store.SPSaveAllMeasureData_notusing" />
+    <FunctionImportMapping FunctionImportName="SpSaveBlockListData" FunctionName="PQRSV13Model.Store.SpSaveBlockListData" />
+    <FunctionImportMapping FunctionImportName="SpSaveBlockMeasureListData" FunctionName="PQRSV13Model.Store.SpSaveBlockMeasureListData" />
+    <FunctionImportMapping FunctionImportName="spSelectedTINNPIRelatedIAMeasureDataForFullYear" FunctionName="PQRSV13Model.Store.spSelectedTINNPIRelatedIAMeasureDataForFullYear" />
+    <FunctionImportMapping FunctionImportName="spSelectedTINNPIRelatedMeasureDataForFullYear" FunctionName="PQRSV13Model.Store.spSelectedTINNPIRelatedMeasureDataForFullYear" />
+    <FunctionImportMapping FunctionImportName="spSelectedTinsRelatedIAMeasureDataForFullYear" FunctionName="PQRSV13Model.Store.spSelectedTinsRelatedIAMeasureDataForFullYear" />
+    <FunctionImportMapping FunctionImportName="spSelectedTinsRelatedMeasureDataForFullYear" FunctionName="PQRSV13Model.Store.spSelectedTinsRelatedMeasureDataForFullYear" />
+    <FunctionImportMapping FunctionImportName="spShowImportTables" FunctionName="PQRSV13Model.Store.spShowImportTables">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="PQRSV13Model.spShowImportTables_Result">
+          <ScalarProperty Name="ImportID" ColumnName="ImportID" />
+          <ScalarProperty Name="ImportRawData" ColumnName="ImportRawData" />
+          <ScalarProperty Name="ImportDate" ColumnName="ImportDate" />
+          <ScalarProperty Name="ImportIPAddress" ColumnName="ImportIPAddress" />
+          <ScalarProperty Name="ImportCorrect" ColumnName="ImportCorrect" />
+          <ScalarProperty Name="Error_Codes" ColumnName="Error_Codes" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Data_Status" ColumnName="Data_Status" />
+          <ScalarProperty Name="Correct_ExamsCount" ColumnName="Correct_ExamsCount" />
+          <ScalarProperty Name="InCorrect_ExamsCount" ColumnName="InCorrect_ExamsCount" />
+          <ScalarProperty Name="No_of_Errors" ColumnName="No_of_Errors" />
+          <ScalarProperty Name="Correct_ExamsWith_WarningCount" ColumnName="Correct_ExamsWith_WarningCount" />
+          <ScalarProperty Name="InCorrect_ExamsWith_ExclusionCount" ColumnName="InCorrect_ExamsWith_ExclusionCount" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SPTemp" FunctionName="PQRSV13Model.Store.SPTemp" />
+    <FunctionImportMapping FunctionImportName="SPTestPK" FunctionName="PQRSV13Model.Store.SPTestPK">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="PQRSV13Model.SPTestPK_Result">
+          <ScalarProperty Name="Exam_Id" ColumnName="Exam_Id" />
+          <ScalarProperty Name="Exam_TIN" ColumnName="Exam_TIN" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spTinFinalize_90DaysLock" FunctionName="PQRSV13Model.Store.spTinFinalize_90DaysLock">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="PQRSV13Model.spTinFinalize_90DaysLock_Result">
+          <ScalarProperty Name="TIN" ColumnName="TIN" />
+          <ScalarProperty Name="IS_GPRO" ColumnName="IS_GPRO" />
+          <ScalarProperty Name="FinalizeAgreeTime" ColumnName="FinalizeAgreeTime" />
+          <ScalarProperty Name="FinalizeDisagreeTime" ColumnName="FinalizeDisagreeTime" />
+          <ScalarProperty Name="FinalizeEmail" ColumnName="FinalizeEmail" />
+          <ScalarProperty Name="Finalize_Year" ColumnName="Finalize_Year" />
+          <ScalarProperty Name="islock" ColumnName="islock" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spTinLevelACIFinalizationValidation" FunctionName="PQRSV13Model.Store.spTinLevelACIFinalizationValidation" />
+    <FunctionImportMapping FunctionImportName="spTinLevelIAFinalizationValidation" FunctionName="PQRSV13Model.Store.spTinLevelIAFinalizationValidation" />
+    <FunctionImportMapping FunctionImportName="spTinLevelQMFinalizationValidation" FunctionName="PQRSV13Model.Store.spTinLevelQMFinalizationValidation" />
+    <FunctionImportMapping FunctionImportName="spTinMeasureRelatedMeasureDataFor90Days" FunctionName="PQRSV13Model.Store.spTinMeasureRelatedMeasureDataFor90Days">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="PQRSV13Model.spTinMeasureRelatedMeasureDataFor90Days_Result">
+          <ScalarProperty Name="Measure_num" ColumnName="Measure_num" />
+          <ScalarProperty Name="TotalExamsCount" ColumnName="TotalExamsCount" />
+          <ScalarProperty Name="SelectedForCMSSubmission" ColumnName="SelectedForCMSSubmission" />
+          <ScalarProperty Name="TotalCasesReviewed" ColumnName="TotalCasesReviewed" />
+          <ScalarProperty Name="Tin" ColumnName="Tin" />
+          <ScalarProperty Name="CMSYear" ColumnName="CMSYear" />
+          <ScalarProperty Name="is90days" ColumnName="is90days" />
+          <ScalarProperty Name="Last_Mod_Date" ColumnName="Last_Mod_Date" />
+          <ScalarProperty Name="isSavedPreviously" ColumnName="isSavedPreviously" />
+          <ScalarProperty Name="HundredPercentSubmit" ColumnName="HundredPercentSubmit" />
+          <ScalarProperty Name="PhysGroupMeasure" ColumnName="PhysGroupMeasure" />
+          <ScalarProperty Name="totalPhysiansSubmittedCount" ColumnName="totalPhysiansSubmittedCount" />
+          <ScalarProperty Name="Performance_rate" ColumnName="Performance_rate" />
+          <ScalarProperty Name="Decile_Val" ColumnName="Decile_Val" />
+          <ScalarProperty Name="Reporting_Rate" ColumnName="Reporting_Rate" />
+          <ScalarProperty Name="CMS_Message" ColumnName="CMS_Message" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spTinMeasureRelatedMeasureDataForFullYear" FunctionName="PQRSV13Model.Store.spTinMeasureRelatedMeasureDataForFullYear">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="PQRSV13Model.spTinMeasureRelatedMeasureDataForFullYear_Result">
+          <ScalarProperty Name="Measure_num" ColumnName="Measure_num" />
+          <ScalarProperty Name="TotalExamsCount" ColumnName="TotalExamsCount" />
+          <ScalarProperty Name="SelectedForCMSSubmission" ColumnName="SelectedForCMSSubmission" />
+          <ScalarProperty Name="TotalCasesReviewed" ColumnName="TotalCasesReviewed" />
+          <ScalarProperty Name="Tin" ColumnName="Tin" />
+          <ScalarProperty Name="CMSYear" ColumnName="CMSYear" />
+          <ScalarProperty Name="is90days" ColumnName="is90days" />
+          <ScalarProperty Name="Last_Mod_Date" ColumnName="Last_Mod_Date" />
+          <ScalarProperty Name="isSavedPreviously" ColumnName="isSavedPreviously" />
+          <ScalarProperty Name="HundredPercentSubmit" ColumnName="HundredPercentSubmit" />
+          <ScalarProperty Name="PhysGroupMeasure" ColumnName="PhysGroupMeasure" />
+          <ScalarProperty Name="totalPhysiansSubmittedCount" ColumnName="totalPhysiansSubmittedCount" />
+          <ScalarProperty Name="Performance_rate" ColumnName="Performance_rate" />
+          <ScalarProperty Name="Decile_Val" ColumnName="Decile_Val" />
+          <ScalarProperty Name="Reporting_Rate" ColumnName="Reporting_Rate" />
+          <ScalarProperty Name="CMS_Message" ColumnName="CMS_Message" />
+          <ScalarProperty Name="isEndToEndReported" ColumnName="isEndToEndReported" />
+          <ScalarProperty Name="HundredPercentSubmit_C2" ColumnName="HundredPercentSubmit_C2" />
+          <ScalarProperty Name="TotalCasesReviewed_C2" ColumnName="TotalCasesReviewed_C2" />
+          <ScalarProperty Name="HundredPercentSubmit_C3" ColumnName="HundredPercentSubmit_C3" />
+          <ScalarProperty Name="TotalCasesReviewed_C3" ColumnName="TotalCasesReviewed_C3" />
+          <ScalarProperty Name="TotalExamsCount_C1" ColumnName="TotalExamsCount_C1" />
+          <ScalarProperty Name="TotalExamsCount_C3" ColumnName="TotalExamsCount_C3" />
+          <ScalarProperty Name="Measure_Scoring" ColumnName="Measure_Scoring" />
+          <ScalarProperty Name="PR_CMeasure" ColumnName="PR_CMeasure" />
+          <ScalarProperty Name="PriorityName" ColumnName="PriorityName" />
+          <ScalarProperty Name="ISSubmittedtoCMS" ColumnName="ISSubmittedtoCMS" />
+          <ScalarProperty Name="Is_eCQM" ColumnName="Is_eCQM" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spTinNpiFinalize_90DaysLock" FunctionName="PQRSV13Model.Store.spTinNpiFinalize_90DaysLock">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="PQRSV13Model.spTinNpiFinalize_90DaysLock_Result">
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="Npi" ColumnName="Npi" />
+          <ScalarProperty Name="FinalizeAgreeTime" ColumnName="FinalizeAgreeTime" />
+          <ScalarProperty Name="FinalizeDisagreeTime" ColumnName="FinalizeDisagreeTime" />
+          <ScalarProperty Name="FinalizeEmail" ColumnName="FinalizeEmail" />
+          <ScalarProperty Name="Finalize_Year" ColumnName="Finalize_Year" />
+          <ScalarProperty Name="islock" ColumnName="islock" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spTinNpiLevelFacilityACIFinalizationValidation" FunctionName="PQRSV13Model.Store.spTinNpiLevelFacilityACIFinalizationValidation" />
+    <FunctionImportMapping FunctionImportName="spTinNpiLevelFinalizationValidation" FunctionName="PQRSV13Model.Store.spTinNpiLevelFinalizationValidation" />
+    <FunctionImportMapping FunctionImportName="spTinNpiLevelIAFinalizationValidation" FunctionName="PQRSV13Model.Store.spTinNpiLevelIAFinalizationValidation" />
+    <FunctionImportMapping FunctionImportName="spTinNpiLevelPhysicianACIFinalizationValidation" FunctionName="PQRSV13Model.Store.spTinNpiLevelPhysicianACIFinalizationValidation" />
+    <FunctionImportMapping FunctionImportName="spTinNpiLevelQMFinalizationValidation" FunctionName="PQRSV13Model.Store.spTinNpiLevelQMFinalizationValidation" />
+    <FunctionImportMapping FunctionImportName="spTinRelatedMeasureData" FunctionName="PQRSV13Model.Store.spTinRelatedMeasureData">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="PQRSV13Model.spTinRelatedMeasureData_Result">
+          <ScalarProperty Name="Measure_num" ColumnName="Measure_num" />
+          <ScalarProperty Name="TotalExamsCount" ColumnName="TotalExamsCount" />
+          <ScalarProperty Name="SelectedForCMSSubmission" ColumnName="SelectedForCMSSubmission" />
+          <ScalarProperty Name="TotalCasesReviewed" ColumnName="TotalCasesReviewed" />
+          <ScalarProperty Name="Tin" ColumnName="Tin" />
+          <ScalarProperty Name="CMSYear" ColumnName="CMSYear" />
+          <ScalarProperty Name="is90days" ColumnName="is90days" />
+          <ScalarProperty Name="Last_Mod_Date" ColumnName="Last_Mod_Date" />
+          <ScalarProperty Name="isSavedPreviously" ColumnName="isSavedPreviously" />
+          <ScalarProperty Name="HundredPercentSubmit" ColumnName="HundredPercentSubmit" />
+          <ScalarProperty Name="PhysGroupMeasure" ColumnName="PhysGroupMeasure" />
+          <ScalarProperty Name="totalPhysiansSubmittedCount" ColumnName="totalPhysiansSubmittedCount" />
+          <ScalarProperty Name="Performance_rate" ColumnName="Performance_rate" />
+          <ScalarProperty Name="Decile_Val" ColumnName="Decile_Val" />
+          <ScalarProperty Name="Reporting_Rate" ColumnName="Reporting_Rate" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spTinRelatedMeasureDataFor90days" FunctionName="PQRSV13Model.Store.spTinRelatedMeasureDataFor90days">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="PQRSV13Model.spTinRelatedMeasureDataFor90days_Result">
+          <ScalarProperty Name="Measure_num" ColumnName="Measure_num" />
+          <ScalarProperty Name="TotalExamsCount" ColumnName="TotalExamsCount" />
+          <ScalarProperty Name="SelectedForCMSSubmission" ColumnName="SelectedForCMSSubmission" />
+          <ScalarProperty Name="TotalCasesReviewed" ColumnName="TotalCasesReviewed" />
+          <ScalarProperty Name="Tin" ColumnName="Tin" />
+          <ScalarProperty Name="CMSYear" ColumnName="CMSYear" />
+          <ScalarProperty Name="is90days" ColumnName="is90days" />
+          <ScalarProperty Name="Last_Mod_Date" ColumnName="Last_Mod_Date" />
+          <ScalarProperty Name="isSavedPreviously" ColumnName="isSavedPreviously" />
+          <ScalarProperty Name="HundredPercentSubmit" ColumnName="HundredPercentSubmit" />
+          <ScalarProperty Name="PhysGroupMeasure" ColumnName="PhysGroupMeasure" />
+          <ScalarProperty Name="totalPhysiansSubmittedCount" ColumnName="totalPhysiansSubmittedCount" />
+          <ScalarProperty Name="Performance_rate" ColumnName="Performance_rate" />
+          <ScalarProperty Name="Decile_Val" ColumnName="Decile_Val" />
+          <ScalarProperty Name="Reporting_Rate" ColumnName="Reporting_Rate" />
+          <ScalarProperty Name="CMS_Message" ColumnName="CMS_Message" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spTinRelatedMeasureDataForFullYear" FunctionName="PQRSV13Model.Store.spTinRelatedMeasureDataForFullYear">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="PQRSV13Model.spTinRelatedMeasureDataForFullYear_Result">
+          <ScalarProperty Name="Measure_num" ColumnName="Measure_num" />
+          <ScalarProperty Name="TotalExamsCount" ColumnName="TotalExamsCount" />
+          <ScalarProperty Name="SelectedForCMSSubmission" ColumnName="SelectedForCMSSubmission" />
+          <ScalarProperty Name="TotalCasesReviewed" ColumnName="TotalCasesReviewed" />
+          <ScalarProperty Name="Tin" ColumnName="Tin" />
+          <ScalarProperty Name="CMSYear" ColumnName="CMSYear" />
+          <ScalarProperty Name="is90days" ColumnName="is90days" />
+          <ScalarProperty Name="Last_Mod_Date" ColumnName="Last_Mod_Date" />
+          <ScalarProperty Name="isSavedPreviously" ColumnName="isSavedPreviously" />
+          <ScalarProperty Name="HundredPercentSubmit" ColumnName="HundredPercentSubmit" />
+          <ScalarProperty Name="PhysGroupMeasure" ColumnName="PhysGroupMeasure" />
+          <ScalarProperty Name="totalPhysiansSubmittedCount" ColumnName="totalPhysiansSubmittedCount" />
+          <ScalarProperty Name="Performance_rate" ColumnName="Performance_rate" />
+          <ScalarProperty Name="Decile_Val" ColumnName="Decile_Val" />
+          <ScalarProperty Name="Reporting_Rate" ColumnName="Reporting_Rate" />
+          <ScalarProperty Name="CMS_Message" ColumnName="CMS_Message" />
+          <ScalarProperty Name="isEndToEndReported" ColumnName="isEndToEndReported" />
+          <ScalarProperty Name="HundredPercentSubmit_C2" ColumnName="HundredPercentSubmit_C2" />
+          <ScalarProperty Name="TotalCasesReviewed_C2" ColumnName="TotalCasesReviewed_C2" />
+          <ScalarProperty Name="HundredPercentSubmit_C3" ColumnName="HundredPercentSubmit_C3" />
+          <ScalarProperty Name="TotalCasesReviewed_C3" ColumnName="TotalCasesReviewed_C3" />
+          <ScalarProperty Name="TotalExamsCount_C1" ColumnName="TotalExamsCount_C1" />
+          <ScalarProperty Name="TotalExamsCount_C3" ColumnName="TotalExamsCount_C3" />
+          <ScalarProperty Name="Measure_Scoring" ColumnName="Measure_Scoring" />
+          <ScalarProperty Name="PR_CMeasure" ColumnName="PR_CMeasure" />
+          <ScalarProperty Name="PriorityName" ColumnName="PriorityName" />
+          <ScalarProperty Name="ISSubmittedtoCMS" ColumnName="ISSubmittedtoCMS" />
+          <ScalarProperty Name="Is_eCQM" ColumnName="Is_eCQM" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spTruncateImportFilesDataInTables" FunctionName="PQRSV13Model.Store.spTruncateImportFilesDataInTables" />
+    <FunctionImportMapping FunctionImportName="spTruncateImportFilesTables" FunctionName="PQRSV13Model.Store.spTruncateImportFilesTables" />
+    <FunctionImportMapping FunctionImportName="spTruncateImportTables" FunctionName="PQRSV13Model.Store.spTruncateImportTables" />
+    <FunctionImportMapping FunctionImportName="spTruncateTransTables" FunctionName="PQRSV13Model.Store.spTruncateTransTables" />
+    <FunctionImportMapping FunctionImportName="spUpdate_GPROtoNonGPRO_ViceVersa" FunctionName="PQRSV13Model.Store.spUpdate_GPROtoNonGPRO_ViceVersa" />
+    <FunctionImportMapping FunctionImportName="spUpdateExamData" FunctionName="PQRSV13Model.Store.spUpdateExamData">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="PQRSV13Model.spUpdateExamData_Result">
+          <ScalarProperty Name="Exam_id" ColumnName="Exam_id" />
+          <ScalarProperty Name="RecordsUpdated" ColumnName="RecordsUpdated" />
+          <ScalarProperty Name="Errors" ColumnName="Errors" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SpUpdateHitrustSiteActiveStatus" FunctionName="PQRSV13Model.Store.SpUpdateHitrustSiteActiveStatus" />
+    <FunctionImportMapping FunctionImportName="spUpdateMeasureData" FunctionName="PQRSV13Model.Store.spUpdateMeasureData">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="PQRSV13Model.spUpdateMeasureData_Result">
+          <ScalarProperty Name="Exam_measure_id" ColumnName="Exam_measure_id" />
+          <ScalarProperty Name="Measure_id" ColumnName="Measure_id" />
+          <ScalarProperty Name="Measure_Num" ColumnName="Measure_Num" />
+          <ScalarProperty Name="Errors" ColumnName="Errors" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SpUpdateMeasureRulesConfigPart1" FunctionName="PQRSV13Model.Store.SpUpdateMeasureRulesConfigPart1" />
+    <FunctionImportMapping FunctionImportName="SpUpdateMeasureRulesConfigPart4" FunctionName="PQRSV13Model.Store.SpUpdateMeasureRulesConfigPart4" />
+    <FunctionImportMapping FunctionImportName="SpUpdateMeasureRulesConfigPart5" FunctionName="PQRSV13Model.Store.SpUpdateMeasureRulesConfigPart5" />
+    <FunctionImportMapping FunctionImportName="SpUpdateNumertorValueFromTblFile_Rawdata" FunctionName="PQRSV13Model.Store.SpUpdateNumertorValueFromTblFile_Rawdata" />
+    <FunctionImportMapping FunctionImportName="spValidateImportExam" FunctionName="PQRSV13Model.Store.spValidateImportExam" />
+    <FunctionImportMapping FunctionImportName="spValidateImportExam_ByTwoActiveYears" FunctionName="PQRSV13Model.Store.spValidateImportExam_ByTwoActiveYears" />
+    <FunctionImportMapping FunctionImportName="spValidateImportExam_Nrdr13x" FunctionName="PQRSV13Model.Store.spValidateImportExam_Nrdr13x" />
+    <FunctionImportMapping FunctionImportName="spValidateImportExamMeasureData" FunctionName="PQRSV13Model.Store.spValidateImportExamMeasureData" />
+    <FunctionImportMapping FunctionImportName="spValidateImportExamMeasureData_BYTwoActiveYears" FunctionName="PQRSV13Model.Store.spValidateImportExamMeasureData_BYTwoActiveYears" />
+    <FunctionImportMapping FunctionImportName="spValidateImportExamMeasureDataExtension" FunctionName="PQRSV13Model.Store.spValidateImportExamMeasureDataExtension" />
+    <FunctionImportMapping FunctionImportName="spValidateImportExams" FunctionName="PQRSV13Model.Store.spValidateImportExams" />
+    <FunctionImportMapping FunctionImportName="spValidateImportExams_NPI_FacilityID_TEMPTable" FunctionName="PQRSV13Model.Store.spValidateImportExams_NPI_FacilityID_TEMPTable" />
+    <FunctionImportMapping FunctionImportName="test_List_orders_2" FunctionName="PQRSV13Model.Store.test_List_orders_2">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="PQRSV13Model.test_List_orders_2_Result">
+          <ScalarProperty Name="FILE_NAME" ColumnName="FILE_NAME" />
+          <ScalarProperty Name="UPLOAD_START_DATE_TIME" ColumnName="UPLOAD_START_DATE_TIME" />
+          <ScalarProperty Name="UPLOAD_END_DATE_TIME" ColumnName="UPLOAD_END_DATE_TIME" />
+          <ScalarProperty Name="ERROR_MESSAGE" ColumnName="ERROR_MESSAGE" />
+          <ScalarProperty Name="TOTAL_RECORDS_COUNT" ColumnName="TOTAL_RECORDS_COUNT" />
+          <ScalarProperty Name="STATUS" ColumnName="STATUS" />
+          <ScalarProperty Name="NPI" ColumnName="NPI" />
+          <ScalarProperty Name="Load_Start_Time" ColumnName="Load_Start_Time" />
+          <ScalarProperty Name="Load_End_Time" ColumnName="Load_End_Time" />
+          <ScalarProperty Name="Invalid_Records_Count" ColumnName="Invalid_Records_Count" />
+          <ScalarProperty Name="Updated_Records_Count" ColumnName="Updated_Records_Count" />
+          <ScalarProperty Name="Added_Records_Count" ColumnName="Added_Records_Count" />
+          <ScalarProperty Name="Extension" ColumnName="Extension" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="IsFile_Encrypted" ColumnName="IsFile_Encrypted" />
+          <ScalarProperty Name="Encryption_Type" ColumnName="Encryption_Type" />
+          <ScalarProperty Name="FacilityID" ColumnName="FacilityID" />
+          <ScalarProperty Name="NRDRUserID" ColumnName="NRDRUserID" />
+          <ScalarProperty Name="isFacility" ColumnName="isFacility" />
+          <ScalarProperty Name="Updated_Records_WithWarning_Count" ColumnName="Updated_Records_WithWarning_Count" />
+          <ScalarProperty Name="Added_Records_WithWarning_Count" ColumnName="Added_Records_WithWarning_Count" />
+          <ScalarProperty Name="Invalid_Records_WithExclusion_Count" ColumnName="Invalid_Records_WithExclusion_Count" />
+          <ScalarProperty Name="IPAddress" ColumnName="IPAddress" />
+          <ScalarProperty Name="isValidationState" ColumnName="isValidationState" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="test_List_orders_3" FunctionName="PQRSV13Model.Store.test_List_orders_3">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="PQRSV13Model.test_List_orders_3_Result">
+          <ScalarProperty Name="FILE_NAME" ColumnName="FILE_NAME" />
+          <ScalarProperty Name="UPLOAD_START_DATE_TIME" ColumnName="UPLOAD_START_DATE_TIME" />
+          <ScalarProperty Name="UPLOAD_END_DATE_TIME" ColumnName="UPLOAD_END_DATE_TIME" />
+          <ScalarProperty Name="ERROR_MESSAGE" ColumnName="ERROR_MESSAGE" />
+          <ScalarProperty Name="TOTAL_RECORDS_COUNT" ColumnName="TOTAL_RECORDS_COUNT" />
+          <ScalarProperty Name="STATUS" ColumnName="STATUS" />
+          <ScalarProperty Name="NPI" ColumnName="NPI" />
+          <ScalarProperty Name="Load_Start_Time" ColumnName="Load_Start_Time" />
+          <ScalarProperty Name="Load_End_Time" ColumnName="Load_End_Time" />
+          <ScalarProperty Name="Invalid_Records_Count" ColumnName="Invalid_Records_Count" />
+          <ScalarProperty Name="Updated_Records_Count" ColumnName="Updated_Records_Count" />
+          <ScalarProperty Name="Added_Records_Count" ColumnName="Added_Records_Count" />
+          <ScalarProperty Name="Extension" ColumnName="Extension" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="IsFile_Encrypted" ColumnName="IsFile_Encrypted" />
+          <ScalarProperty Name="Encryption_Type" ColumnName="Encryption_Type" />
+          <ScalarProperty Name="FacilityID" ColumnName="FacilityID" />
+          <ScalarProperty Name="NRDRUserID" ColumnName="NRDRUserID" />
+          <ScalarProperty Name="isFacility" ColumnName="isFacility" />
+          <ScalarProperty Name="Updated_Records_WithWarning_Count" ColumnName="Updated_Records_WithWarning_Count" />
+          <ScalarProperty Name="Added_Records_WithWarning_Count" ColumnName="Added_Records_WithWarning_Count" />
+          <ScalarProperty Name="Invalid_Records_WithExclusion_Count" ColumnName="Invalid_Records_WithExclusion_Count" />
+          <ScalarProperty Name="IPAddress" ColumnName="IPAddress" />
+          <ScalarProperty Name="isValidationState" ColumnName="isValidationState" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="test1" FunctionName="PQRSV13Model.Store.test1">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="PQRSV13Model.test1_Result">
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Value" ColumnName="Value" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="test2" FunctionName="PQRSV13Model.Store.test2">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="PQRSV13Model.test2_Result">
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Value" ColumnName="Value" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="XMLFilesGenerate_helpScript_QM" FunctionName="PQRSV13Model.Store.XMLFilesGenerate_helpScript_QM" />
+    <FunctionImportMapping FunctionImportName="zzz_obscelete_sp_getFacility_GproTIN" FunctionName="PQRSV13Model.Store.zzz_obscelete_sp_getFacility_GproTIN" />
+    <EntitySetMapping Name="tbl_MIPS_Email_Manager_Test">
+      <EntityTypeMapping TypeName="PQRSV13Model.tbl_MIPS_Email_Manager_Test">
+        <MappingFragment StoreEntitySet="tbl_MIPS_Email_Manager_Test">
+          <ScalarProperty Name="UpdatedDate" ColumnName="UpdatedDate" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="Category" ColumnName="Category" />
+          <ScalarProperty Name="Body" ColumnName="Body" />
+          <ScalarProperty Name="Subject" ColumnName="Subject" />
+          <ScalarProperty Name="ToAddress" ColumnName="ToAddress" />
+          <ScalarProperty Name="FromAddress" ColumnName="FromAddress" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,1938 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="PQRSV13Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="tbl_MIPS_Email_Manager_Test">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FromAddress" Type="varchar" MaxLength="250" />
+    <Property Name="ToAddress" Type="varchar" MaxLength="900" />
+    <Property Name="Subject" Type="varchar" MaxLength="900" />
+    <Property Name="Body" Type="varchar(max)" />
+    <Property Name="Category" Type="varchar" MaxLength="500" />
+    <Property Name="CreatedBy" Type="int" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="UpdatedBy" Type="int" />
+    <Property Name="UpdatedDate" Type="datetime" />
+  </EntityType>
+  <Function Name="c" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="TIN" Type="varchar" Mode="In" />
+    <Parameter Name="NPI" Type="varchar" Mode="In" />
+    <Parameter Name="CMSYear" Type="int" Mode="In" />
+    <Parameter Name="isExport" Type="bit" Mode="In" />
+  </Function>
+  <Function Name="DecimalToStringConvert" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="varchar">
+    <Parameter Name="value" Type="decimal" Mode="In" />
+  </Function>
+  <Function Name="ELMAH_GetErrorsXml" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Application" Type="nvarchar" Mode="In" />
+    <Parameter Name="PageIndex" Type="int" Mode="In" />
+    <Parameter Name="PageSize" Type="int" Mode="In" />
+    <Parameter Name="TotalCount" Type="int" Mode="InOut" />
+  </Function>
+  <Function Name="ELMAH_GetErrorXml" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Application" Type="nvarchar" Mode="In" />
+    <Parameter Name="ErrorId" Type="uniqueidentifier" Mode="In" />
+  </Function>
+  <Function Name="ELMAH_LogError" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ErrorId" Type="uniqueidentifier" Mode="In" />
+    <Parameter Name="Application" Type="nvarchar" Mode="In" />
+    <Parameter Name="Host" Type="nvarchar" Mode="In" />
+    <Parameter Name="Type" Type="nvarchar" Mode="In" />
+    <Parameter Name="Source" Type="nvarchar" Mode="In" />
+    <Parameter Name="Message" Type="nvarchar" Mode="In" />
+    <Parameter Name="User" Type="nvarchar" Mode="In" />
+    <Parameter Name="AllXml" Type="ntext" Mode="In" />
+    <Parameter Name="StatusCode" Type="int" Mode="In" />
+    <Parameter Name="TimeUtc" Type="datetime" Mode="In" />
+  </Function>
+  <Function Name="fn_diagramobjects" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="int" />
+  <Function Name="fnAbdomenBenchmarks" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Userid" Type="int" Mode="In" />
+    <ReturnType>
+      <CollectionType>
+        <RowType>
+          <Property Name="MeasureGroup" Type="varchar" MaxLength="7" Nullable="false" />
+          <Property Name="MeasureName" Type="varchar" MaxLength="50" />
+          <Property Name="Actual" Type="int" />
+          <Property Name="BenchmarkValue" Type="int" />
+          <Property Name="Numerator" Type="int" />
+          <Property Name="Denominator" Type="int" Nullable="false" />
+        </RowType>
+      </CollectionType>
+    </ReturnType>
+  </Function>
+  <Function Name="fnCI_GetIsSubmittoCI" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="bit">
+    <Parameter Name="Tin" Type="varchar" Mode="In" />
+    <Parameter Name="Npi" Type="varchar" Mode="In" />
+    <Parameter Name="CmsYear" Type="int" Mode="In" />
+    <Parameter Name="Category_Id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="fnCI_GetLastSubmittedDate" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="varchar">
+    <Parameter Name="Tin" Type="varchar" Mode="In" />
+    <Parameter Name="Npi" Type="varchar" Mode="In" />
+    <Parameter Name="CmsYear" Type="int" Mode="In" />
+    <Parameter Name="Category_Id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="fnCI_GetLastSubmittedDate_tmp" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="varchar">
+    <Parameter Name="Tin" Type="varchar" Mode="In" />
+    <Parameter Name="Npi" Type="varchar" Mode="In" />
+    <Parameter Name="CmsYear" Type="int" Mode="In" />
+    <Parameter Name="Category_Id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="fnCI_GetLastSubmittedUser" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="varchar">
+    <Parameter Name="Tin" Type="varchar" Mode="In" />
+    <Parameter Name="Npi" Type="varchar" Mode="In" />
+    <Parameter Name="CmsYear" Type="int" Mode="In" />
+    <Parameter Name="Category_Id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="FnCI_GetSubmissionStatusofTINNPI" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="varchar">
+    <Parameter Name="Submission_Uniquekey_Id" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="fndecodehtmlstring" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="varchar(max)">
+    <Parameter Name="input" Type="varchar(max)" Mode="In" />
+  </Function>
+  <Function Name="fnGetBlockMeasures" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Tin" Type="varchar" Mode="In" />
+    <Parameter Name="CategoryId" Type="int" Mode="In" />
+    <Parameter Name="CmsYear" Type="int" Mode="In" />
+    <ReturnType>
+      <CollectionType>
+        <RowType>
+          <Property Name="Mesures" Type="varchar(max)" />
+          <Property Name="CmsYear" Type="int" />
+        </RowType>
+      </CollectionType>
+    </ReturnType>
+  </Function>
+  <Function Name="fnGetCOALESCEByTinNpi" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="varchar(max)">
+    <Parameter Name="TIN" Type="varchar" Mode="In" />
+    <Parameter Name="npi" Type="varchar" Mode="In" />
+    <Parameter Name="Cmsyear" Type="int" Mode="In" />
+    <Parameter Name="ResultType" Type="int" Mode="In" />
+  </Function>
+  <Function Name="fnGetDecileValue" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="varchar">
+    <Parameter Name="measure_num" Type="varchar" Mode="In" />
+    <Parameter Name="performance_rate" Type="float" Mode="In" />
+    <Parameter Name="CMSYear" Type="int" Mode="In" />
+  </Function>
+  <Function Name="fnMIPSExamDataKeyParameters" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="PhysicianNPI" Type="varchar" Mode="In" />
+    <Parameter Name="ExamTIN" Type="varchar" Mode="In" />
+    <Parameter Name="Patient_Id" Type="varchar" Mode="In" />
+    <Parameter Name="DecryptPatient_Id" Type="varchar" Mode="In" />
+    <Parameter Name="Measure_Num" Type="varchar" Mode="In" />
+    <Parameter Name="Procedure_Code" Type="varchar" Mode="In" />
+    <Parameter Name="Exam_Date" Type="datetime" Mode="In" />
+    <Parameter Name="CMS_Submission_Year" Type="int" Mode="In" />
+    <Parameter Name="Exam_Unique_ID" Type="varchar" Mode="In" />
+    <Parameter Name="Criteria" Type="varchar" Mode="In" />
+    <Parameter Name="Denom_Diag_Code" Type="varchar" Mode="In" />
+    <Parameter Name="Numerator_Code" Type="varchar" Mode="In" />
+    <ReturnType>
+      <CollectionType>
+        <RowType>
+          <Property Name="Exam_Id" Type="int" Nullable="false" />
+          <Property Name="Exam_Measure_Id" Type="int" Nullable="false" />
+        </RowType>
+      </CollectionType>
+    </ReturnType>
+  </Function>
+  <Function Name="fnYearwiseDecileLogic" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="varchar">
+    <Parameter Name="strMeasure_num" Type="varchar" Mode="In" />
+    <Parameter Name="performanceRate" Type="float" Mode="In" />
+    <Parameter Name="intCurActiveYear" Type="int" Mode="In" />
+    <Parameter Name="reportingRate" Type="float" Mode="In" />
+    <Parameter Name="TotalExamsCount" Type="int" Mode="In" />
+  </Function>
+  <Function Name="GetExcelSelectQuery" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="SheetName" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="GetFileDetails" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="FileId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="GetImportErrorDetails" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ImportID" Type="int" Mode="In" />
+    <Parameter Name="ImportExamsId" Type="int" Mode="In" />
+    <Parameter Name="ImportExamId" Type="int" Mode="In" />
+    <Parameter Name="ImportExamsMeasureId" Type="int" Mode="In" />
+    <Parameter Name="ImportExamsMeasureExtID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="GetImportExamErrorDetails" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ImportExamId" Type="int" Mode="In" />
+    <Parameter Name="ImportExamsMeasureId" Type="int" Mode="In" />
+    <Parameter Name="ImportExamsMeasureExtID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="GetImportExamMeasureErrorDetails" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ImportExamsMeasureId" Type="int" Mode="In" />
+    <Parameter Name="ImportExamsMeasureExtID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="GetImportExamMeasureExtErrorDetails" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ImportExamsMeasureExtID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="GetImportExamsErrorDetails" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ImportExamsId" Type="int" Mode="In" />
+    <Parameter Name="ImportExamId" Type="int" Mode="In" />
+    <Parameter Name="ImportExamsMeasureId" Type="int" Mode="In" />
+    <Parameter Name="ImportExamsMeasureExtID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="GetImportFileErrorDetails" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ImportID" Type="int" Mode="In" />
+    <Parameter Name="ImportExamsId" Type="int" Mode="In" />
+    <Parameter Name="ImportExamId" Type="int" Mode="In" />
+    <Parameter Name="ImportExamsMeasureId" Type="int" Mode="In" />
+    <Parameter Name="ImportExamsMeasureExtID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="GetInvalidrecords" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="FileId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="IntToStringConvert" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="varchar">
+    <Parameter Name="value" Type="int" Mode="In" />
+  </Function>
+  <Function Name="IsInteger" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="bit">
+    <Parameter Name="Value" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="My_ISDATE" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="bit">
+    <Parameter Name="maybeDate" Type="varchar(max)" Mode="In" />
+  </Function>
+  <Function Name="sp_alterdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="version" Type="int" Mode="In" />
+    <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+  </Function>
+  <Function Name="SP_Attestation_InsertTinsNpis" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="FileId" Type="int" Mode="In" />
+    <Parameter Name="CreatedBy" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_creatediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="version" Type="int" Mode="In" />
+    <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+  </Function>
+  <Function Name="sp_CreatePhysicianRecords" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="PhysicianNPI" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="sp_dropdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_getACRTINandTINNPISs" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="sp_getACRTINsWithOptInStatus" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IsGpro" Type="bit" Mode="In" />
+    <Parameter Name="CmsYear" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_GetDecileSevenCappedMeasures" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="CmsYear" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_getFacilityAdminNPIs" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Nrdr_Facility_id" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="sp_getFacilityIDbyUsername" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="UserName" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="sp_GetFacilityInvoices" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="UserName" Type="varchar" Mode="In" />
+    <Parameter Name="CMSYear" Type="int" Mode="In" />
+    <Parameter Name="TIN" Type="varchar" Mode="In" />
+    <Parameter Name="IsGpro" Type="bit" Mode="In" />
+  </Function>
+  <Function Name="sp_getFacilityManagedPhysicianNPIs" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="facilityUserName" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="sp_getFacilityPhysicianNPIsTINs" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="UserName" Type="nvarchar" Mode="In" />
+    <Parameter Name="TIN" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="sp_getFacilityPhysicianNPIsTINs_bkp" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="UserName" Type="nvarchar" Mode="In" />
+    <Parameter Name="TIN" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="sp_getFacilityTIN" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="FacilityUserName" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="sp_getFacilityTIN_GPRO" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="FacilityUserName" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="sp_GetFacilityTinDocumentsStatus" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="UserName" Type="varchar" Mode="In" />
+    <Parameter Name="CMSYear" Type="int" Mode="In" />
+    <Parameter Name="userRole" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_getFacilityTINsWithOptInStatus" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="FacilityUserName" Type="varchar" Mode="In" />
+    <Parameter Name="IsGpro" Type="bit" Mode="In" />
+    <Parameter Name="CMSYear" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_getFacilityUnFinializedTins" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="facilityusername" Type="varchar" Mode="In" />
+    <Parameter Name="CMSYear" Type="int" Mode="In" />
+    <Parameter Name="UserRole" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_getFacilityUnFinializedTins_ACI" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="facilityusername" Type="varchar" Mode="In" />
+    <Parameter Name="CMSYear" Type="int" Mode="In" />
+    <Parameter Name="UserRole" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_GetFacilityUnpaidInvoicesCount" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="UserName" Type="varchar" Mode="In" />
+    <Parameter Name="CMSYear" Type="int" Mode="In" />
+    <Parameter Name="TIN" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="sp_getListOfFacilities" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Nrdr_Facility_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_getNPIsOfTin" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="TIN" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="sp_getPhysianProfileForNPI" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="NPI" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="sp_getPhysicianDocumentStatus" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="NPI" Type="nvarchar" Mode="In" />
+    <Parameter Name="TIN" Type="nvarchar" Mode="In" />
+    <Parameter Name="CMSReportingYear" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_GetPhysicianInvoices" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="UserName" Type="varchar" Mode="In" />
+    <Parameter Name="NPI" Type="varchar" Mode="In" />
+    <Parameter Name="CMSYear" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_getPhysicianNPIByFacilityID" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="NrdrFacilityid" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_getPhysicianProfile" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="UserName" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="sp_getTIN_GPRO" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="TIN" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="sp_getTinNpiDetailsForOptInData" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="cmsYear" Type="int" Mode="In" />
+    <Parameter Name="facilityusername" Type="varchar" Mode="In" />
+    <Parameter Name="IsGpro" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_getTINNPIsWithOptInStatus" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IsGpro" Type="bit" Mode="In" />
+    <Parameter Name="userRole" Type="int" Mode="In" />
+    <Parameter Name="UserName" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="sp_getTINNumbers" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="NPI" Type="nvarchar" Mode="In" />
+    <Parameter Name="RegistryName" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="sp_getUserIDWithNrdrUserID" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="nrdrUserID" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="sp_helpdiagramdefinition" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_helpdiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_isExistFacilitytin" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="tin" Type="varchar" Mode="In" />
+    <Parameter Name="facilityusername" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="sp_Physian_Tin_Count" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="strPhysicianNPI" Type="varchar" Mode="In" />
+    <Parameter Name="Tin" Type="varchar" Mode="In" />
+    <Parameter Name="intYear" Type="int" Mode="In" />
+  </Function>
+  <Function Name="SP_PhysicianAttestionDetails_bak" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="userid" Type="int" Mode="In" />
+    <Parameter Name="NPI" Type="varchar" Mode="In" />
+    <Parameter Name="Cmsyear" Type="int" Mode="In" />
+  </Function>
+  <Function Name="SP_RecordEnteredPageGridDetails" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="CMSYear" Type="int" Mode="In" />
+    <Parameter Name="npi" Type="varchar" Mode="In" />
+    <Parameter Name="PageNo" Type="int" Mode="In" />
+    <Parameter Name="PageLimit" Type="int" Mode="In" />
+    <Parameter Name="ISASC" Type="bit" Mode="In" />
+    <Parameter Name="SortColumn" Type="varchar" Mode="In" />
+    <Parameter Name="SortDirection" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="sp_renamediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="new_diagramname" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="sp_sendquarterlymails" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="cmsYear" Type="int" Mode="In" />
+  </Function>
+  <Function Name="Sp_SingleNPITINFiles" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="FileName" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="sp_upgraddiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="SP_Validate_PreProcessed_Data" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="sp_validateTIN" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="NPI" Type="nvarchar" Mode="In" />
+    <Parameter Name="TIN" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="SpacimeasuresInsertbyselectionId" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Tin" Type="varchar" Mode="In" />
+    <Parameter Name="Npi" Type="varchar" Mode="In" />
+    <Parameter Name="CMSYear" Type="int" Mode="In" />
+    <Parameter Name="FacilityUsername" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="spAddFacilityUserNPIsFromNRDR" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="spAddUserFacilityTIN_forFacility" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="spALLTINNPIRelatedMeasureDataForFullYear" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Current_User" Type="varchar" Mode="In" />
+    <Parameter Name="CMSYear" Type="int" Mode="In" />
+    <Parameter Name="isExport" Type="bit" Mode="In" />
+  </Function>
+  <Function Name="spALLTINNPIRelatedMeasureDataForFullYear_Physician" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="NPI" Type="varchar" Mode="In" />
+    <Parameter Name="IS_GPRO" Type="bit" Mode="In" />
+    <Parameter Name="CMSYear" Type="int" Mode="In" />
+    <Parameter Name="isExport" Type="bit" Mode="In" />
+  </Function>
+  <Function Name="spAllTinRelatedMeasureDataForFullYear" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Current_User" Type="varchar" Mode="In" />
+    <Parameter Name="CMSYear" Type="int" Mode="In" />
+    <Parameter Name="isExport" Type="bit" Mode="In" />
+  </Function>
+  <Function Name="SPAttestation_FacilityDetails" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="UserId" Type="int" Mode="In" />
+    <Parameter Name="CmsYear" Type="int" Mode="In" />
+    <Parameter Name="ISEmailAddrRequire" Type="bit" Mode="In" />
+  </Function>
+  <Function Name="SPAttestation_InsertFacilityData" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="UserId" Type="int" Mode="In" />
+    <Parameter Name="EmailAddress" Type="varchar" Mode="In" />
+    <Parameter Name="CmsYear" Type="int" Mode="In" />
+  </Function>
+  <Function Name="SPAttestation_InsertPhysicianData" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="userid" Type="int" Mode="In" />
+    <Parameter Name="NPI" Type="varchar" Mode="In" />
+    <Parameter Name="Cmsyear" Type="int" Mode="In" />
+    <Parameter Name="Email" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="SPAttestation_InsertTinsNpisofFile" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="FileId" Type="int" Mode="In" />
+    <Parameter Name="UserId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="SPAttestation_PhysicianDetails" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="userid" Type="int" Mode="In" />
+    <Parameter Name="NPI" Type="varchar" Mode="In" />
+    <Parameter Name="Cmsyear" Type="int" Mode="In" />
+  </Function>
+  <Function Name="SPAttestationDelete_UploadFiles" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Fileid" Type="int" Mode="In" />
+  </Function>
+  <Function Name="SpBackend_GPRO_IAMeasures" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="CMSYear" Type="int" Mode="In" />
+    <Parameter Name="UserName" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="SpBackend_GPROTIN_IA_Measures" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="CMSYear" Type="int" Mode="In" />
+    <Parameter Name="UserID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="SpBackend_GPROTIN_Measures" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="CMSYear" Type="int" Mode="In" />
+    <Parameter Name="UserID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="SpBackend_GPROTIN_Measures_Finalize" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="CMSYear" Type="int" Mode="In" />
+    <Parameter Name="isFinalize" Type="bit" Mode="In" />
+    <Parameter Name="UserID" Type="int" Mode="In" />
+    <Parameter Name="FinalizeEmailAddress" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="SpBackend_GPROTIN_Measures_IA_Finalize" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="CMSYear" Type="int" Mode="In" />
+    <Parameter Name="isFinalize" Type="bit" Mode="In" />
+    <Parameter Name="UserID" Type="int" Mode="In" />
+    <Parameter Name="FinalizeEmailAddress" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="spBackend_IA_ACI_Tins_Insert_tbl_Tin_Gpro" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="SpBackend_NonGPRO_IAMeasures" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="CMSYear" Type="int" Mode="In" />
+    <Parameter Name="UserName" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="SpBackend_NONGPROTIN_NPI_IA_Measures" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="CMSYear" Type="int" Mode="In" />
+    <Parameter Name="UserID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="SpBackend_NONGPROTIN_NPI_Measures" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="CMSYear" Type="int" Mode="In" />
+    <Parameter Name="UserID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="SpBackend_NONGPROTIN_NPI_Measures_Finalize" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="CMSYear" Type="int" Mode="In" />
+    <Parameter Name="isFinalize" Type="bit" Mode="In" />
+    <Parameter Name="UserID" Type="int" Mode="In" />
+    <Parameter Name="FinalizeEmailAddress" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="SpBackend_NONGPROTIN_NPI_Measures_IA_Finalize" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="CMSYear" Type="int" Mode="In" />
+    <Parameter Name="isFinalize" Type="bit" Mode="In" />
+    <Parameter Name="UserID" Type="int" Mode="In" />
+    <Parameter Name="FinalizeEmailAddress" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="SpBackend_TIN_IAMeasures" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="CMSYear" Type="int" Mode="In" />
+    <Parameter Name="UserName" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="SpBackend_TINNPI_IAMeasures" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="CMSYear" Type="int" Mode="In" />
+    <Parameter Name="UserName" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="SpBackend_TINNPI_IAMeasures_UNSELECTED" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="CmsYear" Type="int" Mode="In" />
+  </Function>
+  <Function Name="SPBackendHandling_tblFileAccessFacilityList" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="StartDate" Type="datetime" Mode="In" />
+    <Parameter Name="EndDate" Type="datetime" Mode="In" />
+  </Function>
+  <Function Name="spBackupCompatability_Fileupload" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="year" Type="int" Mode="In" />
+  </Function>
+  <Function Name="SPCheck_NPI_Exists" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="NPI" Type="varchar" Mode="In" />
+    <Parameter Name="StatusCode" Type="int" Mode="InOut" />
+  </Function>
+  <Function Name="SpCI_App_GetMeasureData" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="PageNo" Type="int" Mode="In" />
+    <Parameter Name="PageLimit" Type="int" Mode="In" />
+  </Function>
+  <Function Name="SpCI_App_MeasureDataCount" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="SPCI_AppInsertMeasureData" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="SPCI_BatchPerformanceStatusUpdate" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IsGpro" Type="bit" Mode="In" />
+    <Parameter Name="IsBatchCalculation" Type="bit" Mode="In" />
+    <Parameter Name="strCurTIN" Type="varchar" Mode="In" />
+    <Parameter Name="strCurNPI" Type="varchar" Mode="In" />
+    <Parameter Name="intCurActiveYear" Type="int" Mode="In" />
+    <Parameter Name="strMeasure_num" Type="varchar" Mode="In" />
+    <Parameter Name="Batch_MaxFileId" Type="int" Mode="InOut" />
+  </Function>
+  <Function Name="SPCI_BlockedMeasureList" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="CmsYear" Type="int" Mode="In" />
+    <Parameter Name="Tin" Type="varchar" Mode="In" />
+    <Parameter Name="CategoryId" Type="int" Mode="In" />
+    <Parameter Name="IsGpro" Type="bit" Mode="In" />
+  </Function>
+  <Function Name="SPCI_BulkUpload_ExcelMeasureData_Gpro_IA" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Cmsyear" Type="int" Mode="In" />
+    <Parameter Name="FileId" Type="int" Mode="In" />
+    <Parameter Name="Createdby" Type="varchar" Mode="In" />
+    <Parameter Name="CreatedDate" Type="datetime" Mode="In" />
+    <Parameter Name="UserRole" Type="int" Mode="In" />
+  </Function>
+  <Function Name="SPCI_BulkUpload_ExcelMeasureData_Gpro_QM" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Cmsyear" Type="int" Mode="In" />
+    <Parameter Name="FileId" Type="int" Mode="In" />
+    <Parameter Name="Createdby" Type="varchar" Mode="In" />
+    <Parameter Name="CreatedDate" Type="datetime" Mode="In" />
+  </Function>
+  <Function Name="SPCI_BulkUpload_ExcelMeasureData_NonGpro_IA" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Cmsyear" Type="int" Mode="In" />
+    <Parameter Name="FileId" Type="int" Mode="In" />
+    <Parameter Name="Createdby" Type="varchar" Mode="In" />
+    <Parameter Name="CreatedDate" Type="datetime" Mode="In" />
+    <Parameter Name="UserRole" Type="int" Mode="In" />
+  </Function>
+  <Function Name="SPCI_BulkUpload_ExcelMeasureData_NonGpro_QM" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Cmsyear" Type="int" Mode="In" />
+    <Parameter Name="FileId" Type="int" Mode="In" />
+    <Parameter Name="Createdby" Type="varchar" Mode="In" />
+    <Parameter Name="CreatedDate" Type="datetime" Mode="In" />
+  </Function>
+  <Function Name="SPCI_BulkUpload_FileErrorDetails" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="CMSYear" Type="int" Mode="In" />
+    <Parameter Name="FileId" Type="int" Mode="In" />
+    <Parameter Name="UserId" Type="int" Mode="In" />
+    <Parameter Name="UserRole" Type="int" Mode="In" />
+  </Function>
+  <Function Name="SPCI_BulkUpload_FileProcess_Details" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="UserId" Type="varchar" Mode="In" />
+    <Parameter Name="CmsYear" Type="int" Mode="In" />
+  </Function>
+  <Function Name="SPCI_BulkUpload_FilesProcess" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="CMSYear" Type="int" Mode="In" />
+  </Function>
+  <Function Name="SPCI_BulkUpload_HistoryDetails" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="CmsYear" Type="int" Mode="In" />
+    <Parameter Name="CategoryId" Type="int" Mode="In" />
+    <Parameter Name="Status" Type="int" Mode="In" />
+  </Function>
+  <Function Name="SPCI_BulkUpload_MeasureDataUpdate" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IsGPORO" Type="bit" Mode="In" />
+    <Parameter Name="FileId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="SPCI_BulkUpload_MeasureDataUpdate_ACRStaff" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IsGPORO" Type="bit" Mode="In" />
+    <Parameter Name="FileId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="SPCI_BulkUpload_MeasureDataUpdate_ACRStaff_IA" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IsGPORO" Type="bit" Mode="In" />
+    <Parameter Name="FileId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="SPCI_BulkUpload_MeasureDataUpdate_IA" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IsGPRO" Type="bit" Mode="In" />
+    <Parameter Name="FileId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="SPCI_BulkUpload_MeasureDataUpdateForFacility" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IsGPORO" Type="bit" Mode="In" />
+    <Parameter Name="FileId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="SPCI_BulkUpload_PREValidation_For_IA" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IsGPRO" Type="bit" Mode="In" />
+    <Parameter Name="FileId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="SPCI_BulkUpload_ReCalculatePerformance_TIN_Measure" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="FileId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="SPCI_BulkUpload_ReCalculatePerformance_TIN_NPI_Measure" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="FileId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="SPCI_BulkUpload_SingleMeasureDataUpdate" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IsGPRO" Type="bit" Mode="In" />
+    <Parameter Name="TIN" Type="varchar" Mode="In" />
+    <Parameter Name="Npi" Type="varchar" Mode="In" />
+    <Parameter Name="Measure_Name" Type="varchar" Mode="In" />
+    <Parameter Name="CmsYear" Type="int" Mode="In" />
+    <Parameter Name="Total_no_of_exams_new" Type="int" Mode="In" />
+    <Parameter Name="HundredPercentSubmit_new" Type="bit" Mode="In" />
+    <Parameter Name="SelectedForCms_new" Type="bit" Mode="In" />
+    <Parameter Name="UserName" Type="varchar" Mode="In" />
+    <Parameter Name="NoofExamsSubmitted" Type="int" Mode="In" />
+    <Parameter Name="Total_no_of_exams_old" Type="int" Mode="In" />
+    <Parameter Name="HundredPercentSubmit_old" Type="bit" Mode="In" />
+    <Parameter Name="SelectedForCms_old" Type="bit" Mode="In" />
+    <Parameter Name="Performac_Rate" Type="decimal" Mode="In" />
+    <Parameter Name="Decile" Type="varchar" Mode="In" />
+    <Parameter Name="Reporting_Rate" Type="decimal" Mode="In" />
+    <Parameter Name="CreatedDate" Type="datetime" Mode="In" />
+    <Parameter Name="FileId" Type="int" Mode="In" />
+    <Parameter Name="Createdby" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="SPCI_BulkUploadInvalidRecordsForTINNPIs" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="FileId" Type="int" Mode="In" />
+    <Parameter Name="CategoryId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="SPCI_BulkUploadInvalidRecordsForTINs" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="FileId" Type="int" Mode="In" />
+    <Parameter Name="CategoryId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="SPCI_DeleteMeasureData" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="KeyId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="SPCI_DeleteMeasureswithFilter" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Tin" Type="varchar" Mode="In" />
+    <Parameter Name="Npi" Type="varchar" Mode="In" />
+    <Parameter Name="Cmsyear" Type="varchar" Mode="In" />
+    <Parameter Name="Type" Type="int" Mode="In" />
+  </Function>
+  <Function Name="SPCI_FinalScoreDetails" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="CMSYear" Type="int" Mode="In" />
+  </Function>
+  <Function Name="SPCI_GetBulkCMSTINNPISSubwithFilter" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Tin" Type="varchar" Mode="In" />
+    <Parameter Name="Npi" Type="varchar" Mode="In" />
+    <Parameter Name="Cmsyear" Type="int" Mode="In" />
+    <Parameter Name="IsSubmittoCMS" Type="bit" Mode="In" />
+    <Parameter Name="Category_Id" Type="int" Mode="In" />
+    <Parameter Name="Type" Type="int" Mode="In" />
+  </Function>
+  <Function Name="SPCI_GetCategorywiseResponseData" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Tin" Type="varchar" Mode="In" />
+    <Parameter Name="Npi" Type="varchar" Mode="In" />
+    <Parameter Name="Cmsyear" Type="int" Mode="In" />
+    <Parameter Name="CategotyId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="SPCI_GetFinalScorePendingDetails" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="CMSYear" Type="int" Mode="In" />
+  </Function>
+  <Function Name="SpCI_GetIsSubmittoCMSAndSubmittedDate" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Tin" Type="varchar" Mode="In" />
+    <Parameter Name="Npi" Type="varchar" Mode="In" />
+    <Parameter Name="CmsYear" Type="int" Mode="In" />
+    <Parameter Name="Category_Id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="SPCI_GetMeasurementsetIdswithFilter" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Tin" Type="varchar" Mode="In" />
+    <Parameter Name="Npi" Type="varchar" Mode="In" />
+    <Parameter Name="Cmsyear" Type="int" Mode="In" />
+    <Parameter Name="Type" Type="int" Mode="In" />
+  </Function>
+  <Function Name="SpCI_GetMeasurementSetKeyForPatch" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Tin" Type="varchar" Mode="In" />
+    <Parameter Name="Npi" Type="varchar" Mode="In" />
+    <Parameter Name="CmsYear" Type="int" Mode="In" />
+    <Parameter Name="Category_Id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="SPCI_GetScoreDetails" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Tin" Type="varchar" Mode="In" />
+    <Parameter Name="Npi" Type="varchar" Mode="In" />
+    <Parameter Name="CmsYear" Type="int" Mode="In" />
+    <Parameter Name="CategoryId" Type="int" Mode="In" />
+    <Parameter Name="Type" Type="int" Mode="In" />
+    <Parameter Name="PageNo" Type="int" Mode="In" />
+    <Parameter Name="PageLimit" Type="int" Mode="In" />
+    <Parameter Name="ISASC" Type="bit" Mode="In" />
+    <Parameter Name="SortColumn" Type="varchar" Mode="In" />
+    <Parameter Name="SortDirection" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="SPCI_GetSub_IndividualScore" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="TIN" Type="varchar" Mode="In" />
+    <Parameter Name="Npi" Type="varchar" Mode="In" />
+    <Parameter Name="CMSYear" Type="int" Mode="In" />
+    <Parameter Name="Category_ID" Type="int" Mode="In" />
+    <Parameter Name="Sub_Score_Id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="SPCI_GetSub_Score" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="TIN" Type="varchar" Mode="In" />
+    <Parameter Name="Npi" Type="varchar" Mode="In" />
+    <Parameter Name="CMSYear" Type="int" Mode="In" />
+    <Parameter Name="Category_ID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="SPCI_GetSub_Score_All" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="TIN" Type="varchar" Mode="In" />
+    <Parameter Name="Npi" Type="varchar" Mode="In" />
+    <Parameter Name="CMSYear" Type="int" Mode="In" />
+    <Parameter Name="Category_ID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="SPCI_GetSubmissionsDataByEntityType_N" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="EntityType" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="SPCI_GetSubmissionUniqueKeyId" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Tin" Type="varchar" Mode="In" />
+    <Parameter Name="Npi" Type="varchar" Mode="In" />
+    <Parameter Name="CmsYear" Type="int" Mode="In" />
+  </Function>
+  <Function Name="SPCI_GetTIN_NPI_ProcessDetails" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="CMSYear" Type="int" Mode="In" />
+  </Function>
+  <Function Name="SPCI_GproShedulerReportbyID_N" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Shedule_Requestid" Type="int" Mode="In" />
+    <Parameter Name="isGpro" Type="bit" Mode="In" />
+  </Function>
+  <Function Name="SPCI_HttpStatusCodeDescription" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="SPCI_IABulkSubmissionMeasureUpdate" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Cmsyear" Type="int" Mode="In" />
+    <Parameter Name="useId" Type="int" Mode="In" />
+    <Parameter Name="isACRStaff" Type="bit" Mode="In" />
+  </Function>
+  <Function Name="SpCI_InsertPIAttestedMeasures" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="TIN" Type="varchar" Mode="In" />
+    <Parameter Name="CMSYear" Type="int" Mode="In" />
+    <Parameter Name="UserName" Type="varchar" Mode="In" />
+    <Parameter Name="NPI" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="SPCI_InsertSubmissionDataDetails_N" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="SPCI_IsAnyMeasureDataExistsForCMS" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="CmsYear" Type="int" Mode="In" />
+    <Parameter Name="Tin" Type="varchar" Mode="In" />
+    <Parameter Name="NPI" Type="varchar" Mode="In" />
+    <Parameter Name="CategoryId" Type="int" Mode="In" />
+    <Parameter Name="Is90days" Type="bit" Mode="In" />
+    <Parameter Name="ISGPRO" Type="bit" Mode="In" />
+  </Function>
+  <Function Name="SPCI_NonGproValidationDetails" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Tin" Type="varchar" Mode="In" />
+    <Parameter Name="UserName" Type="varchar" Mode="In" />
+    <Parameter Name="Role" Type="int" Mode="In" />
+    <Parameter Name="CMSYear" Type="int" Mode="In" />
+  </Function>
+  <Function Name="SpCI_Post_Patch_Insert" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="InputCategory_Id" Type="int" Mode="In" />
+    <Parameter Name="Request_Data" Type="varchar(max)" Mode="In" />
+    <Parameter Name="Tin" Type="varchar" Mode="In" />
+    <Parameter Name="Npi" Type="varchar" Mode="In" />
+    <Parameter Name="CmsYear" Type="int" Mode="In" />
+    <Parameter Name="Status" Type="varchar" Mode="In" />
+    <Parameter Name="CreatedBy" Type="varchar" Mode="In" />
+    <Parameter Name="Method_Id" Type="int" Mode="In" />
+    <Parameter Name="Response_Data" Type="varchar(max)" Mode="In" />
+    <Parameter Name="Status_Id" Type="int" Mode="In" />
+    <Parameter Name="Submission_Uniquekey_Id" Type="varchar" Mode="In" />
+    <Parameter Name="MeasurementSet_Unquekey_id" Type="varchar" Mode="In" />
+    <Parameter Name="Measurement_Uniquekey_id" Type="varchar" Mode="In" />
+    <Parameter Name="Category_Id" Type="int" Mode="In" />
+    <Parameter Name="IsScoreSuccess" Type="bit" Mode="In" />
+    <Parameter Name="Status_Code" Type="int" Mode="In" />
+    <Parameter Name="IsFromSheduler" Type="bit" Mode="In" />
+    <Parameter Name="IsScoreRequired" Type="bit" Mode="In" />
+    <Parameter Name="IsPostType" Type="bit" Mode="In" />
+    <Parameter Name="ResponseStartDate" Type="datetime" Mode="In" />
+    <Parameter Name="measurecount" Type="int" Mode="In" />
+    <Parameter Name="Response_End_Date" Type="datetime" Mode="In" />
+    <Parameter Name="BulkGpro" Type="bit" Mode="In" />
+    <Parameter Name="ShedulerReqId" Type="int" Mode="In" />
+    <Parameter Name="Created_Date" Type="datetime" Mode="In" />
+    <Parameter Name="IsBatchTins" Type="bit" Mode="In" />
+    <Parameter Name="cehrtId" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="SPCI_Report_ScoreIASheet" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="CMSYear" Type="int" Mode="In" />
+    <Parameter Name="UserName" Type="varchar" Mode="In" />
+    <Parameter Name="isTinReport" Type="bit" Mode="In" />
+    <Parameter Name="IsACRStaff" Type="bit" Mode="In" />
+  </Function>
+  <Function Name="SPCI_Report_ScorePISheet" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="CMSYear" Type="int" Mode="In" />
+    <Parameter Name="UserName" Type="varchar" Mode="In" />
+    <Parameter Name="isTinReport" Type="bit" Mode="In" />
+    <Parameter Name="IsACRStaff" Type="bit" Mode="In" />
+  </Function>
+  <Function Name="SPCI_Report_ScoreQMSheet" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="CMSYear" Type="int" Mode="In" />
+    <Parameter Name="UserName" Type="varchar" Mode="In" />
+    <Parameter Name="isTinReport" Type="bit" Mode="In" />
+    <Parameter Name="IsACRStaff" Type="bit" Mode="In" />
+  </Function>
+  <Function Name="SPCI_Report_ScoreSummarySheet" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="CMSYear" Type="int" Mode="In" />
+    <Parameter Name="UserName" Type="varchar" Mode="In" />
+    <Parameter Name="isTinReport" Type="bit" Mode="In" />
+    <Parameter Name="IsACRStaff" Type="bit" Mode="In" />
+  </Function>
+  <Function Name="SpCI_Score_Insert" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IsFromSheduler" Type="bit" Mode="In" />
+    <Parameter Name="IsScoreSuccess" Type="bit" Mode="In" />
+    <Parameter Name="Tin" Type="varchar" Mode="In" />
+    <Parameter Name="Npi" Type="varchar" Mode="In" />
+    <Parameter Name="CmsYear" Type="int" Mode="In" />
+    <Parameter Name="CreatedBy" Type="varchar" Mode="In" />
+    <Parameter Name="Status" Type="varchar" Mode="In" />
+    <Parameter Name="Response_Data" Type="varchar(max)" Mode="In" />
+    <Parameter Name="Submission_Uniquekey_Id" Type="varchar" Mode="In" />
+    <Parameter Name="Method_Id" Type="int" Mode="In" />
+    <Parameter Name="Status_Id" Type="int" Mode="In" />
+    <Parameter Name="Status_Code" Type="int" Mode="In" />
+    <Parameter Name="Response_Start_Date" Type="datetime" Mode="In" />
+    <Parameter Name="Response_End_Date" Type="datetime" Mode="In" />
+  </Function>
+  <Function Name="SPCI_Submission_Email_Remainder_GPRO" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Tin" Type="varchar" Mode="In" />
+    <Parameter Name="UserID" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="SPCI_Submission_Email_Remainder_nonGPRO" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Tin" Type="varchar" Mode="In" />
+    <Parameter Name="NPI" Type="varchar" Mode="In" />
+    <Parameter Name="UserID" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="SPCI_SubmissionDetails" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Type" Type="int" Mode="In" />
+    <Parameter Name="Tin" Type="varchar" Mode="In" />
+    <Parameter Name="Npi" Type="varchar" Mode="In" />
+    <Parameter Name="CmsYear" Type="int" Mode="In" />
+    <Parameter Name="HttpStatusCode" Type="int" Mode="In" />
+    <Parameter Name="Status" Type="varchar" Mode="In" />
+    <Parameter Name="MethodID" Type="int" Mode="In" />
+    <Parameter Name="PageNo" Type="int" Mode="In" />
+    <Parameter Name="PageLimit" Type="int" Mode="In" />
+    <Parameter Name="ISASC" Type="bit" Mode="In" />
+    <Parameter Name="SortColumn" Type="varchar" Mode="In" />
+    <Parameter Name="SortDirection" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="SPCI_SubsDataSyncStatusUpdate" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="EntityType" Type="varchar" Mode="In" />
+    <Parameter Name="TotalCount" Type="int" Mode="In" />
+    <Parameter Name="Username" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="SPCI_TIN_ScoreDetails" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="TIN" Type="varchar" Mode="In" />
+    <Parameter Name="CMSYear" Type="int" Mode="In" />
+  </Function>
+  <Function Name="SPCI_TINCMSSubStatusReports_ACRStaff" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="CmsYear" Type="int" Mode="In" />
+  </Function>
+  <Function Name="SPCI_TINNPI_ScoreDetails" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="TIN" Type="varchar" Mode="In" />
+    <Parameter Name="NPI" Type="varchar" Mode="In" />
+    <Parameter Name="CMSYear" Type="int" Mode="In" />
+  </Function>
+  <Function Name="SPCI_TINNPICMSSubStatusReports_ACRStaff" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="CmsYear" Type="int" Mode="In" />
+  </Function>
+  <Function Name="SPCI_UpdateMeasureData" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Tin" Type="varchar" Mode="In" />
+    <Parameter Name="NPI" Type="varchar" Mode="In" />
+    <Parameter Name="Category_Id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="SPCI_UpdateMeasurementSetKeys_N" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Tin" Type="varchar" Mode="In" />
+    <Parameter Name="Npi" Type="varchar" Mode="In" />
+    <Parameter Name="CmsYear" Type="int" Mode="In" />
+    <Parameter Name="ResponseId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="SPCI_UpdateMeasurementSetKeysByCategory" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Tin" Type="varchar" Mode="In" />
+    <Parameter Name="Npi" Type="varchar" Mode="In" />
+    <Parameter Name="CmsYear" Type="int" Mode="In" />
+    <Parameter Name="ResponseId" Type="int" Mode="In" />
+    <Parameter Name="MeasurementSet_Unquekey_id" Type="varchar" Mode="In" />
+    <Parameter Name="Submission_Uniquekey_Id" Type="varchar" Mode="In" />
+    <Parameter Name="CategoryId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="SPCI_Updatetbl_CI_Source_UniqueKeys" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Tin" Type="varchar" Mode="In" />
+    <Parameter Name="Npi" Type="varchar" Mode="In" />
+    <Parameter Name="CmsYear" Type="int" Mode="In" />
+    <Parameter Name="Category_Id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="SpDeleteACIAssestedMeasures" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="TIN" Type="varchar" Mode="In" />
+    <Parameter Name="CMSYear" Type="int" Mode="In" />
+    <Parameter Name="UserName" Type="varchar" Mode="In" />
+    <Parameter Name="isGPRO" Type="bit" Mode="In" />
+    <Parameter Name="NPI" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="spDeleteFacilityUserNPIs" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="userID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spDeleteMigrateImportData" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="spDeleteNewTransImportData" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ImportID" Type="int" Mode="In" />
+    <Parameter Name="Transactionid" Type="varchar" Mode="In" />
+    <Parameter Name="Appid" Type="varchar" Mode="In" />
+    <Parameter Name="PartnerID" Type="varchar" Mode="In" />
+    <Parameter Name="facilityID" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="spDeletePhysicianUserTINs" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="userID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spDeletePrevTransImportData" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Transactionid" Type="varchar" Mode="In" />
+    <Parameter Name="prev_Transactionid" Type="varchar" Mode="In" />
+    <Parameter Name="Appid" Type="varchar" Mode="In" />
+    <Parameter Name="PartnerID" Type="varchar" Mode="In" />
+    <Parameter Name="facilityID" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="spDisableTransactionData" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="prev_TransactionID" Type="varchar" Mode="In" />
+    <Parameter Name="New_TrascationId" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="SpEmail_GetAppSettings" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="SpEmail_InsertData" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="EmailTemplateId" Type="int" Mode="In" />
+    <Parameter Name="Subject" Type="varchar" Mode="In" />
+    <Parameter Name="Body" Type="varchar(max)" Mode="In" />
+    <Parameter Name="EmailStatus" Type="bit" Mode="In" />
+    <Parameter Name="UserId" Type="int" Mode="In" />
+    <Parameter Name="TIN" Type="varchar" Mode="In" />
+    <Parameter Name="NPI" Type="varchar" Mode="In" />
+    <Parameter Name="CMSYear" Type="int" Mode="In" />
+    <Parameter Name="ToAddress" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="SpEmailTemplate_GetDetails" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="EmailTemplateType" Type="varchar" Mode="In" />
+    <Parameter Name="EmailTemplateTypeId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="SPExamData_Decrypted_PatientIds" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="spFileDependencies" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="spFileDependenciesByFileId" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="InFileid" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spFileProcessHistoryDetails" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="SortColumn" Type="varchar" Mode="In" />
+    <Parameter Name="SortDirection" Type="varchar" Mode="In" />
+    <Parameter Name="StartDate" Type="datetime" Mode="In" />
+    <Parameter Name="EndDate" Type="datetime" Mode="In" />
+    <Parameter Name="PageNo" Type="int" Mode="In" />
+    <Parameter Name="PageLimit" Type="int" Mode="In" />
+    <Parameter Name="CmsYear" Type="int" Mode="In" />
+    <Parameter Name="ProcessType" Type="int" Mode="In" />
+    <Parameter Name="Status" Type="int" Mode="In" />
+  </Function>
+  <Function Name="SpGet_DenomProc_Code_ForManualDataEntry" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Measure_ID" Type="int" Mode="In" />
+    <Parameter Name="Gender_Restriction" Type="varchar" Mode="In" />
+    <Parameter Name="Age" Type="int" Mode="In" />
+  </Function>
+  <Function Name="SPGet_Measurenum_helpofProc_NumreratorCodes" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="CMSYear" Type="int" Mode="In" />
+    <Parameter Name="Numerator_Code" Type="varchar" Mode="In" />
+    <Parameter Name="Proc_code" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="SpGetAC_PI_MeasureData_Tin" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="TIN" Type="varchar" Mode="In" />
+    <Parameter Name="CMSYear" Type="int" Mode="In" />
+  </Function>
+  <Function Name="SPGetActivitieslist_IA" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="CMSYear" Type="int" Mode="In" />
+    <Parameter Name="Role" Type="int" Mode="In" />
+    <Parameter Name="Category_Id" Type="int" Mode="In" />
+    <Parameter Name="Tin" Type="varchar" Mode="In" />
+    <Parameter Name="Npi" Type="varchar" Mode="In" />
+    <Parameter Name="isGPRO" Type="bit" Mode="In" />
+    <Parameter Name="facilityusername" Type="varchar" Mode="In" />
+    <Parameter Name="Userid" Type="int" Mode="In" />
+  </Function>
+  <Function Name="SPGetActivitieslist_IA_bak" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="CMSYear" Type="int" Mode="In" />
+    <Parameter Name="Role" Type="int" Mode="In" />
+    <Parameter Name="Tin" Type="varchar" Mode="In" />
+    <Parameter Name="Npi" Type="varchar" Mode="In" />
+    <Parameter Name="isGPRO" Type="bit" Mode="In" />
+    <Parameter Name="facilityusername" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="SPGetActivitieslistIA_ACRStaff" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="CMSYear" Type="int" Mode="In" />
+    <Parameter Name="Role" Type="int" Mode="In" />
+    <Parameter Name="Category_Id" Type="int" Mode="In" />
+    <Parameter Name="Tin" Type="varchar" Mode="In" />
+    <Parameter Name="Npi" Type="varchar" Mode="In" />
+    <Parameter Name="isGPRO" Type="bit" Mode="In" />
+    <Parameter Name="facilityusername" Type="varchar" Mode="In" />
+    <Parameter Name="Userid" Type="int" Mode="In" />
+  </Function>
+  <Function Name="SPGetActivitieslistIA_Facility" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="CMSYear" Type="int" Mode="In" />
+    <Parameter Name="Category_Id" Type="int" Mode="In" />
+    <Parameter Name="Tin" Type="varchar" Mode="In" />
+    <Parameter Name="Npi" Type="varchar" Mode="In" />
+    <Parameter Name="isGPRO" Type="bit" Mode="In" />
+    <Parameter Name="facilityusername" Type="varchar" Mode="In" />
+    <Parameter Name="Userid" Type="int" Mode="In" />
+  </Function>
+  <Function Name="SPGetActivitieslistIA_Physician" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="CMSYear" Type="int" Mode="In" />
+    <Parameter Name="Role" Type="int" Mode="In" />
+    <Parameter Name="Category_Id" Type="int" Mode="In" />
+    <Parameter Name="Tin" Type="varchar" Mode="In" />
+    <Parameter Name="Npi" Type="varchar" Mode="In" />
+    <Parameter Name="isGPRO" Type="bit" Mode="In" />
+    <Parameter Name="facilityusername" Type="varchar" Mode="In" />
+    <Parameter Name="Userid" Type="int" Mode="In" />
+  </Function>
+  <Function Name="SpGetBlockMeasureDetails" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Tin" Type="varchar" Mode="In" />
+    <Parameter Name="CmsYear" Type="int" Mode="In" />
+    <Parameter Name="CategoryId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="SpGetCMSPaymentsActiveStatus" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="UserName" Type="varchar" Mode="In" />
+    <Parameter Name="IsSingleUser" Type="bit" Mode="In" />
+    <Parameter Name="CMSYear" Type="int" Mode="In" />
+  </Function>
+  <Function Name="SpgetEligibleMeasuresOnAge" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="CMSYear" Type="int" Mode="In" />
+    <Parameter Name="Gender_Restriction" Type="varchar" Mode="In" />
+    <Parameter Name="Age" Type="int" Mode="In" />
+    <Parameter Name="examDate" Type="datetime" Mode="In" />
+  </Function>
+  <Function Name="SPgetExamCountbyFileId" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="FileId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spGetFacilityAccessDetailsforUploadedFiles" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="FacilityUserName" Type="varchar" Mode="In" />
+    <Parameter Name="StartDate" Type="datetime" Mode="In" />
+    <Parameter Name="EndDate" Type="datetime" Mode="In" />
+    <Parameter Name="FacilityUserId" Type="int" Mode="In" />
+    <Parameter Name="SearchStatus" Type="varchar" Mode="In" />
+    <Parameter Name="PageNo" Type="int" Mode="In" />
+    <Parameter Name="PageLimit" Type="int" Mode="In" />
+    <Parameter Name="ISASC" Type="bit" Mode="In" />
+    <Parameter Name="SortColumn" Type="varchar" Mode="In" />
+    <Parameter Name="SortDirection" Type="varchar" Mode="In" />
+    <Parameter Name="Filename" Type="varchar" Mode="In" />
+    <Parameter Name="TIN" Type="varchar" Mode="In" />
+    <Parameter Name="SubmitterName" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="SPGetFacilityTinRelatedPhysicianDetails" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Username" Type="varchar" Mode="In" />
+    <Parameter Name="TIN" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="spGetFacilityTins_EmailAddress" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="UserName" Type="varchar" Mode="In" />
+    <Parameter Name="CMSYear" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spGetFilenames_of_NnumeratorZero" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="startdate" Type="datetime" Mode="In" />
+    <Parameter Name="enddate" Type="datetime" Mode="In" />
+    <Parameter Name="status" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="spGetGproACIXmlData" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="CMSYear" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spGetGproACIXmlData_Tin" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="CMSYear" Type="int" Mode="In" />
+    <Parameter Name="Tin" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="SPGetGPROCMSSubmittedTins" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="CMSYear" Type="int" Mode="In" />
+    <Parameter Name="FaciliyUserName" Type="varchar" Mode="In" />
+    <Parameter Name="UserRole" Type="int" Mode="In" />
+    <Parameter Name="NPI" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="spGetGproIAXmlData" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="CMSYear" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spGetGproIAXmlData_Tin" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="CMSYear" Type="int" Mode="In" />
+    <Parameter Name="Tin" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="SpGetHitrustSiteActiveStatus" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="UserId" Type="int" Mode="In" />
+    <Parameter Name="IsSingleUser" Type="bit" Mode="In" />
+  </Function>
+  <Function Name="spGetIAGPROAttestation_Finalize_Activities" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="spGetIANonGPROAttestation_Finalize_Activities" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="spGetLatestTINsOfNPI" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="strNPI" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="spGetLookupDataBasedonCategory" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="CMSYear" Type="int" Mode="In" />
+    <Parameter Name="CategoryId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="SpGetMeasureRulesConfigPart1" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="CMSYear" Type="int" Mode="In" />
+    <Parameter Name="CategoryId" Type="int" Mode="In" />
+    <Parameter Name="RuleId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="SPGetMeasureslistByRuleId" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="RuleId" Type="int" Mode="In" />
+    <Parameter Name="CMSYear" Type="int" Mode="In" />
+  </Function>
+  <Function Name="SPGetMeasureslistByRuleIdCompare" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="RuleId" Type="int" Mode="In" />
+    <Parameter Name="CompareYear" Type="int" Mode="In" />
+    <Parameter Name="CurrentYear" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spGetNonGproACIXmlData" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="CMSYear" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spGetNonGproACIXmlData_Tin" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="CMSYear" Type="int" Mode="In" />
+    <Parameter Name="Tin" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="spGetNonGproACIXmlData_Tin_NPI" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="CMSYear" Type="int" Mode="In" />
+    <Parameter Name="Tin" Type="varchar" Mode="In" />
+    <Parameter Name="Npi" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="SPGetNonGproCMSSubmittedTins" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="CMSYear" Type="int" Mode="In" />
+    <Parameter Name="FaciliyUserName" Type="varchar" Mode="In" />
+    <Parameter Name="UserRole" Type="int" Mode="In" />
+    <Parameter Name="NPIs" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="SpGetNonGproIA_PI_MeasureData_Tin" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="TIN" Type="varchar" Mode="In" />
+    <Parameter Name="NPI" Type="varchar" Mode="In" />
+    <Parameter Name="CMSYear" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spGetNonGproIAXmlData" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="CMSYear" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spGetNonGproIAXmlData_Tin" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="CMSYear" Type="int" Mode="In" />
+    <Parameter Name="Tin" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="spGetNonGproIAXmlData_Tin_NPI" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="CMSYear" Type="int" Mode="In" />
+    <Parameter Name="Tin" Type="varchar" Mode="In" />
+    <Parameter Name="Npi" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="SPGetNpisofTin_VW" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="NPI" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="SPGetNpisofTinwithDescription_VW" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="NPI" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="SPGetProcessRecordCount" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="FileId" Type="int" Mode="In" />
+    <Parameter Name="ReqId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spgetQMXML_examscount_TINGpro_NonGpro" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="spGetRecordsEnteredPageGridDetails" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="FacilityUserName" Type="varchar" Mode="In" />
+    <Parameter Name="StartDate" Type="datetime" Mode="In" />
+    <Parameter Name="EndDate" Type="datetime" Mode="In" />
+    <Parameter Name="FacilityUserId" Type="int" Mode="In" />
+    <Parameter Name="PageNo" Type="int" Mode="In" />
+    <Parameter Name="PageLimit" Type="int" Mode="In" />
+    <Parameter Name="ISASC" Type="bit" Mode="In" />
+    <Parameter Name="SortColumn" Type="varchar" Mode="In" />
+    <Parameter Name="SortDirection" Type="varchar" Mode="In" />
+    <Parameter Name="ExamTin" Type="varchar" Mode="In" />
+    <Parameter Name="ExamNpi" Type="varchar" Mode="In" />
+    <Parameter Name="MeasureId" Type="int" Mode="In" />
+    <Parameter Name="IsFacilityRole" Type="bit" Mode="In" />
+    <Parameter Name="CMSYear" Type="int" Mode="In" />
+    <Parameter Name="Searchtext" Type="varchar" Mode="In" />
+    <Parameter Name="PatientAge" Type="decimal" Mode="In" />
+    <Parameter Name="CPTCode" Type="varchar" Mode="In" />
+    <Parameter Name="PatientSex" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="spgetReportingRateGreaterThan100TemplateBody" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="emailtemplate" Type="varchar(max)" Mode="InOut" />
+    <Parameter Name="toAddress" Type="varchar(max)" Mode="InOut" />
+    <Parameter Name="subject" Type="varchar(max)" Mode="InOut" />
+    <Parameter Name="isFromPortal" Type="bit" Mode="In" />
+  </Function>
+  <Function Name="spGetStartEndDateForACI" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="CMSYear" Type="int" Mode="In" />
+    <Parameter Name="TIN" Type="varchar" Mode="In" />
+    <Parameter Name="NPI" Type="varchar" Mode="In" />
+    <Parameter Name="isGpro" Type="bit" Mode="In" />
+  </Function>
+  <Function Name="spGetStartEndDateForIA" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="CMSYear" Type="int" Mode="In" />
+    <Parameter Name="TIN" Type="varchar" Mode="In" />
+    <Parameter Name="NPI" Type="varchar" Mode="In" />
+    <Parameter Name="isGpro" Type="bit" Mode="In" />
+  </Function>
+  <Function Name="spGetStartEndDateForIAorACI" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="isIA" Type="bit" Mode="In" />
+    <Parameter Name="SelectionId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spGetStartEndDateForTIN_TINNPIforXML" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="isTINonly" Type="bit" Mode="In" />
+    <Parameter Name="Exam_TIN" Type="varchar" Mode="In" />
+    <Parameter Name="Physician_NPI" Type="varchar" Mode="In" />
+    <Parameter Name="CMS_Submission_Year" Type="int" Mode="In" />
+    <Parameter Name="is90days" Type="bit" Mode="In" />
+  </Function>
+  <Function Name="SpGetSubmissionKeyForNonGproPatch" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Tin" Type="varchar" Mode="In" />
+    <Parameter Name="Npi" Type="varchar" Mode="In" />
+    <Parameter Name="CmsYear" Type="int" Mode="In" />
+  </Function>
+  <Function Name="SpGetSubmissionKeyForPatch" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Tin" Type="varchar" Mode="In" />
+    <Parameter Name="CmsYear" Type="int" Mode="In" />
+  </Function>
+  <Function Name="SPGetSubmittoCMSTinsCount" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="CMSYear" Type="int" Mode="In" />
+    <Parameter Name="FaciliyUserName" Type="varchar" Mode="In" />
+    <Parameter Name="UserRole" Type="int" Mode="In" />
+    <Parameter Name="NPI" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="SpGetTinlevelAttesationDetailsOfUser" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="UserId" Type="int" Mode="In" />
+    <Parameter Name="UserRole" Type="int" Mode="In" />
+    <Parameter Name="NPI" Type="varchar" Mode="In" />
+    <Parameter Name="CMSYEAR" Type="int" Mode="In" />
+  </Function>
+  <Function Name="SPGetTINSbyNpi_Physician_VW" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="NPI" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="spGetValidateNpi" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Npi" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="spGetValidateTin" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Tin" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="spGproNonGproConversionLock" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="CMSYear" Type="int" Mode="In" />
+    <Parameter Name="facilityuseranme" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="SPIA_Activitieslist" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="CMSYear" Type="int" Mode="In" />
+    <Parameter Name="Category_Id" Type="int" Mode="In" />
+    <Parameter Name="Tin" Type="varchar" Mode="In" />
+    <Parameter Name="isGPRO" Type="bit" Mode="In" />
+    <Parameter Name="Userid" Type="int" Mode="In" />
+    <Parameter Name="RoleId" Type="int" Mode="In" />
+    <Parameter Name="facilityusername" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="SPIA_FinalizeDetails" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="CMSYear" Type="int" Mode="In" />
+    <Parameter Name="Category_Id" Type="int" Mode="In" />
+    <Parameter Name="Role" Type="int" Mode="In" />
+    <Parameter Name="Tin" Type="varchar" Mode="In" />
+    <Parameter Name="facilityusername" Type="varchar" Mode="In" />
+    <Parameter Name="Userid" Type="int" Mode="In" />
+  </Function>
+  <Function Name="SPIA_FinalizeDetails_Physician" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="CMSYear" Type="int" Mode="In" />
+    <Parameter Name="Category_Id" Type="int" Mode="In" />
+    <Parameter Name="Role" Type="int" Mode="In" />
+    <Parameter Name="Npi" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="SPInsert_Decrypted_PatientID" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="SPInsert_FileAccessFacilityLists" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="FileID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="SpInsertACIAssestedMeasures" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="TIN" Type="varchar" Mode="In" />
+    <Parameter Name="CMSYear" Type="int" Mode="In" />
+    <Parameter Name="UserName" Type="varchar" Mode="In" />
+    <Parameter Name="isGPRO" Type="bit" Mode="In" />
+    <Parameter Name="NPI" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="spInsertFileRawData" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="CreatedBy" Type="varchar" Mode="In" />
+    <Parameter Name="FileId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="SpInsertHitrustEventData" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="EventData" Type="varchar(max)" Mode="In" />
+    <Parameter Name="CreatedBy" Type="int" Mode="In" />
+  </Function>
+  <Function Name="SpInsertHitrustExceptionData" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="UserId" Type="int" Mode="In" />
+    <Parameter Name="ExceptionType" Type="varchar" Mode="In" />
+    <Parameter Name="ExceptionMessage" Type="varchar(max)" Mode="In" />
+  </Function>
+  <Function Name="spInsertIndividualInvalidDataForACIXML" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Tin" Type="varchar" Mode="In" />
+    <Parameter Name="Npi" Type="varchar" Mode="In" />
+    <Parameter Name="CmsYear" Type="int" Mode="In" />
+    <Parameter Name="measureId" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="spInsertTinInvalidDataForACIXML" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Tin" Type="varchar" Mode="In" />
+    <Parameter Name="CmsYear" Type="int" Mode="In" />
+    <Parameter Name="measureId" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="spInsertUpdate_ACI_FinalizeData" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Tin" Type="varchar" Mode="In" />
+    <Parameter Name="Npi" Type="varchar" Mode="In" />
+    <Parameter Name="isGpro" Type="bit" Mode="In" />
+    <Parameter Name="CMSYear" Type="int" Mode="In" />
+    <Parameter Name="isFinalize" Type="bit" Mode="In" />
+    <Parameter Name="CreateBy" Type="int" Mode="In" />
+    <Parameter Name="Createddate" Type="datetime" Mode="In" />
+    <Parameter Name="ModifiedBy" Type="int" Mode="In" />
+    <Parameter Name="ModifiedDate" Type="datetime" Mode="In" />
+    <Parameter Name="isTinLock" Type="bit" Mode="In" />
+    <Parameter Name="Email" Type="varchar" Mode="In" />
+    <Parameter Name="finalizeAgreeTime" Type="datetime" Mode="In" />
+    <Parameter Name="finalizeDisAgreeTime" Type="datetime" Mode="In" />
+  </Function>
+  <Function Name="spInsertUpdate_IA_FinalizeData" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Tin" Type="varchar" Mode="In" />
+    <Parameter Name="Npi" Type="varchar" Mode="In" />
+    <Parameter Name="isGpro" Type="bit" Mode="In" />
+    <Parameter Name="CMSYear" Type="int" Mode="In" />
+    <Parameter Name="isFinalize" Type="bit" Mode="In" />
+    <Parameter Name="CreateBy" Type="int" Mode="In" />
+    <Parameter Name="Createddate" Type="datetime" Mode="In" />
+    <Parameter Name="ModifiedBy" Type="int" Mode="In" />
+    <Parameter Name="ModifiedDate" Type="datetime" Mode="In" />
+    <Parameter Name="isTinLock" Type="bit" Mode="In" />
+    <Parameter Name="Email" Type="varchar" Mode="In" />
+    <Parameter Name="finalizeAgreeTime" Type="datetime" Mode="In" />
+    <Parameter Name="finalizeDisAgreeTime" Type="datetime" Mode="In" />
+  </Function>
+  <Function Name="spInsertUpdate_QM_FinalizeData" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Tin" Type="varchar" Mode="In" />
+    <Parameter Name="Npi" Type="varchar" Mode="In" />
+    <Parameter Name="isGpro" Type="bit" Mode="In" />
+    <Parameter Name="CMSYear" Type="int" Mode="In" />
+    <Parameter Name="isFinalize" Type="bit" Mode="In" />
+    <Parameter Name="CreateBy" Type="int" Mode="In" />
+    <Parameter Name="Createddate" Type="datetime" Mode="In" />
+    <Parameter Name="ModifiedBy" Type="int" Mode="In" />
+    <Parameter Name="ModifiedDate" Type="datetime" Mode="In" />
+    <Parameter Name="isTinLock" Type="bit" Mode="In" />
+    <Parameter Name="Email" Type="varchar" Mode="In" />
+    <Parameter Name="finalizeAgreeTime" Type="datetime" Mode="In" />
+    <Parameter Name="finalizeDisAgreeTime" Type="datetime" Mode="In" />
+  </Function>
+  <Function Name="SPInsertUpdateExamsData" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="FileId" Type="int" Mode="In" />
+    <Parameter Name="UploadUserId" Type="int" Mode="In" />
+    <Parameter Name="PartnerID" Type="varchar" Mode="In" />
+    <Parameter Name="DataSource_Id" Type="int" Mode="In" />
+    <Parameter Name="Created_By" Type="varchar" Mode="In" />
+    <Parameter Name="Status" Type="int" Mode="In" />
+    <Parameter Name="ReqId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="SPInsertUpdateImportExamsData" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Transaction_ID" Type="varchar" Mode="In" />
+    <Parameter Name="Transaction_DateTime" Type="varchar" Mode="In" />
+    <Parameter Name="Num_of_exams_Included" Type="varchar" Mode="In" />
+    <Parameter Name="PartnerId" Type="varchar" Mode="In" />
+    <Parameter Name="Appid" Type="varchar" Mode="In" />
+    <Parameter Name="Facility_Id" Type="varchar" Mode="In" />
+    <Parameter Name="Prev_Transction_ID" Type="varchar" Mode="In" />
+    <Parameter Name="RawData_Id" Type="varchar" Mode="In" />
+    <Parameter Name="Import_Status" Type="int" Mode="In" />
+  </Function>
+  <Function Name="SpInsertUserAttestData" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="UserId" Type="int" Mode="In" />
+    <Parameter Name="NPI" Type="varchar" Mode="In" />
+    <Parameter Name="UserRole" Type="int" Mode="In" />
+    <Parameter Name="CMSYEAR" Type="int" Mode="In" />
+    <Parameter Name="USERMAIL" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="SpIs_ResetButtonEnable" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="FileID" Type="int" Mode="In" />
+    <Parameter Name="ReqID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="Split" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="InputString" Type="varchar" Mode="In" />
+    <Parameter Name="Delimiter" Type="varchar" Mode="In" />
+    <ReturnType>
+      <CollectionType>
+        <RowType>
+          <Property Name="Item" Type="varchar" MaxLength="8000" />
+        </RowType>
+      </CollectionType>
+    </ReturnType>
+  </Function>
+  <Function Name="Split_IgnoreParantheses" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="InputString" Type="varchar" Mode="In" />
+    <Parameter Name="Delimiter" Type="varchar" Mode="In" />
+    <ReturnType>
+      <CollectionType>
+        <RowType>
+          <Property Name="Item" Type="varchar" MaxLength="8000" />
+        </RowType>
+      </CollectionType>
+    </ReturnType>
+  </Function>
+  <Function Name="spLockPendingFilesforExamAPI" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="excelFilename" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="spMeasureDataExists" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="PhysicianNPI" Type="varchar" Mode="In" />
+    <Parameter Name="ExamTIN" Type="varchar" Mode="In" />
+    <Parameter Name="Patient_Id" Type="varchar" Mode="In" />
+    <Parameter Name="DecryptPatient_Id" Type="varchar" Mode="In" />
+    <Parameter Name="Measure_Num" Type="varchar" Mode="In" />
+    <Parameter Name="Procedure_Code" Type="varchar" Mode="In" />
+    <Parameter Name="IsEncrypt" Type="bit" Mode="In" />
+    <Parameter Name="Exam_Date" Type="datetime" Mode="In" />
+    <Parameter Name="CMS_Submission_Year" Type="int" Mode="In" />
+    <Parameter Name="Exam_Unique_ID" Type="varchar" Mode="In" />
+    <Parameter Name="Criteria" Type="varchar" Mode="In" />
+    <Parameter Name="Denom_Diag_Code" Type="varchar" Mode="In" />
+    <Parameter Name="Numerator_Code" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="spMeasureDataExistsForManualData" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="PhysicianNPI" Type="varchar" Mode="In" />
+    <Parameter Name="ExamTIN" Type="varchar" Mode="In" />
+    <Parameter Name="Patient_Id" Type="varchar" Mode="In" />
+    <Parameter Name="DecryptPatient_Id" Type="varchar" Mode="In" />
+    <Parameter Name="Measure_Num" Type="varchar" Mode="In" />
+    <Parameter Name="Procedure_Code" Type="varchar" Mode="In" />
+    <Parameter Name="IsEncrypt" Type="bit" Mode="In" />
+    <Parameter Name="Exam_Date" Type="datetime" Mode="In" />
+    <Parameter Name="CMS_Submission_Year" Type="int" Mode="In" />
+    <Parameter Name="Exam_Unique_ID" Type="varchar" Mode="In" />
+    <Parameter Name="Criteria" Type="varchar" Mode="In" />
+    <Parameter Name="Denom_Diag_Code" Type="varchar" Mode="In" />
+    <Parameter Name="Numerator_Code" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="SPMerge_Delete_NPI_tbl_Users" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="NPI" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="spMigrated_Exam_split_Duplicate_measures" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="tbl_Exam_ExamID" Type="int" Mode="In" />
+    <Parameter Name="Import_examID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spMigrateExamMeasureData" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="NewExamID" Type="int" Mode="In" />
+    <Parameter Name="Import_ExamID" Type="int" Mode="In" />
+    <Parameter Name="transaction_datetime" Type="datetime" Mode="In" />
+  </Function>
+  <Function Name="spMigrateExamMeasureDataExtension" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="NewMeasure_Data_Id" Type="int" Mode="In" />
+    <Parameter Name="Import_measuredata_ID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spMigrateImportData" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="spNPIMeasureRelatedmeasureDataFor90Days" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="cmsyear" Type="int" Mode="In" />
+    <Parameter Name="npi" Type="varchar" Mode="In" />
+    <Parameter Name="TIN" Type="varchar" Mode="In" />
+    <Parameter Name="is90days" Type="bit" Mode="In" />
+    <Parameter Name="Measure_Num" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="spNPIMeasureRelatedmeasureDataForFullYear" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="cmsyear" Type="int" Mode="In" />
+    <Parameter Name="npi" Type="varchar" Mode="In" />
+    <Parameter Name="TIN" Type="varchar" Mode="In" />
+    <Parameter Name="is90days" Type="bit" Mode="In" />
+    <Parameter Name="Measure_Num" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="spNPIRelatedmeasureData" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="cmsyear" Type="int" Mode="In" />
+    <Parameter Name="npi" Type="varchar" Mode="In" />
+    <Parameter Name="TIN" Type="varchar" Mode="In" />
+    <Parameter Name="isExport" Type="bit" Mode="In" />
+    <Parameter Name="is90days" Type="bit" Mode="In" />
+    <Parameter Name="Measure_Num" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="spNPIRelatedMeasureDataFor90days" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="TIN" Type="varchar" Mode="In" />
+    <Parameter Name="NPI" Type="varchar" Mode="In" />
+    <Parameter Name="CMSYear" Type="int" Mode="In" />
+    <Parameter Name="isExport" Type="bit" Mode="In" />
+  </Function>
+  <Function Name="spNPIRelatedMeasureDataForFullYear" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="TIN" Type="varchar" Mode="In" />
+    <Parameter Name="NPI" Type="varchar" Mode="In" />
+    <Parameter Name="CMSYear" Type="int" Mode="In" />
+    <Parameter Name="isExport" Type="bit" Mode="In" />
+  </Function>
+  <Function Name="spPhsicianTinNpiLevelQMFinalizationValidation" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="TIN" Type="varchar" Mode="In" />
+    <Parameter Name="Npi" Type="varchar" Mode="In" />
+    <Parameter Name="CMSYear" Type="int" Mode="In" />
+    <Parameter Name="is90days" Type="bit" Mode="In" />
+  </Function>
+  <Function Name="spPhysicianTinNpiLevelIAFinalizationValidation" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="TIN" Type="varchar" Mode="In" />
+    <Parameter Name="Npi" Type="varchar" Mode="In" />
+    <Parameter Name="CMSYear" Type="int" Mode="In" />
+  </Function>
+  <Function Name="SPPI_Activitieslist" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="CMSYear" Type="int" Mode="In" />
+    <Parameter Name="Category_Id" Type="int" Mode="In" />
+    <Parameter Name="Tin" Type="varchar" Mode="In" />
+    <Parameter Name="isGPRO" Type="bit" Mode="In" />
+    <Parameter Name="Userid" Type="int" Mode="In" />
+    <Parameter Name="RoleId" Type="int" Mode="In" />
+    <Parameter Name="facilityusername" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="SPPI_FinalizeDetails" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="CMSYear" Type="int" Mode="In" />
+    <Parameter Name="Category_Id" Type="int" Mode="In" />
+    <Parameter Name="Role" Type="int" Mode="In" />
+    <Parameter Name="Tin" Type="varchar" Mode="In" />
+    <Parameter Name="facilityusername" Type="varchar" Mode="In" />
+    <Parameter Name="Userid" Type="int" Mode="In" />
+  </Function>
+  <Function Name="SPPI_FinalizeDetails_Physician" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="CMSYear" Type="int" Mode="In" />
+    <Parameter Name="Category_Id" Type="int" Mode="In" />
+    <Parameter Name="Role" Type="int" Mode="In" />
+    <Parameter Name="Npi" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="SPQM_FacilityPhyFinalizeDetails" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="CMSYear" Type="int" Mode="In" />
+    <Parameter Name="Category_Id" Type="int" Mode="In" />
+    <Parameter Name="Tin" Type="varchar" Mode="In" />
+    <Parameter Name="isGPRO" Type="bit" Mode="In" />
+    <Parameter Name="Userid" Type="int" Mode="In" />
+    <Parameter Name="RoleId" Type="int" Mode="In" />
+    <Parameter Name="facilityusername" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="SPQM_FinalizeDetails" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="CMSYear" Type="int" Mode="In" />
+    <Parameter Name="Category_Id" Type="int" Mode="In" />
+    <Parameter Name="Role" Type="int" Mode="In" />
+    <Parameter Name="Tin" Type="varchar" Mode="In" />
+    <Parameter Name="facilityusername" Type="varchar" Mode="In" />
+    <Parameter Name="Userid" Type="int" Mode="In" />
+  </Function>
+  <Function Name="SPQM_FinalizeDetails_Physician" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="CMSYear" Type="int" Mode="In" />
+    <Parameter Name="Category_Id" Type="int" Mode="In" />
+    <Parameter Name="Role" Type="int" Mode="In" />
+    <Parameter Name="Npi" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="SpQMSaveAllMeasureData" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="TIN" Type="varchar" Mode="In" />
+    <Parameter Name="NPI" Type="varchar" Mode="In" />
+    <Parameter Name="IS_GPRO" Type="bit" Mode="In" />
+    <Parameter Name="IS_90Days" Type="bit" Mode="In" />
+    <Parameter Name="CMSYear" Type="int" Mode="In" />
+    <Parameter Name="UserId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spReCalculate_Measure143ForPhy" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="NPI" Type="varchar" Mode="In" />
+    <Parameter Name="TIN" Type="varchar" Mode="In" />
+    <Parameter Name="intCurActiveYear" Type="int" Mode="In" />
+    <Parameter Name="strMeasure_num" Type="varchar" Mode="In" />
+    <Parameter Name="blnGPRO" Type="bit" Mode="In" />
+  </Function>
+  <Function Name="spReCalculate_Measure143ForTin" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="strCurTIN" Type="varchar" Mode="In" />
+    <Parameter Name="intCurActiveYear" Type="int" Mode="In" />
+    <Parameter Name="strMeasure_num" Type="varchar" Mode="In" />
+    <Parameter Name="blnGPRO" Type="bit" Mode="In" />
+    <Parameter Name="isReqFromShedular" Type="bit" Mode="In" />
+  </Function>
+  <Function Name="spReCalculate_Measure226ForPhy" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="NPI" Type="varchar" Mode="In" />
+    <Parameter Name="TIN" Type="varchar" Mode="In" />
+    <Parameter Name="intCurActiveYear" Type="int" Mode="In" />
+    <Parameter Name="strMeasure_num" Type="varchar" Mode="In" />
+    <Parameter Name="blnGPRO" Type="bit" Mode="In" />
+    <Parameter Name="isReqFromShedular" Type="bit" Mode="In" />
+  </Function>
+  <Function Name="spReCalculate_Measure226ForPhy90Days" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="NPI" Type="varchar" Mode="In" />
+    <Parameter Name="TIN" Type="varchar" Mode="In" />
+    <Parameter Name="intCurActiveYear" Type="int" Mode="In" />
+    <Parameter Name="strMeasure_num" Type="varchar" Mode="In" />
+    <Parameter Name="blnGPRO" Type="bit" Mode="In" />
+    <Parameter Name="isReqFromShedular" Type="bit" Mode="In" />
+  </Function>
+  <Function Name="spReCalculate_Measure226ForTin" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="strCurTIN" Type="varchar" Mode="In" />
+    <Parameter Name="intCurActiveYear" Type="int" Mode="In" />
+    <Parameter Name="strMeasure_num" Type="varchar" Mode="In" />
+    <Parameter Name="blnGPRO" Type="bit" Mode="In" />
+    <Parameter Name="isReqFromShedular" Type="bit" Mode="In" />
+  </Function>
+  <Function Name="spReCalculate_Measure226ForTin90Days" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="strCurTIN" Type="varchar" Mode="In" />
+    <Parameter Name="intCurActiveYear" Type="int" Mode="In" />
+    <Parameter Name="strMeasure_num" Type="varchar" Mode="In" />
+    <Parameter Name="blnGPRO" Type="bit" Mode="In" />
+    <Parameter Name="isReqFromShedular" Type="bit" Mode="In" />
+  </Function>
+  <Function Name="spReCalculate_Measure409ForPhy" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="intYear" Type="int" Mode="In" />
+    <Parameter Name="strPhysicianNPI" Type="varchar" Mode="In" />
+    <Parameter Name="strTIN" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="spReCalculate_Measure409ForTin" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="intYear" Type="int" Mode="In" />
+    <Parameter Name="strTIN" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="spReCalculate_PapulatePhyAggrTblForTinofNPIS" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="strCurMeasure_num" Type="varchar" Mode="In" />
+    <Parameter Name="strCurTIN" Type="varchar" Mode="In" />
+    <Parameter Name="intCurActiveYear" Type="int" Mode="In" />
+    <Parameter Name="Is_90Days" Type="bit" Mode="In" />
+  </Function>
+  <Function Name="spReCalculate_StratumCalbyAgeforPhy" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="intCurActiveYear" Type="int" Mode="In" />
+    <Parameter Name="strCurNPI" Type="varchar" Mode="In" />
+    <Parameter Name="strCurTIN" Type="varchar" Mode="In" />
+    <Parameter Name="intCurMeasureId" Type="int" Mode="In" />
+    <Parameter Name="strMeasure_num" Type="varchar" Mode="In" />
+    <Parameter Name="blnGPRO" Type="bit" Mode="In" />
+  </Function>
+  <Function Name="spReCalculate_StratumCalbyAgeforPhy90Days" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="intCurActiveYear" Type="int" Mode="In" />
+    <Parameter Name="strCurNPI" Type="varchar" Mode="In" />
+    <Parameter Name="strCurTIN" Type="varchar" Mode="In" />
+    <Parameter Name="intCurMeasureId" Type="int" Mode="In" />
+    <Parameter Name="strMeasure_num" Type="varchar" Mode="In" />
+    <Parameter Name="blnGPRO" Type="bit" Mode="In" />
+  </Function>
+  <Function Name="spReCalculate_StratumCalbyAgeforTIN" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="intCurActiveYear" Type="int" Mode="In" />
+    <Parameter Name="strCurTIN" Type="varchar" Mode="In" />
+    <Parameter Name="intCurMeasureId" Type="int" Mode="In" />
+    <Parameter Name="strMeasure_num" Type="varchar" Mode="In" />
+    <Parameter Name="blnGPRO" Type="bit" Mode="In" />
+  </Function>
+  <Function Name="spReCalculate_StratumCalbyAgeforTIN90Days" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="intCurActiveYear" Type="int" Mode="In" />
+    <Parameter Name="strCurTIN" Type="varchar" Mode="In" />
+    <Parameter Name="intCurMeasureId" Type="int" Mode="In" />
+    <Parameter Name="strMeasure_num" Type="varchar" Mode="In" />
+    <Parameter Name="blnGPRO" Type="bit" Mode="In" />
+  </Function>
+  <Function Name="spReCalculatePerfomanceRateFor90Days" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="intYear" Type="int" Mode="In" />
+    <Parameter Name="strPhysicianNPI" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="spReCalculatePerfomanceRateFor90DaysandMeasureID" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="strCurMeasure_num" Type="varchar" Mode="In" />
+    <Parameter Name="strCurTIN" Type="varchar" Mode="In" />
+    <Parameter Name="intCurActiveYear" Type="int" Mode="In" />
+    <Parameter Name="Is_90Days" Type="bit" Mode="In" />
+    <Parameter Name="strCurNPI" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="spReCalculatePerfomanceRateForYear" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="intYear" Type="int" Mode="In" />
+    <Parameter Name="strPhysicianNPI" Type="varchar" Mode="In" />
+    <Parameter Name="strTIN" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="spReCalculatePerfomanceRateForYearandMeasureID" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="strCurMeasure_num" Type="varchar" Mode="In" />
+    <Parameter Name="strCurTIN" Type="varchar" Mode="In" />
+    <Parameter Name="intCurActiveYear" Type="int" Mode="In" />
+    <Parameter Name="Is_90Days" Type="bit" Mode="In" />
+    <Parameter Name="strCurNPI" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="spReCalculateTINperformanceRateFor90Days" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="intYear" Type="int" Mode="In" />
+    <Parameter Name="strTIN" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="spReCalculateTINperformanceRateFor90DaysandMeasureID" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="strCurMeasure_num" Type="varchar" Mode="In" />
+    <Parameter Name="intCurActiveYear" Type="int" Mode="In" />
+    <Parameter Name="strCurTIN" Type="varchar" Mode="In" />
+    <Parameter Name="Is_90Days" Type="bit" Mode="In" />
+  </Function>
+  <Function Name="spReCalculateTINperformanceRateForYear" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="intYear" Type="int" Mode="In" />
+    <Parameter Name="strTIN" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="spReCalculateTINperformanceRateForYear_NewSP" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="intYear" Type="int" Mode="In" />
+    <Parameter Name="strTIN" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="spReCalculateTINperformanceRateForYearandMeasureID" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="strCurMeasure_num" Type="varchar" Mode="In" />
+    <Parameter Name="intCurActiveYear" Type="int" Mode="In" />
+    <Parameter Name="strCurTIN" Type="varchar" Mode="In" />
+    <Parameter Name="Is_90Days" Type="bit" Mode="In" />
+  </Function>
+  <Function Name="SPRecordEnteredPageGridDetails" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="CMSYear" Type="int" Mode="In" />
+    <Parameter Name="npi" Type="varchar" Mode="In" />
+    <Parameter Name="PageNo" Type="int" Mode="In" />
+    <Parameter Name="PageLimit" Type="int" Mode="In" />
+    <Parameter Name="ISASC" Type="bit" Mode="In" />
+    <Parameter Name="SortColumn" Type="varchar" Mode="In" />
+    <Parameter Name="SortDirection" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="spRegistrationStatusForFaciilty" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="spRejectedData" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="DataSourceId" Type="int" Mode="In" />
+    <Parameter Name="CreatedBy" Type="int" Mode="In" />
+    <Parameter Name="FileId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spRejectedDataNew" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="DataSourceId" Type="int" Mode="In" />
+    <Parameter Name="CreatedBy" Type="int" Mode="In" />
+    <Parameter Name="FileId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spRemoveDuplicate_Users" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="spRemoveDuplicateExams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="intYear" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spRemoveDuplicateExams_NoExamUniqueID" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="intYear" Type="int" Mode="In" />
+  </Function>
+  <Function Name="SPRepopulate_AttestationTINNPIs_ForJIRA_659" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" StoreFunctionName="SPRepopulate_AttestationTINNPIs_ForJIRA#659" />
+  <Function Name="SPSaveAllMeasureData_notusing" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" StoreFunctionName="SPSaveAllMeasureData-notusing">
+    <Parameter Name="TIN" Type="varchar" Mode="In" />
+    <Parameter Name="NPI" Type="varchar" Mode="In" />
+    <Parameter Name="IS_GPRO" Type="bit" Mode="In" />
+    <Parameter Name="IS_90Days" Type="bit" Mode="In" />
+    <Parameter Name="CMSYear" Type="int" Mode="In" />
+    <Parameter Name="UserId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="SpSaveBlockListData" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="UserId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="SpSaveBlockMeasureListData" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="UserId" Type="int" Mode="In" />
+    <Parameter Name="CmsYear" Type="int" Mode="In" />
+    <Parameter Name="CategoryId" Type="int" Mode="In" />
+    <Parameter Name="Tin" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="spSelectedTINNPIRelatedIAMeasureDataForFullYear" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="CMSYear" Type="int" Mode="In" />
+    <Parameter Name="isExport" Type="bit" Mode="In" />
+  </Function>
+  <Function Name="spSelectedTINNPIRelatedMeasureDataForFullYear" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="CMSYear" Type="int" Mode="In" />
+    <Parameter Name="isExport" Type="bit" Mode="In" />
+  </Function>
+  <Function Name="spSelectedTinsRelatedIAMeasureDataForFullYear" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="CMSYear" Type="int" Mode="In" />
+    <Parameter Name="isExport" Type="bit" Mode="In" />
+  </Function>
+  <Function Name="spSelectedTinsRelatedMeasureDataForFullYear" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="CMSYear" Type="int" Mode="In" />
+    <Parameter Name="isExport" Type="bit" Mode="In" />
+  </Function>
+  <Function Name="spShowImportTables" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="SPTemp" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="SPTestPK" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="spTinFinalize_90DaysLock" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="CMSYear" Type="int" Mode="In" />
+    <Parameter Name="facilityuseranme" Type="varchar" Mode="In" />
+    <Parameter Name="userId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spTinLevelACIFinalizationValidation" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="TIN" Type="varchar" Mode="In" />
+    <Parameter Name="CMSYear" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spTinLevelIAFinalizationValidation" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="TIN" Type="varchar" Mode="In" />
+    <Parameter Name="CMSYear" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spTinLevelQMFinalizationValidation" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="TIN" Type="varchar" Mode="In" />
+    <Parameter Name="CMSYear" Type="int" Mode="In" />
+    <Parameter Name="is90days" Type="bit" Mode="In" />
+  </Function>
+  <Function Name="spTinMeasureRelatedMeasureDataFor90Days" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="cmsyear" Type="int" Mode="In" />
+    <Parameter Name="TIN" Type="varchar" Mode="In" />
+    <Parameter Name="measureNum" Type="varchar" Mode="In" />
+    <Parameter Name="is90days" Type="bit" Mode="In" />
+  </Function>
+  <Function Name="spTinMeasureRelatedMeasureDataForFullYear" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="cmsyear" Type="int" Mode="In" />
+    <Parameter Name="TIN" Type="varchar" Mode="In" />
+    <Parameter Name="measureNum" Type="varchar" Mode="In" />
+    <Parameter Name="is90days" Type="bit" Mode="In" />
+    <Parameter Name="isExport" Type="bit" Mode="In" />
+  </Function>
+  <Function Name="spTinNpiFinalize_90DaysLock" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="TIN" Type="varchar" Mode="In" />
+    <Parameter Name="CMSYear" Type="int" Mode="In" />
+    <Parameter Name="facilityuseranme" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="spTinNpiLevelFacilityACIFinalizationValidation" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="TIN" Type="varchar" Mode="In" />
+    <Parameter Name="Npi" Type="varchar" Mode="In" />
+    <Parameter Name="CMSYear" Type="int" Mode="In" />
+    <Parameter Name="is90days" Type="bit" Mode="In" />
+  </Function>
+  <Function Name="spTinNpiLevelFinalizationValidation" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="TIN" Type="varchar" Mode="In" />
+    <Parameter Name="Npi" Type="varchar" Mode="In" />
+    <Parameter Name="CMSYear" Type="int" Mode="In" />
+    <Parameter Name="is90days" Type="bit" Mode="In" />
+  </Function>
+  <Function Name="spTinNpiLevelIAFinalizationValidation" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="TIN" Type="varchar" Mode="In" />
+    <Parameter Name="Npi" Type="varchar" Mode="In" />
+    <Parameter Name="CMSYear" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spTinNpiLevelPhysicianACIFinalizationValidation" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="TIN" Type="varchar" Mode="In" />
+    <Parameter Name="Npi" Type="varchar" Mode="In" />
+    <Parameter Name="CMSYear" Type="int" Mode="In" />
+    <Parameter Name="is90days" Type="bit" Mode="In" />
+  </Function>
+  <Function Name="spTinNpiLevelQMFinalizationValidation" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="TIN" Type="varchar" Mode="In" />
+    <Parameter Name="Npi" Type="varchar" Mode="In" />
+    <Parameter Name="CMSYear" Type="int" Mode="In" />
+    <Parameter Name="is90days" Type="bit" Mode="In" />
+  </Function>
+  <Function Name="spTinRelatedMeasureData" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="cmsyear" Type="int" Mode="In" />
+    <Parameter Name="TIN" Type="varchar" Mode="In" />
+    <Parameter Name="isExport" Type="bit" Mode="In" />
+    <Parameter Name="is90days" Type="bit" Mode="In" />
+  </Function>
+  <Function Name="spTinRelatedMeasureDataFor90days" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="TIN" Type="varchar" Mode="In" />
+    <Parameter Name="CMSYear" Type="int" Mode="In" />
+    <Parameter Name="isExport" Type="bit" Mode="In" />
+  </Function>
+  <Function Name="spTinRelatedMeasureDataForFullYear" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="TIN" Type="varchar" Mode="In" />
+    <Parameter Name="CMSYear" Type="int" Mode="In" />
+    <Parameter Name="isExport" Type="bit" Mode="In" />
+  </Function>
+  <Function Name="spTruncateImportFilesDataInTables" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="spTruncateImportFilesTables" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="spTruncateImportTables" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="spTruncateTransTables" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="spUpdate_GPROtoNonGPRO_ViceVersa" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="TIN" Type="varchar" Mode="In" />
+    <Parameter Name="IS_GPRO" Type="bit" Mode="In" />
+    <Parameter Name="CMSYear" Type="int" Mode="In" />
+    <Parameter Name="userid" Type="varchar" Mode="In" />
+    <Parameter Name="ErrorCode" Type="int" Mode="InOut" />
+  </Function>
+  <Function Name="spUpdateExamData" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="PartnerId" Type="varchar" Mode="In" />
+    <Parameter Name="PhysicianNPI" Type="varchar" Mode="In" />
+    <Parameter Name="ExamTIN" Type="varchar" Mode="In" />
+    <Parameter Name="Patient_Id" Type="varchar" Mode="In" />
+    <Parameter Name="DecryptPatient_Id" Type="varchar" Mode="In" />
+    <Parameter Name="Patient_Age" Type="decimal" Mode="In" />
+    <Parameter Name="Patient_Gender" Type="varchar" Mode="In" />
+    <Parameter Name="Measure_Num" Type="varchar" Mode="In" />
+    <Parameter Name="Procedure_Code" Type="varchar" Mode="In" />
+    <Parameter Name="IsEncrypt" Type="bit" Mode="In" />
+    <Parameter Name="Patient_Medicare_Advantage" Type="smallint" Mode="In" />
+    <Parameter Name="Patient_Medicare_Beneficiary" Type="smallint" Mode="In" />
+    <Parameter Name="Exam_Date" Type="datetime" Mode="In" />
+    <Parameter Name="Last_Modified_Date" Type="datetime" Mode="In" />
+    <Parameter Name="Last_Modified_By" Type="varchar" Mode="In" />
+    <Parameter Name="CMS_Submission_Year" Type="int" Mode="In" />
+    <Parameter Name="Exam_Unique_ID" Type="varchar" Mode="In" />
+    <Parameter Name="DataSource_Id" Type="int" Mode="In" />
+    <Parameter Name="File_Name" Type="varchar" Mode="In" />
+    <Parameter Name="Criteria" Type="varchar" Mode="In" />
+    <Parameter Name="Denom_Diag_Code" Type="varchar" Mode="In" />
+    <Parameter Name="Numerator_Code" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="SpUpdateHitrustSiteActiveStatus" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Userid" Type="int" Mode="In" />
+    <Parameter Name="SiteActive" Type="bit" Mode="In" />
+    <Parameter Name="Category" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="spUpdateMeasureData" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Exam_Id" Type="int" Mode="In" />
+    <Parameter Name="Measure_Num" Type="varchar" Mode="In" />
+    <Parameter Name="Denominator_proc_code" Type="varchar" Mode="In" />
+    <Parameter Name="Denominator_Diag_code" Type="varchar" Mode="In" />
+    <Parameter Name="Last_Mod_Date" Type="datetime" Mode="In" />
+    <Parameter Name="Last_Mod_By" Type="varchar" Mode="In" />
+    <Parameter Name="Numerator_response_value" Type="smallint" Mode="In" />
+    <Parameter Name="Status" Type="int" Mode="In" />
+    <Parameter Name="CMS_Submission_Year" Type="int" Mode="In" />
+    <Parameter Name="Criteria" Type="varchar" Mode="In" />
+    <Parameter Name="Numerator_response_code" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="SpUpdateMeasureRulesConfigPart1" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="CmsYear" Type="int" Mode="In" />
+    <Parameter Name="CategoryId" Type="int" Mode="In" />
+    <Parameter Name="RuleId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="SpUpdateMeasureRulesConfigPart4" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="CmsYear" Type="int" Mode="In" />
+    <Parameter Name="CategoryId" Type="int" Mode="In" />
+    <Parameter Name="RuleId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="SpUpdateMeasureRulesConfigPart5" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="CmsYear" Type="int" Mode="In" />
+    <Parameter Name="CategoryId" Type="int" Mode="In" />
+    <Parameter Name="RuleId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="SpUpdateNumertorValueFromTblFile_Rawdata" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="startdate" Type="datetime" Mode="In" />
+    <Parameter Name="enddate" Type="datetime" Mode="In" />
+  </Function>
+  <Function Name="spValidateImportExam" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ExamsID" Type="int" Mode="In" />
+    <Parameter Name="TransactionID" Type="varchar" Mode="In" />
+    <Parameter Name="ParentNode" Type="varchar(max)" Mode="In" />
+    <Parameter Name="FacilityID" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="spValidateImportExam_ByTwoActiveYears" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ExamsID" Type="int" Mode="In" />
+    <Parameter Name="TransactionID" Type="varchar" Mode="In" />
+    <Parameter Name="ParentNode" Type="varchar(max)" Mode="In" />
+    <Parameter Name="FacilityID" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="spValidateImportExam_Nrdr13x" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ExamsID" Type="int" Mode="In" />
+    <Parameter Name="TransactionID" Type="varchar" Mode="In" />
+    <Parameter Name="ParentNode" Type="varchar(max)" Mode="In" />
+    <Parameter Name="FacilityID" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="spValidateImportExamMeasureData" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ExamID" Type="int" Mode="In" />
+    <Parameter Name="ParentNode" Type="varchar(max)" Mode="In" />
+  </Function>
+  <Function Name="spValidateImportExamMeasureData_BYTwoActiveYears" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ExamID" Type="int" Mode="In" />
+    <Parameter Name="ParentNode" Type="varchar(max)" Mode="In" />
+  </Function>
+  <Function Name="spValidateImportExamMeasureDataExtension" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Measure_Data_ID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spValidateImportExams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="spValidateImportExams_NPI_FacilityID_TEMPTable" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="test_List_orders_2" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="fromdate" Type="datetime" Mode="In" />
+  </Function>
+  <Function Name="test_List_orders_3" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="fromdate" Type="datetime" Mode="In" />
+  </Function>
+  <Function Name="test1" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="name" Type="varchar" Mode="In" />
+    <Parameter Name="val" Type="int" Mode="In" />
+  </Function>
+  <Function Name="test2" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="nam" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="XMLFilesGenerate_helpScript_QM" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="zzz_obscelete_sp_getFacility_GproTIN" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="FacilityID" Type="nvarchar" Mode="In" />
+  </Function>
+  <EntityContainer Name="PQRSV13ModelStoreContainer">
+    <EntitySet Name="tbl_MIPS_Email_Manager_Test" EntityType="Self.tbl_MIPS_Email_Manager_Test" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>
